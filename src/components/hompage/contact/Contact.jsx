@@ -15,23 +15,23 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      details: "+91 9833883611",
+      details: "+91 9999999999",
       description: "Mon to Fri 9am to 6pm",
-      href: "tel:+9833883611",
+      href: "tel:+9999999999",
       gradient: "from-green-500 to-blue-500"
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: "ritesh.gokani3@gmail.com",
+      details: "indequitynetwork@gmail.com",
       description: "Send us your query anytime",
-      href: "ritesh.gokani3@gmail.com",
+      href: "indequitynetwork@gmail.com",
       gradient: "from-blue-500 to-green-500"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Office",
-      details: "White Orchid Shop 105 Beside Shell Petrol, Pump Adajan Dn Surat City, Surat, Gujarat, 395009",
+      details: "201, RADHAKRISHNA, RADHA RESIDENCY,SIDDHARTH NAGER, BORIVALI - EAST, MUMBAI, MAHARASHTRA - 400066",
       description: "Come say hello at our office",
       href: "#",
       gradient: "from-green-500 to-blue-600"
@@ -77,7 +77,7 @@ const Contact = () => {
             {/* Contact Methods Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {contactMethods.map((method, index) => (
-                <a
+                <a 
                   key={index}
                   href={method.href}
                   className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-green-200 hover:transform hover:scale-105"
@@ -238,7 +238,7 @@ const Contact = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mx-auto mb-4">
                 <Users className="w-8 h-8" />
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">500+ Clients</h4>
+              <h4 className="font-bold text-gray-900 mb-2">300+ Clients</h4>
               <p className="text-gray-600">Trusted by investors nationwide</p>
             </div>
           </div>

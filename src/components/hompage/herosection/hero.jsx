@@ -136,7 +136,7 @@ const Hero = () => {
               </div>
               <div className="text-right"> 
                 <p className="text-white text-sm lg:text-xl font-light leading-relaxed mb-2 lg:mb-3">
-                  Unlock smarter investing with the trusted expertise of RGX
+                  Unlock smarter investing with the trusted expertise of INDEQNET
                 </p>
                 <div className="w-12 lg:w-16 h-1 bg-gradient-to-r from-green-400 to-blue-400 rounded-full ml-auto"></div>
               </div>

@@ -39,19 +39,19 @@ const Navbar = () => {
     <>
       <nav className='flex items-center justify-between lg:justify-around bg-white shadow-lg px-4 lg:px-8 py-4 border-b-2 border-blue-100 sticky top-0 z-50'>
         {/* Logo and Brand */}
-        <div className='flex items-center gap-6 lg:gap-2'>
-          <div onClick={()=> router.push('/')} className='w-12 h-12 lg:w-24 lg:h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer'>
-           <Image src={"/logoo.png"}
-           width={200}
+        <div className='flex items-center  lg:gap-2'>
+          <div onClick={()=> router.push('/')} className='w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center  hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer'>
+           <Image src={"/INlogo2.png"}
+           width={60}
           
-           height={200}/>
+           height={60}/>
           </div>
           
           <div className='h-10 lg:h-12 w-0.5 bg-gradient-to-b from-green-300 to-blue-300 rounded-full hidden sm:block'></div>
           
           <div className='flex flex-col'>
-            <h1 className='text-green-600 font-bold text-lg lg:text-xl tracking-tight'>RGX RESEARCH PRIVATE LIMITED</h1>
-            <h2 className='text-blue-600 text-sm lg:text-lg font-semibold tracking-wide hidden sm:block'>INH000021094</h2>
+            <h1 className='text-green-600 font-bold text-lg lg:text-xl tracking-tight'>Indeqnet Private Limited</h1>
+            <h2 className='text-blue-600 text-sm lg:text-lg font-semibold tracking-wide hidden sm:block'>SEBI Registration Number</h2>
           </div>
         </div> 
 

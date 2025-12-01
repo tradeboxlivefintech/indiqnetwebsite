@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { 
   Target, 
@@ -13,7 +14,11 @@ import {
   BookOpen,
   Lock,
   Scale,
-  Heart
+  Heart,
+  Star,
+  TrendingUp,
+  Award,
+  Building
 } from "lucide-react";
 
 const InvestorCharter = () => {
@@ -21,12 +26,14 @@ const InvestorCharter = () => {
     {
       icon: <Target className="w-8 h-8" />,
       title: "Vision",
-      content: "Invest with knowledge & safety."
+      content: "Invest with knowledge & safety.",
+      color: "from-green-500 to-blue-500"
     },
     {
       icon: <Eye className="w-8 h-8" />,
       title: "Mission",
-      content: "Every investor should be able to invest in right investment products based on their needs, manage and monitor them to meet their goals, access reports and enjoy financial wellness."
+      content: "Every investor should be able to invest in right investment products based on their needs, manage and monitor them to meet their goals, access reports and enjoy financial wellness.",
+      color: "from-blue-500 to-green-500"
     }
   ];
 
@@ -136,64 +143,99 @@ const InvestorCharter = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white">
-      {/* Header Section */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-  
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+    <section className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4 sm:py-20">
+      <div className="max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 bg-green-50 px-4 py-2 rounded-full border border-green-200 mb-6">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <h3 className="text-green-600 font-semibold text-sm uppercase tracking-wider">
+              Investor Protection
+            </h3>
+          </div>
+          
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
             Investor Charter
+            <span className="block bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl mt-2">
+              For Research Analysts & Research Entities
+            </span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            For Research Analysts & Research Entities
-          </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto mt-8 rounded-full"></div>
+          
+          <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto mt-6 rounded-full"></div>
         </div>
 
         {/* A. Vision & Mission */}
-        <section className="max-w-6xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-green-400 mb-8 text-center">A. Vision & Mission</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="mb-12 sm:mb-16">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+              A
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Vision & Mission</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {visionMission.map((item, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-green-500/30 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                  {item.icon}
+              <div 
+                key={index} 
+                className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-200 hover:shadow-xl transition-all duration-300"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-xl flex items-center justify-center mb-6 mx-auto`}>
+                  <div className="text-white">
+                    {item.icon}
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-center text-green-400 mb-4">{item.title}</h3>
-                <p className="text-gray-300 text-center leading-relaxed">{item.content}</p>
+                <h3 className="text-xl font-bold text-center text-gray-900 mb-4">{item.title}</h3>
+                <p className="text-gray-600 text-center leading-relaxed">{item.content}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* B. Business Details */}
-        <section className="max-w-6xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-green-400 mb-8 text-center">B. Business Details</h2>
-          <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
-            <ul className="space-y-4">
+        <section className="mb-12 sm:mb-16">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+              B
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Business Details</h2>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-200 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 gap-4">
               {businessDetails.map((item, index) => (
-                <li key={index} className="flex items-start gap-4 text-gray-300">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
+                <div key={index} className="flex items-start gap-4 p-3 hover:bg-blue-50 rounded-lg transition-colors duration-200">
+                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-green-600" />
                   </div>
-                  <span>{item}</span>
-                </li>
+                  <span className="text-gray-700">{item}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </section>
 
         {/* C. Services Provided */}
-        <section className="max-w-6xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-green-400 mb-8 text-center">C. Services Provided</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <section className="mb-12 sm:mb-16">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+              C
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Services Provided</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {services.map((service, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-green-500/30 transition-all duration-300">
-                <h3 className="text-lg font-bold text-green-400 mb-4 text-center">{service.category}</h3>
+              <div key={index} className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold">{index + 1}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900">{service.category}</h3>
+                </div>
                 <ul className="space-y-3">
                   {service.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start gap-3 text-sm text-gray-300">
-                      <ArrowRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-1" />
+                    <li key={itemIndex} className="flex items-start gap-3 text-sm text-gray-600">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -204,20 +246,34 @@ const InvestorCharter = () => {
         </section>
 
         {/* D. Grievance Redressal */}
-        <section className="max-w-6xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-green-400 mb-8 text-center">D. Grievance Redressal Mechanism</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="mb-12 sm:mb-16">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+              D
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Grievance Redressal Mechanism</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {grievanceMechanism.map((item, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-green-500/30 transition-all duration-300">
+              <div key={index} className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center">
-                    {item.icon}
+                    <div className="text-white">
+                      {item.icon}
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold text-green-400">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
                 </div>
-                <p className="text-gray-300 mb-3">{item.description}</p>
+                <p className="text-gray-600 mb-3">{item.description}</p>
                 {item.link && (
-                  <a href={item.link} className="text-green-400 hover:text-green-300 transition-colors duration-300 text-sm">
+                  <a 
+                    href={item.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-700 transition-colors duration-300 text-sm inline-flex items-center gap-1"
+                  >
+                    <ArrowRight className="w-4 h-4" />
                     {item.link}
                   </a>
                 )}
@@ -226,9 +282,12 @@ const InvestorCharter = () => {
           </div>
           
           {/* Physical Complaint Address */}
-          <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 mt-8">
-            <h3 className="text-lg font-bold text-green-400 mb-4 text-center">Physical Complaints Address</h3>
-            <div className="text-gray-300 text-center">
+          <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 max-w-4xl mx-auto mt-8">
+            <div className="flex items-center gap-3 mb-6">
+              <Building className="w-8 h-8 text-blue-600" />
+              <h3 className="text-lg font-bold text-gray-900">Physical Complaints Address</h3>
+            </div>
+            <div className="text-gray-600 space-y-1 pl-4">
               <p>Office of Investor Assistance and Education,</p>
               <p>Securities and Exchange Board of India,</p>
               <p>SEBI Bhavan, Plot No. C4-A, 'G' Block,</p>
@@ -239,16 +298,24 @@ const InvestorCharter = () => {
         </section>
 
         {/* E. Investor Rights */}
-        <section className="max-w-6xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold text-green-400 mb-8 text-center">E. Rights of Investors</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <section className="mb-12 sm:mb-16">
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+              E
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Rights of Investors</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
             {investorRights.map((right, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 border border-gray-700 hover:border-green-500/30 transition-all duration-300">
+              <div key={index} className="bg-white rounded-xl shadow p-4 border border-gray-200 hover:border-blue-300 transition-all duration-300 hover:shadow-md">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    {right.icon}
+                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="text-blue-600">
+                      {right.icon}
+                    </div>
                   </div>
-                  <span className="text-gray-300 text-sm">{right.text}</span>
+                  <span className="text-gray-700 text-sm">{right.text}</span>
                 </div>
               </div>
             ))}
@@ -256,43 +323,76 @@ const InvestorCharter = () => {
         </section>
 
         {/* F. Investor Responsibilities */}
-        <section className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-green-400 mb-8 text-center">F. Expectations from Investors</h2>
+        <section>
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+              F
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Expectations from Investors</h2>
+          </div>
           
           {/* Do's */}
           <div className="mb-8">
-            <h3 className="text-2xl font-bold text-green-400 mb-6 text-center">Do's</h3>
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-green-500/20">
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                <CheckCircle className="w-6 h-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900">Do's</h3>
+            </div>
+            
+            <div className="bg-white rounded-2xl shadow-lg p-6 border border-green-200">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {investorDos.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
+                  <div key={index} className="flex items-start gap-3 p-3 hover:bg-green-50 rounded-lg transition-colors duration-200">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700">{item}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
 
           {/* Don'ts */}
           <div>
-            <h3 className="text-2xl font-bold text-green-400 mb-6 text-center">Don'ts</h3>
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-red-500/20">
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                <AlertCircle className="w-6 h-6 text-red-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900">Don'ts</h3>
+            </div>
+            
+            <div className="bg-white rounded-2xl shadow-lg p-6 border border-red-200">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {investorDonts.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-300">
-                    <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
+                  <div key={index} className="flex items-start gap-3 p-3 hover:bg-red-50 rounded-lg transition-colors duration-200">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700">{item}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </section>
 
-        
+        {/* SEBI Notice */}
+        <div className="max-w-4xl mx-auto mt-12 bg-yellow-50 border border-yellow-200 rounded-2xl p-6">
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <Shield className="w-6 h-6 text-yellow-600" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">SEBI Compliance Notice</h3>
+              <p className="text-gray-700">
+                This Investor Charter is in compliance with SEBI regulations. Investors are advised to verify 
+                the registration status of the Research Analyst on SEBI's official website. Investment in 
+                securities market are subject to market risks. Please read all related documents carefully 
+                before investing.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

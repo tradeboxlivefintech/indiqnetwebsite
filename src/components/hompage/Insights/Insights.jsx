@@ -20,11 +20,11 @@ const Insights = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4 text-white/80 text-sm">
             <p className="flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
-              SEBI Certified Research Analyst
+              Indeqnet Private Limited (IPL)
             </p>
             <p className="flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
-              INH000021094
+              SEBI Registration Number
             </p>
           </div>
         </div>

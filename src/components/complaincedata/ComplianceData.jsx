@@ -17,48 +17,40 @@ const ComplianceData = () => {
     {
       icon: <Building className="w-6 h-6" />,
       label: "Registered Name",
-      value: "RGX RESEARCH PRIVATE LIMITED"
+      value: "Indeqnet Private Limited"
     },
     {
       icon: <FileText className="w-6 h-6" />,
       label: "Registration Number",
-      value: "INH000021094"
+      value: "INH1094"
     },
-    {
-      icon: <Award className="w-6 h-6" />,
-      label: "BSE Enlistment No.",
-      value: "6577"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      label: "Type",
-      value: "Research Entity"
-    },
+    
+    
     {
       icon: <Users className="w-6 h-6" />,
       label: "Category",
-      value: "Non-Individual"
+      value: "CORPORATE RESEARCH ANALYSTl"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       label: "Address",
-      value: "White Orchid Shop 105 Beside Shell Petrol Pump, Adajan Dn, Surat City, Surat, Gujarat, 395009"
+      value: "201, RADHAKRISHNA, RADHA RESIDENCY ,SIDDHARTH NAGER, BORIVALI - EAST, MUMBAI, MAHARASHTRA - 400066"
     }
   ];
 
   const officerInfo = [
     {
       role: "Principal Officer",
-      name: "RGX",
-      mobile: "9326872065",
-      email: "rgxresearch3@gmail.com",
+      name: "Indeqnet Private Limited (IPL)",
+      mobile: "9999999999",
+      email: "indequitynetwork@gmail.com",
       icon: <User className="w-6 h-6" />
     },
     {
       role: "Compliance Officer / Grievance Officer",
-      name: "Ms. Devanshi P. Sheth",
-      mobile: "9324060130",
-      email: "rgxcompliance@gmail.com",
+      name: "RAM IYER (RAMACHANDRAN CHITHAMBARAN)",
+      mobile: "8828320113",
+      email: "COMPLIANCE@INDEQNETYNETWORK.COM",
       icon: <Shield className="w-6 h-6" />
     }
   ];
@@ -66,13 +58,13 @@ const ComplianceData = () => {
   const contactInfo = [
     {
       icon: <Phone className="w-5 h-5" />,
-      text: "+91 9833883611",
-      href: "tel:+919833883611"
+      text: "+91 9999999999",
+      href: "tel:+9999999999"
     },
     {
       icon: <Mail className="w-5 h-5" />,
-      text: "ritesh.gokani3@gmail.com",
-      href: "mailto:ritesh.gokani3@gmail.com"
+      text: "indequitynetwork@gmail.com",
+      href: "mailto:indequitynetwork@gmail.com"
     }
   ];
 
