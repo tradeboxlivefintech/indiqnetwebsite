@@ -1,4 +1,4 @@
-import Disclaimer from '@/components/PTD/disclaimer'
+import Disclaimer from '@/components/ptd/Disclaimer'
 import React from 'react'
 
 const page = () => {
