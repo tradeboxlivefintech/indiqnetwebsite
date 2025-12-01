@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRouter } from "next/navigation";
+
 const Disclaimer = () => {
   const router = useRouter();
   return (
