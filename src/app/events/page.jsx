@@ -1,10 +1,10 @@
-import Disclaime from '@/components/ptd/Disclaime'
+import Events from '@/components/hompage/events/Events'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-      <Disclaime/>
+      <Events/>
     </div>
   )
 }

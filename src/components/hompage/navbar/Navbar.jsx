@@ -20,7 +20,7 @@ const Navbar = () => {
     { name: 'HOME', href: '/' },
     { name: 'PRODUCT & SERVICE', href: '/services' },
     {name:"LEARNING", href:''},
-    
+    {name:"EVENTS", href:'/events'},
     { name: 'COMPLIANCE DATA', href: '/compliance' },
     { name: 'CONTACT', href: '/contactUS' },
   ];
@@ -56,7 +56,7 @@ const Navbar = () => {
         </div> 
 
         {/* Desktop Navigation */}
-        <div className='hidden lg:flex items-center gap-8 '>
+        <div className='hidden lg:flex items-center gap-4 '>
           {navItems.map((item) => (
             <Link 
               key={item.name}
