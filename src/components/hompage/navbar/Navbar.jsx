@@ -10,18 +10,19 @@ const Navbar = () => {
   const router = useRouter();
 
   const announcements = [
-    "🚀 New Workshop Available: Advanced Technical Research Methods",
-    "📢 Latest Compliance Data Updates Now Live",
-    "⭐ Featured Product: Innovative Research Solutions",
-    "🔔 Contact us for customized technical consultations"
+    "🚀 India Elite Summit 2025: Early Bird Registration Open",
+    "📢 MarketgAInz: SEBI-Registered Research Reports Available",
+    "⭐ ISSMA: New Financial Literacy Program Launched",
+    "🔔 Contact us: +91 XXXXX XXXXX | support@indeqnet.com"
   ];
 
   const navItems = [
     { name: 'HOME', href: '/' },
-    { name: 'PRODUCT & SERVICE', href: '/services' },
-    {name:"LEARNING", href:''},
-    {name:"EVENTS", href:'/events'},
-    { name: 'COMPLIANCE DATA', href: '/compliance' },
+    { name: 'ABOUT', href: '/important/about' },
+    { name: 'MARKETGAINZ', href: '/important/marketgainz' },
+    { name: 'ISSMA', href: '/important/issma' },
+    { name: 'INDIA ELITE SUMMIT', href: '/important/indiasubmit' },
+    { name: 'COMPLIANCE', href: '/compliance' },
     { name: 'CONTACT', href: '/contactUS' },
   ];
 
@@ -30,38 +31,40 @@ const Navbar = () => {
   };
 
   const handleNavClick = (itemname) => {
-    
     setActiveLink(itemname);
-    // setIsMobileMenu(false);
   };
 
   return (
     <>
       <nav className='flex items-center justify-between lg:justify-around bg-white shadow-lg px-4 lg:px-8 py-4 border-b-2 border-blue-100 sticky top-0 z-50'>
         {/* Logo and Brand */}
-        <div className='flex items-center  lg:gap-2'>
-          <div onClick={()=> router.push('/')} className='w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center  hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer'>
-           <Image src={"/INlogo2.png"}
-           width={60}
-          
-           height={60}/>
+        <div className='flex items-center lg:gap-2'>
+          <div onClick={() => router.push('/')} className='w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer'>
+            <Image 
+              src={"/INlogo2.png"}
+              width={60}
+              height={60}
+              alt="India Equity Network Logo"
+            />
           </div>
           
           <div className='h-10 lg:h-12 w-0.5 bg-gradient-to-b from-green-300 to-blue-300 rounded-full hidden sm:block'></div>
           
           <div className='flex flex-col'>
-            <h1 className='text-green-600 font-bold text-lg lg:text-xl tracking-tight'>Indeqnet Private Limited</h1>
-            <h2 className='text-blue-600 text-sm lg:text-lg font-semibold tracking-wide hidden sm:block'>SEBI Registration Number</h2>
+            <h1 className='text-green-600 font-bold text-lg lg:text-xl tracking-tight'>India Equity Network</h1>
+            <h2 className='text-blue-600 text-sm lg:text-lg font-semibold tracking-wide hidden sm:block'>
+              Indeqnet Private Limited
+            </h2>
           </div>
         </div> 
 
         {/* Desktop Navigation */}
-        <div className='hidden lg:flex items-center gap-4 '>
+        <div className='hidden lg:flex items-center gap-3'>
           {navItems.map((item) => (
             <Link 
               key={item.name}
               href={item.href}
-              className={`font-semibold transition-all duration-300 relative group px-2 py-1 rounded-lg ${
+              className={`font-semibold transition-all duration-300 relative group px-3 py-2 rounded-lg text-sm ${
                 activeLink === item.name 
                   ? 'text-green-500 scale-105 bg-green-50' 
                   : 'text-blue-500 hover:text-green-400 hover:bg-gray-50'
@@ -79,7 +82,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className='lg:hidden flex items-center sticky '>
+        <div className='lg:hidden flex items-center sticky'>
           <button
             onClick={toggleMobileMenu}
             className='flex flex-col justify-center items-center w-10 h-10 space-y-1.5'
@@ -107,12 +110,15 @@ const Navbar = () => {
             <Link
               key={item.name}
               href={item.href}
-              className={`block font-semibold transition-all duration-200 py-3 px-4 rounded-lg ${
+              className={`block font-semibold transition-all duration-200 py-3 px-4 rounded-lg text-sm ${
                 activeLink === item.name
                   ? 'text-green-500 bg-green-50 border-l-4 border-green-500'
                   : 'text-blue-500 hover:text-green-400 hover:bg-gray-50'
               }`}
-              onClick={() => handleNavClick(item.name)}
+              onClick={() => {
+                handleNavClick(item.name);
+                setIsMobileMenuOpen(false);
+              }}
             >
               {item.name}
             </Link>
@@ -121,13 +127,13 @@ const Navbar = () => {
       </div>
 
       {/* Modern Announcement Bar */}
-      <div className='border-b py-2 overflow-hidden bg-gray-50'>
+      <div className='border-b py-2 overflow-hidden bg-gradient-to-r from-blue-50 to-green-50'>
         <div className='animate-marquee whitespace-nowrap'>
           {announcements.map((announcement, index) => (
-            <span key={index} className='mx-4 lg:mx-8 text-black font-medium text-sm lg:text-l'>
+            <span key={index} className='mx-4 lg:mx-8 text-gray-700 font-medium text-sm lg:text-base'>
               {announcement}
               {index < announcements.length - 1 && (
-                <span className='mx-2 lg:mx-4 text-blue-300'>•</span>
+                <span className='mx-2 lg:mx-4 text-green-400'>•</span>
               )}
             </span>
           ))}
@@ -141,7 +147,7 @@ const Navbar = () => {
           100% { transform: translateX(-100%); }
         }
         .animate-marquee {
-          animation: marquee 30s linear infinite;
+          animation: marquee 40s linear infinite;
         }
         
         /* Pause animation on hover */
