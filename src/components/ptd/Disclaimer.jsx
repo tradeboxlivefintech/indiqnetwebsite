@@ -111,7 +111,7 @@ const Disclaimer = () => {
               <div className="border-l-4 border-green-400 pl-4 py-2">
                 <p className="font-semibold text-gray-900 mb-2">Research Analyst Status</p>
                 <p>
-                  INDEQNET PRIVATE LIMITED (Research Analyst) is an independent securities research company, 
+                 India Equity Network  (Research Analyst) is an independent securities research company, 
                   not an Investment Adviser.
                 </p>
               </div>
@@ -134,7 +134,7 @@ const Disclaimer = () => {
               <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
                 <p className="font-semibold text-gray-900 mb-2">Company Information</p>
                 <p className="text-sm">
-                  <span className="font-bold">INDEQNET PRIVATE LIMITED</span> may hold shares in companies discussed herein.
+                  <span className="font-bold">India Equity Network</span> may hold shares in companies discussed herein.
                   Past performance does not guarantee future results.
                 </p>
               </div>

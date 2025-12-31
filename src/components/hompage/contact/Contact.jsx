@@ -32,7 +32,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-gray-900">India Equity Network</h2>
-                <p className="text-gray-600 text-lg">Indeqnet Private Limited</p>
+                
               </div>
             </div>
 
@@ -46,7 +46,12 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">Phone</h3>
-                  <p className="text-gray-800 text-xl font-semibold mb-1">+91 XXXXX XXXXX</p>
+                  <a 
+                    href="tel:+918828320113"
+                    className="text-gray-800 text-xl font-semibold mb-1 block hover:text-blue-600 transition-colors"
+                  >
+                    +91 8828320113
+                  </a>
                   <div className="flex items-center gap-2 mt-3">
                     <Clock className="w-4 h-4 text-gray-500" />
                     <p className="text-gray-600 text-sm">Monday to Friday, 9 AM to 6 PM IST</p>
@@ -61,10 +66,15 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">Email</h3>
-                  <p className="text-gray-800 text-xl font-semibold mb-1">support@indeqnet.com</p>
+                  <a
+                    href="mailto:support@indeqnet.com"
+                    className="text-gray-800 text-xl font-semibold mb-1 block hover:text-blue-600 transition-colors"
+                  >
+                    support@indeqnet.com
+                  </a>
                   <div className="flex items-center gap-2 mt-3">
                     <Clock className="w-4 h-4 text-gray-500" />
-                    <p className="text-gray-600 text-sm">Response within 24-48 hours</p>
+                    <p className="text-gray-600 text-sm">Response within 24–48 hours</p>
                   </div>
                 </div>
               </div>
@@ -83,7 +93,7 @@ const ContactPage = () => {
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2"></div>
-                    <p className="text-gray-800 text-lg">201, RADHAKRISHNA, RADHA RESIDENCY,SIDDHARTH NAGER, BORIVALI - EAST,</p>
+                    <p className="text-gray-800 text-lg">201, RADHAKRISHNA, RADHA RESIDENCY,SIDDHARTH NAGAR, BORIVALI - EAST,</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2"></div>
@@ -112,7 +122,13 @@ const ContactPage = () => {
           {/* Disclaimer */}
           <div className="mt-12 text-center">
             <p className="text-gray-600">
-              All communications are handled with strict confidentiality and in accordance with our Privacy Policy.
+              All communications are handled with strict confidentiality and in accordance with our{' '}
+              <a 
+                href="/privacy-policy" 
+                className="text-emerald-600 hover:text-emerald-700 hover:underline font-medium"
+              >
+                Privacy Policy
+              </a>.
             </p>
           </div>
         </div>

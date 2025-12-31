@@ -116,7 +116,7 @@ const CompliancePage = () => {
                 </div>
                 
                 <div className="space-y-3 text-gray-700">
-                  <p className="text-lg"><strong>Indeqnet Private Limited</strong></p>
+                  
                   <p>CIN: ________</p>
                   <p>Registered Address: ____________________________</p>
                 </div>

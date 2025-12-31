@@ -126,8 +126,8 @@ const HomePage = () => {
                   <Clock className="w-5 h-5 text-white" />
                 </div>
                 <div className="text-left">
-                  <div className="text-white font-bold text-xl">30+ Years</div>
-                  <div className="text-gray-400 text-sm">Real Market Experience</div>
+                  <div className="text-white font-bold text-xl">75+ Years</div>
+                  <div className="text-gray-400 text-sm">Combined Market Experience</div>
                 </div>
               </div>
               
@@ -218,7 +218,7 @@ const HomePage = () => {
     const achievements = [
       { icon: <Shield />, value: "SEBI Registered", label: "Regulatory Compliance" },
       { icon: <GraduationCap />, value: "500+", label: "Trained Professionals" },
-      { icon: <Briefcase />, value: "30+ Years", label: "Collective Experience" },
+      { icon: <Briefcase />, value: "75+ Years", label: "Cumulative Market Experience" },
       { icon: <Users />, value: "1000+", label: "Community Members" }
     ];
 
@@ -259,7 +259,7 @@ const HomePage = () => {
                       Who We Are
                     </h3>
                     <p className="text-gray-700 text-lg leading-relaxed">
-                      India Equity Network <span className="text-emerald-600 font-bold">(Indeqnet Private Limited)</span> brings together regulated research, practical education, and values-driven community learning.
+                      <span className="text-emerald-600 font-bold"> India Equity Network</span> brings together regulated research, practical education, and values-driven community learning.
                     </p>
                   </div>
                 </div>
@@ -267,7 +267,7 @@ const HomePage = () => {
                 <div className="space-y-6">
                   <div className="bg-gradient-to-r from-emerald-50 to-cyan-50 p-6 rounded-xl border-l-4 border-emerald-500">
                     <p className="text-gray-800 text-xl font-semibold">
-                      "Our ethos is grounded in quiet depth, discipline, and long-term clarity — not noise or hype."
+                    “We exist to simplify the markets for India&apos;s next generation of investors and traders”
                     </p>
                   </div>
                   
@@ -276,7 +276,7 @@ const HomePage = () => {
                     className="group w-full sm:w-auto bg-gradient-to-r from-gray-900 to-gray-800 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]"
                   >
                     <span className="flex items-center justify-center gap-3 text-lg">
-                      Discover Our Full Story
+                      Discover Our Story
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
                     </span>
                   </button>
@@ -314,19 +314,19 @@ const HomePage = () => {
   const VerticalsSection = () => {
     const verticals = [
       {
-        title: "marketgAInz",
+        title: "Advisory & Research Desk",
         subtitle: "SEBI Registered Research Analyst",
         description: "The regulated advisory division providing SEBI-compliant, framework-based equity research focused on clarity, documentation, and disciplined analysis.",
         icon: <Shield className="w-10 h-10" />,
         color: "from-emerald-500 to-emerald-600",
         bgColor: "bg-emerald-50",
         borderColor: "border-emerald-200",
-        buttonText: "View Advisory Services",
+        buttonText: "Explore As Others..",
         route: "/marketgainz",
         disclaimer: "SEBI RA Registration No: ______. No guaranteed returns. Market risks apply."
       },
       {
-        title: "ISSMA",
+        title: "Integrated School of Stock Market Analytics (Training & Fellowship)",
         subtitle: "Integrated School of Stock Markets & Analytics",
         description: "The learning and training division delivering structured market education, financial literacy, and skill-building rooted in real market practice.",
         icon: <BookOpen className="w-10 h-10" />,
@@ -338,7 +338,7 @@ const HomePage = () => {
         disclaimer: "ISSMA offers education only. No stock tips, calls, or advisory."
       },
       {
-        title: "India Elite Summit",
+        title: "Flagship Events",
         subtitle: "Community Events Division",
         description: "A quiet, invitation-only gathering for thoughtful market practitioners designed for reflection, learning, and alignment — not promotion.",
         icon: <Users className="w-10 h-10" />,
@@ -479,7 +479,7 @@ const HomePage = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
               <div className="w-16 h-1 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full"></div>
               <span className="text-emerald-600 font-bold text-xl">— NS Fidai</span>
-              <span className="text-gray-600 text-lg">#NoCapitalNoCapitalMarkets</span>
+              <span className="text-gray-900 font-extrabold text-lg">#NoCapitalNoCapitalMarkets</span>
               <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-full"></div>
             </div>
           </div>

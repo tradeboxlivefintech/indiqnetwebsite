@@ -57,7 +57,7 @@ const AboutPage = () => {
             <div className="space-y-8">
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200">
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                  <span className="text-emerald-600 font-bold">India Equity Network (Indeqnet Private Limited)</span> was founded after more than 30 years of deep engagement with Indian equity markets.
+                  <span className="text-emerald-600 font-bold">India Equity Network </span> was founded after more than 30 years of deep engagement with Indian equity markets.
                 </p>
                 
                 <div className="bg-gradient-to-r from-emerald-50 to-cyan-50 p-6 rounded-xl border-l-4 border-emerald-500 mb-8">
@@ -86,7 +86,7 @@ const AboutPage = () => {
                 </div>
                 
                 <div className="pt-6 border-t border-gray-200">
-                  <p className="text-gray-700 text-lg font-semibold mb-4">
+                  <p className="text-green-700 text-lg font-semibold mb-4">
                     We do not believe in noise, hype, shortcuts, or inflated claims.
                   </p>
                   <p className="text-gray-700 text-lg">

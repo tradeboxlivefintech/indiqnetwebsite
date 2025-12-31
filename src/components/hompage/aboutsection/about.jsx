@@ -92,7 +92,7 @@ const About = () => {
             <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-200">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                <span className="font-bold text-blue-600">Indeqnet Private Limited (IPL)</span> is dedicated to providing premium, knowledge-driven experiences that are both accessible and affordable. We empower market participants with insightful strategies, practical expertise, and invaluable networking opportunities.
+                <span className="font-bold text-blue-600">India Equity Network</span> is dedicated to providing premium, knowledge-driven experiences that are both accessible and affordable. We empower market participants with insightful strategies, practical expertise, and invaluable networking opportunities.
               </p>
               
               <div className="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500 p-4 rounded-r-lg">

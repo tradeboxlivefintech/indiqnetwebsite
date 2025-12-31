@@ -10,6 +10,7 @@ import {
   Users,
   Building,
   Info
+  ,BlendIcon
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -22,12 +23,12 @@ const Footer = () => {
   const mandatoryLinks = [
     { 
       name: "Privacy Policy", 
-      href: "/",
+      href: "/important/PrivacyPolicy",
       icon: <Shield className="w-4 h-4" />
     },
     { 
-      name: "Terms", 
-      href: "/",
+      name: "Terms and Conditions", 
+      href: "/important/termsandconditions",
       icon: <FileText className="w-4 h-4" />
     },
     { 
@@ -39,6 +40,19 @@ const Footer = () => {
       name: "Code of Conduct", 
       href: "/important/codeofconduct",
       icon: <Users className="w-4 h-4" />
+    },
+    { 
+      name: "Blogs", 
+      href: "/",
+      icon: <BlendIcon className="w-4 h-4" />
+    },{ 
+      name: "Grienvance officer", 
+      href: "/important/Grienvanceofficer",
+      icon: <BlendIcon className="w-4 h-4" />
+    },{ 
+      name: "Refund & Cancelation Policy", 
+      href: "/important/refundandcancelationpolicy",
+      icon: <BlendIcon className="w-4 h-4" />
     }
   ];
 
@@ -65,7 +79,7 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-bold text-white mb-1">India Equity Network</h3>
               <p className="text-gray-300 text-sm mb-2">
-                Indeqnet Private Limited (CIN: ________)
+                (CIN: ________)
               </p>
               
               <div className="space-y-1 text-xs text-gray-400">
@@ -89,9 +103,9 @@ const Footer = () => {
               Contact
             </h4>
             <div className="space-y-2 text-xs">
-              <a href="tel:+91XXXXXXXXXX" className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center gap-2">
+              <a href="tel:+918828320113" className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center gap-2">
                 <Phone className="w-3 h-3" />
-                +91 XXXXX XXXXX
+                +918828320113
               </a>
               <a href="mailto:support@indeqnet.com" className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center gap-2">
                 <Mail className="w-3 h-3" />
@@ -99,11 +113,14 @@ const Footer = () => {
               </a>
               <div className="text-gray-300 flex items-start gap-2">
                 <Building className="w-3 h-3 mt-0.5" />
-                <span>201, RADHAKRISHNA, RADHA RESIDENCY,SIDDHARTH NAGER, BORIVALI - EAST,
-
-MUMBAI, MAHARASHTRA - 400066
-
-India</span>
+                <span>
+    201, RADHAKRISHNA, RADHA RESIDENCY,
+    SIDDHARTH NAGAR, BORIVALI - EAST,
+    <br />
+    MUMBAI, MAHARASHTRA - 400066
+    <br />
+    India
+  </span>
               </div>
             </div>
           </div>
@@ -170,7 +187,7 @@ India</span>
           <div className="flex flex-col md:flex-row justify-between items-center gap-3">
             {/* Copyright */}
             <div className="text-gray-400 text-xs order-2 md:order-1">
-              © {currentYear} India Equity Network | Indeqnet Private Limited
+              © {currentYear} India Equity Network 
             </div>
 
             {/* Compact Legal Links */}
