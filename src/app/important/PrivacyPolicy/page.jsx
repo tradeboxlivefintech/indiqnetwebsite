@@ -49,7 +49,7 @@ const PrivacyPolicy = () => {
             </div>
           </div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Your privacy and trust are fundamental to our operations at IndeqNet and its verticals
+            Your privacy and trust are fundamental to our operations at Indeqnet and its verticals
           </p>
           <div className="w-20 h-1.5 bg-gradient-to-r from-blue-400 to-emerald-400 mx-auto rounded-full mt-8"></div>
         </div>
@@ -69,7 +69,7 @@ const PrivacyPolicy = () => {
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Privacy Matters</h2>
                   <p className="text-gray-700">
-                    This Privacy Policy explains how IndeqNet, operating under the brand India Equity Network and its verticals — MarketGAInz (Advisory Desk), India Elite Summit (Events & Community), and ISSMA – Integrated School of Stock Markets Analytics (Training & Academy) — collects, uses, stores, discloses and protects your personal information.
+                    This Privacy Policy explains how Indeqnet, operating under the brand India Equity Network and its verticals — MarketgAInz (Advisory Desk), India Elite Summit (Events & Community), and ISSMA – Integrated School of Stock Markets Analytics (Training & Academy) — collects, uses, stores, discloses and protects your personal information.
                   </p>
                   <div className="mt-4 p-4 bg-white/70 rounded-lg border border-blue-100">
                     <p className="text-gray-600 text-sm">
@@ -93,7 +93,7 @@ const PrivacyPolicy = () => {
                 <div className="space-y-6">
                   <div>
                     <p className="text-gray-800 text-lg mb-4">
-                      This Privacy Policy governs all websites and services owned and operated by IndeqNet, the registered legal entity of India Equity Network. Throughout this document, terms such as "we", "our", and "us" refer to IndeqNet and its operational verticals.
+                      This Privacy Policy governs all websites and services owned and operated by Indeqnet, the registered legal entity of India Equity Network. Throughout this document, terms such as "we", "our", and "us" refer to Indeqnet and its operational verticals.
                     </p>
                   </div>
 
@@ -253,7 +253,7 @@ const PrivacyPolicy = () => {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Compliance Commitment</h3>
                   <p className="text-gray-700">
-                    All communications from IndeqNet and its verticals are intended for informational, educational and research purposes only.
+                    All communications from Indeqnet and its verticals are intended for informational, educational and research purposes only.
                   </p>
                 </div>
                 

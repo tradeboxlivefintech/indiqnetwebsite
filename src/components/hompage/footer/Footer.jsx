@@ -46,7 +46,7 @@ const Footer = () => {
       href: "/",
       icon: <BlendIcon className="w-4 h-4" />
     },{ 
-      name: "Grienvance officer", 
+      name: "Grievance officer", 
       href: "/important/Grienvanceofficer",
       icon: <BlendIcon className="w-4 h-4" />
     },{ 

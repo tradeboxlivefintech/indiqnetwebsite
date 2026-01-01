@@ -71,7 +71,7 @@ const TermsAndConditions = () => {
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Important Legal Notice</h3>
                   <p className="text-gray-800 mb-3">
-                    These Terms & Conditions ("Terms") govern your access to and use of all services operated by IndeqNet under India Equity Network.
+                    These Terms & Conditions ("Terms") govern your access to and use of all services operated by Indeqnet under India Equity Network.
                   </p>
                   <div className="p-4 bg-white/70 rounded-lg border border-indigo-100">
                     <p className="text-gray-600">
@@ -95,7 +95,7 @@ const TermsAndConditions = () => {
                 <div className="space-y-6">
                   <div>
                     <p className="text-gray-800 text-lg">
-                      "IndeqNet", "India Equity Network", "MarketGAInz", "India Elite Summit", and "ISSMA" are used for branding clarity; however, the legal contracting entity is:
+                      "Indeqnet", "India Equity Network", "MarketGAInz", "India Elite Summit", and "ISSMA" are used for branding clarity; however, the legal contracting entity is:
                     </p>
                   </div>
 
@@ -105,7 +105,7 @@ const TermsAndConditions = () => {
                         <Building className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h4 className="text-xl font-bold text-gray-900 mb-2">IndeqNet</h4>
+                        <h4 className="text-xl font-bold text-gray-900 mb-2">Indeqnet</h4>
                         <div className="space-y-2">
                           <div className="flex items-start gap-3">
                             <MapPin className="w-5 h-5 text-gray-500 mt-1" />
@@ -247,7 +247,7 @@ const TermsAndConditions = () => {
                   </div>
                   <div className="flex items-start gap-2">
                     <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2"></div>
-                    <span className="text-gray-800">Decisions at sole discretion of IndeqNet</span>
+                    <span className="text-gray-800">Decisions at sole discretion of Indeqnet</span>
                   </div>
                 </div>
               </div>
@@ -398,7 +398,7 @@ const TermsAndConditions = () => {
                 <div className="space-y-6">
                   <div>
                     <p className="text-gray-800 text-lg">
-                      To the maximum extent permitted by law, IndeqNet shall not be liable for:
+                      To the maximum extent permitted by law, Indeqnet shall not be liable for:
                     </p>
                   </div>
 
