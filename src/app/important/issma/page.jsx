@@ -1,10 +1,29 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { useRouter } from "next/navigation"
-import { ArrowRight, BookOpen, Users, Brain, Target, BarChart3, TrendingUp, ChevronRight, GraduationCap, Calendar, Clock, Zap, Shield, Award, FileText, Lightbulb, Layers, PieChart, LineChart, Database, Globe, Users as UsersIcon, Video, Book, Mail, CheckCircle, XCircle, AlertTriangle, Rocket } from 'lucide-react'
+import { 
+  ArrowRight, BookOpen, Users, Brain, Target, BarChart3, 
+  TrendingUp, ChevronRight, GraduationCap, Calendar, Clock, 
+  Zap, Shield, Award, FileText, Lightbulb, Layers, PieChart, 
+  LineChart, Database, Globe, Users as UsersIcon, Video, 
+  Book, Mail, CheckCircle, XCircle, AlertTriangle, Rocket,
+  ChevronDown, ChevronUp, Briefcase, Gift, Flame, Crown,
+  Clock3, Wallet, Star, Sparkles, Medal, Trophy, Gem,
+  BookMarked, ScrollText, BadgeCheck, Workflow, GanttChart,
+  CandlestickChart, LineChart as LineChartIcon, Activity,
+  TrendingUp as TrendingUpIcon, BarChartBig, Network,
+  Grid, List, Table2, Filter, Search, Eye, EyeOff,
+  Layers3, Library, School, Binary, Sigma, Calculator,
+  Gauge, LineChart as LineChart2, PieChart as PieChart2,
+  TrendingUp as TrendingUp2, BarChart4, Presentation
+} from 'lucide-react'
 
 const ISSMApage = () => {
   const router = useRouter();
+  const [activeTab, setActiveTab] = useState('all');
+  const [selectedCourse, setSelectedCourse] = useState(null);
+  const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'list'
+  const [hoveredCourse, setHoveredCourse] = useState(null);
 
   const teachingPhilosophy = [
     { icon: <Layers className="w-6 h-6" />, title: "Depth over shortcuts", desc: "Comprehensive understanding over quick fixes" },
@@ -12,17 +31,6 @@ const ISSMApage = () => {
     { icon: <Brain className="w-6 h-6" />, title: "Behavior + risk + system design", desc: "Holistic approach integrating psychology, risk, and systems" },
     { icon: <Shield className="w-6 h-6" />, title: "Ethical, value-driven training", desc: "Education grounded in principles and integrity" },
     { icon: <Globe className="w-6 h-6" />, title: "Real-world market understanding", desc: "Practical insights from actual market experience" }
-  ];
-
-  const whatWeTeach = [
-    { icon: <BookOpen className="w-6 h-6" />, title: "Market basics & financial literacy", desc: "Foundational knowledge for market participation" },
-    { icon: <BarChart3 className="w-6 h-6" />, title: "Technical & Fundamental frameworks", desc: "Comprehensive analysis methodologies" },
-    { icon: <Target className="w-6 h-6" />, title: "System design & execution", desc: "Creating and implementing trading systems" },
-    { icon: <Database className="w-6 h-6" />, title: "Data-driven analysis", desc: "Making decisions based on empirical evidence" },
-    { icon: <PieChart className="w-6 h-6" />, title: "Portfolio construction principles", desc: "Strategic asset allocation and management" },
-    { icon: <Brain className="w-6 h-6" />, title: "Behavioral finance", desc: "Understanding psychological factors in markets" },
-    { icon: <Zap className="w-6 h-6" />, title: "Psychology of discipline", desc: "Developing mental fortitude for consistent execution" },
-    { icon: <UsersIcon className="w-6 h-6" />, title: "Practical implementation workshops", desc: "Hands-on application of learned concepts" }
   ];
 
   const programFormats = [
@@ -34,310 +42,1045 @@ const ISSMApage = () => {
     { icon: <Video className="w-6 h-6" />, title: "Online modules & analytics tools", desc: "Digital learning platforms (Future)" }
   ];
 
+  const courseCategories = [
+    { id: 'all', name: 'All Courses', icon: <Library className="w-4 h-4" /> },
+    { id: 'foundation', name: 'Foundation', icon: <School className="w-4 h-4" /> },
+    { id: 'technical', name: 'Technical Analysis', icon: <LineChart2 className="w-4 h-4" /> },
+    { id: 'fundamental', name: 'Fundamental Analysis', icon: <PieChart2 className="w-4 h-4" /> },
+    { id: 'derivatives', name: 'Futures & Options', icon: <Binary className="w-4 h-4" /> },
+    { id: 'internship', name: 'Internship', icon: <Briefcase className="w-4 h-4" /> }
+  ];
+
+  const courses = [
+    {
+      id: 1,
+      category: 'foundation',
+      level: "FOUNDATION COURSE",
+      title: "Basic Financial Literacy & Introduction to Stock Markets",
+      shortTitle: "Financial Literacy",
+      subtitle: "A Foundation Course for Every Individual",
+      icon: <BookOpen className="w-8 h-8" />,
+      color: "emerald",
+      gradient: "from-emerald-500 to-teal-500",
+      lightGradient: "from-emerald-50 to-teal-50",
+      borderColor: "border-emerald-200",
+      badgeColor: "bg-emerald-100 text-emerald-700",
+      duration: "3 hours",
+      format: "Live/online session with recorded access",
+      fee: "₹999 + GST",
+      students: "Beginners",
+      rating: 4.8,
+      image: "/issma/course1.png",
+      philosophy: [
+        "Why savings and capital protection come first",
+        "The role of insurance before wealth creation",
+        "How businesses operate, grow, and raise money",
+        "How ownership works in private and public companies"
+      ],
+      features: [
+        "Understanding money, savings, protection, business, capital, and ownership",
+        "Markets explained as systems of ownership and valuation",
+        "Live/online session with recorded access for revision",
+        "Guided discussions for conceptual clarity"
+      ],
+      assessment: "Single comprehensive evaluation after course completion",
+      benefit: "100% of ₹999 adjusted against next course fee",
+      target: ["Students and young earners", "Individuals with no formal financial education", "Anyone seeking clarity before investing", "Families wanting to build healthy financial habits"],
+      description: `This course is a financial literacy and awareness program created for individuals who want to build a clear, safe, and grounded understanding of money and markets—before taking any financial decisions.
+      
+Most people are expected to manage savings, insurance, risk, and investments throughout life, yet financial education is rarely taught formally. This course exists to bridge that gap.`
+    },
+    {
+      id: 2,
+      category: 'technical',
+      level: "BASIC TECHNICAL ANALYSIS",
+      title: "Price, Charts & Market Structure",
+      shortTitle: "Basic Technical Analysis",
+      subtitle: "Understanding How Price Moves",
+      icon: <LineChart className="w-8 h-8" />,
+      color: "blue",
+      gradient: "from-blue-500 to-cyan-500",
+      lightGradient: "from-blue-50 to-cyan-50",
+      borderColor: "border-blue-200",
+      badgeColor: "bg-blue-100 text-blue-700",
+      duration: "16 hours (4 hours/week × 4 weeks)",
+      format: "Live/online sessions with recorded access",
+      fee: "₹4,999 + GST",
+      students: "Intermediate",
+      rating: 4.7,
+      image: "/issma/course2.png",
+      features: [
+        "Study price movement using candlestick, bar, line, and Renko charts",
+        "Read and interpret price behaviour across charts",
+        "Application and interpretation of indicators and oscillators",
+        "Understanding price and volume action together",
+        "Core technical analysis tools and their limitations",
+        "Structured and disciplined approach to reading charts"
+      ],
+      assessment: "Module-wise MCQ tests + Final assessment",
+      outcome: "Read and interpret charts with clear understanding of price and volume behaviour"
+    },
+    {
+      id: 3,
+      category: 'technical',
+      level: "ADVANCED TECHNICAL ANALYSIS",
+      title: "Strategies, Application & Systematic Thinking",
+      shortTitle: "Advanced Technical Analysis",
+      subtitle: "From Reading Charts to Using Technical Analysis",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "purple",
+      gradient: "from-purple-500 to-pink-500",
+      lightGradient: "from-purple-50 to-pink-50",
+      borderColor: "border-purple-200",
+      badgeColor: "bg-purple-100 text-purple-700",
+      duration: "24 hours (4 hours/week × 6 weeks)",
+      format: "Live/online sessions with recorded access",
+      fee: "₹30,000 + GST",
+      students: "Advanced",
+      rating: 4.9,
+      image: "/issma/course3.png",
+      features: [
+        "Converting technical concepts into practical trading strategies",
+        "Applying indicators, price action, and volume in real scenarios",
+        "Understanding strategy behaviour across market conditions",
+        "Introduction to systematic and rule-based approaches",
+        "Testing and refining strategies for consistency",
+        "Elliott Wave Theory: market structure, impulse and corrective phases"
+      ],
+      combined: {
+        with: "Course 2 (Basic Technical Analysis)",
+        fee: "₹24,999 + GST"
+      },
+      assessment: "Module-wise assessments + Final MCQ evaluation"
+    },
+    {
+      id: 4,
+      category: 'fundamental',
+      level: "BASIC FUNDAMENTAL ANALYSIS",
+      title: "Understanding Business Numbers",
+      shortTitle: "Basic Fundamental Analysis",
+      subtitle: "Familiarity with Financial Information",
+      icon: <PieChart className="w-8 h-8" />,
+      color: "amber",
+      gradient: "from-amber-500 to-orange-500",
+      lightGradient: "from-amber-50 to-orange-50",
+      borderColor: "border-amber-200",
+      badgeColor: "bg-amber-100 text-amber-700",
+      duration: "16 hours (4 hours/week × 4 weeks)",
+      format: "Live online sessions with recorded access",
+      fee: "₹4,999 + GST",
+      students: "Intermediate",
+      rating: 4.6,
+      image: "/issma/course4.png",
+      features: [
+        "What Fundamental Analysis is and where it's used",
+        "How businesses report financial information",
+        "Structure of P&L, Balance Sheet, Cash Flow Statement",
+        "Common accounting terminology",
+        "Introduction to financial ratios",
+        "Understanding annual report presentation"
+      ],
+      assessment: "Module-wise MCQ tests + Final assessment",
+      note: "Focus on terminology, structure, and familiarity, not interpretation"
+    },
+    {
+      id: 5,
+      category: 'fundamental',
+      level: "FUNDAMENTAL ANALYSIS",
+      title: "Business Understanding & Portfolio Logic",
+      shortTitle: "Advanced Fundamental Analysis",
+      subtitle: "Analyzing Businesses Like Long-Term Investors",
+      icon: <Database className="w-8 h-8" />,
+      color: "red",
+      gradient: "from-red-500 to-rose-500",
+      lightGradient: "from-red-50 to-rose-50",
+      borderColor: "border-red-200",
+      badgeColor: "bg-red-100 text-red-700",
+      duration: "36 hours (3 hours/week × 12 weeks)",
+      format: "Live/online sessions with recorded access",
+      fee: "₹30,000 + GST",
+      students: "Advanced",
+      rating: 4.8,
+      image: "/issma/course5.png",
+      features: [
+        "Assessing business quality, durability, and positioning",
+        "Reading financial statements with analytical intent",
+        "Understanding business and sector cyclicality",
+        "Evaluating management quality and governance",
+        "Core valuation concepts and their limitations",
+        "Portfolio structuring and capital preservation",
+        "Off-balance sheet items and hidden risks"
+      ],
+      combined: {
+        with: "Course 4 (Basic Fundamental Analysis)",
+        fee: "₹24,999 + GST"
+      },
+      assessment: "Module-wise assessments + Final evaluation"
+    },
+    {
+      id: 6,
+      category: 'derivatives',
+      level: "BASICS OF FUTURES & OPTIONS",
+      title: "Clear, Simple Introduction to Derivatives",
+      shortTitle: "Basics of F&O",
+      subtitle: "Understanding What Derivatives Are",
+      icon: <Zap className="w-8 h-8" />,
+      color: "yellow",
+      gradient: "from-yellow-500 to-amber-500",
+      lightGradient: "from-yellow-50 to-amber-50",
+      borderColor: "border-yellow-200",
+      badgeColor: "bg-yellow-100 text-yellow-700",
+      duration: "8 hours (4 hours/day × 2 days)",
+      format: "Live/online sessions with recorded access",
+      fee: "₹4,999 + GST",
+      students: "Intermediate",
+      rating: 4.5,
+      image: "/issma/course6.png",
+      features: [
+        "What Futures and Options are and why they exist",
+        "Difference between trading shares and derivatives",
+        "Basic structure of F&O contracts",
+        "Key terminology: strike price, premium, expiry",
+        "ITM, ATM, OTM concepts",
+        "Understanding option chains, OI, and PCR"
+      ],
+      assessment: "Module-wise assessments + Final evaluation"
+    },
+    {
+      id: 7,
+      category: 'derivatives',
+      level: "ADVANCED FUTURES & OPTIONS",
+      title: "Pricing, Volatility & Risk-Based Application",
+      shortTitle: "Advanced F&O",
+      subtitle: "Structured, Practical Application of Derivatives",
+      icon: <Flame className="w-8 h-8" />,
+      color: "orange",
+      gradient: "from-orange-500 to-red-500",
+      lightGradient: "from-orange-50 to-red-50",
+      borderColor: "border-orange-200",
+      badgeColor: "bg-orange-100 text-orange-700",
+      duration: "24 hours (4 hours/week × 6 weeks)",
+      format: "Live/online sessions with recorded access",
+      fee: "₹30,000 + GST",
+      students: "Advanced",
+      rating: 4.7,
+      image: "/issma/course7.png",
+      features: [
+        "How market conditions affect derivative behaviour",
+        "Volatility's role in option pricing",
+        "Option Greeks: Delta, Gamma, Theta, Vega",
+        "Introduction to Black-Scholes Model",
+        "Position analysis using price and Open Interest",
+        "Integrating F&O with Technical and Fundamental analysis"
+      ],
+      combined: {
+        with: "Course 6 (Basics of Futures & Options)",
+        fee: "₹24,999 + GST"
+      },
+      assessment: "Module-wise assessments + Final evaluation"
+    },
+    {
+      id: 8,
+      category: 'advanced',
+      level: "ANALYSIS THAT WORKS",
+      title: "Recorded Master Program",
+      shortTitle: "Master Program",
+      subtitle: "Integrated Technical & Fundamental Market Learning",
+      icon: <Crown className="w-8 h-8" />,
+      color: "indigo",
+      gradient: "from-indigo-500 to-purple-500",
+      lightGradient: "from-indigo-50 to-purple-50",
+      borderColor: "border-indigo-200",
+      badgeColor: "bg-indigo-100 text-indigo-700",
+      duration: "150+ hours (54 recorded sessions)",
+      format: "Recorded program with 6 query sessions over 3 months",
+      fee: "₹49,999 + GST",
+      students: "All Levels",
+      rating: 4.9,
+      image: "/issma/course8.png",
+      features: [
+        "54 live recorded sessions with 150+ hours content",
+        "Technical Analysis: price behaviour, market structure",
+        "Speed Analysis: A–Z NSE chart scanning",
+        "Fundamental Analysis: beyond surface numbers",
+        "Off-balance sheet items and hidden risks",
+        "Frameworks for spotting long-term wealth creators",
+        "Options timing and risk management",
+        "Trading psychology and behavioural biases"
+      ],
+      internship: {
+        unpaid: "₹74,999 + GST (3 months unpaid internship)",
+        paid: "₹1,49,999 + GST (3 months paid internship)"
+      },
+      assessment: "Self-paced with 6 query resolution sessions over 3 months"
+    },
+    {
+      id: 9,
+      category: 'internship',
+      level: "MARKET & INDUSTRY READINESS INTERNSHIP",
+      title: "Paid Internship with Practical Market Exposure",
+      shortTitle: "Industry Internship",
+      subtitle: "Real-World Exposure to Capital Markets",
+      icon: <Briefcase className="w-8 h-8" />,
+      color: "emerald",
+      gradient: "from-emerald-500 to-green-500",
+      lightGradient: "from-emerald-50 to-green-50",
+      borderColor: "border-emerald-200",
+      badgeColor: "bg-emerald-100 text-emerald-700",
+      duration: "3 months",
+      format: "Online/Offline (subject to availability)",
+      fee: "₹2,00,000 + GST (Includes all courses + internship)",
+      students: "Advanced",
+      rating: 5.0,
+      image: "/issma/course9.png",
+      features: [
+        "Guaranteed 3-month paid internship",
+        "Exposure to real market-related work",
+        "Understanding analysis, research, and market processes",
+        "Developing professional discipline and reporting skills",
+        "Market research and data analysis",
+        "Assisting in technical and fundamental analysis",
+        "Compliance awareness and ethical boundaries"
+      ],
+      prerequisite: "Completion of all courses",
+      outcome: "Internship completion certificate with experience recognition"
+    }
+  ];
+
+  const filteredCourses = activeTab === 'all' 
+    ? courses 
+    : courses.filter(course => course.category === activeTab);
+
+  const getColorClasses = (color) => {
+    const colors = {
+      emerald: {
+        bg: 'bg-emerald-500',
+        light: 'bg-emerald-50',
+        text: 'text-emerald-600',
+        border: 'border-emerald-200',
+        gradient: 'from-emerald-500 to-teal-500',
+        badge: 'bg-emerald-100 text-emerald-700'
+      },
+      blue: {
+        bg: 'bg-blue-500',
+        light: 'bg-blue-50',
+        text: 'text-blue-600',
+        border: 'border-blue-200',
+        gradient: 'from-blue-500 to-cyan-500',
+        badge: 'bg-blue-100 text-blue-700'
+      },
+      purple: {
+        bg: 'bg-purple-500',
+        light: 'bg-purple-50',
+        text: 'text-purple-600',
+        border: 'border-purple-200',
+        gradient: 'from-purple-500 to-pink-500',
+        badge: 'bg-purple-100 text-purple-700'
+      },
+      amber: {
+        bg: 'bg-amber-500',
+        light: 'bg-amber-50',
+        text: 'text-amber-600',
+        border: 'border-amber-200',
+        gradient: 'from-amber-500 to-orange-500',
+        badge: 'bg-amber-100 text-amber-700'
+      },
+      red: {
+        bg: 'bg-red-500',
+        light: 'bg-red-50',
+        text: 'text-red-600',
+        border: 'border-red-200',
+        gradient: 'from-red-500 to-rose-500',
+        badge: 'bg-red-100 text-red-700'
+      },
+      yellow: {
+        bg: 'bg-yellow-500',
+        light: 'bg-yellow-50',
+        text: 'text-yellow-600',
+        border: 'border-yellow-200',
+        gradient: 'from-yellow-500 to-amber-500',
+        badge: 'bg-yellow-100 text-yellow-700'
+      },
+      orange: {
+        bg: 'bg-orange-500',
+        light: 'bg-orange-50',
+        text: 'text-orange-600',
+        border: 'border-orange-200',
+        gradient: 'from-orange-500 to-red-500',
+        badge: 'bg-orange-100 text-orange-700'
+      },
+      indigo: {
+        bg: 'bg-indigo-500',
+        light: 'bg-indigo-50',
+        text: 'text-indigo-600',
+        border: 'border-indigo-200',
+        gradient: 'from-indigo-500 to-purple-500',
+        badge: 'bg-indigo-100 text-indigo-700'
+      }
+    };
+    return colors[color] || colors.blue;
+  };
+
   return (
     <main className="bg-gradient-to-b from-white to-gray-50">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900 via-gray-800 to-cyan-900 text-white overflow-hidden">
-  <div className="absolute inset-0 opacity-10">
-    <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
-    <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500 rounded-full blur-3xl"></div>
-  </div>
-  
-  <div className="relative max-w-7xl mx-auto">
-    <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-      {/* Left Side */}
-      <div className="lg:w-1/2">
-        <div className="mb-6">
-          <span className="inline-block px-4 py-2 bg-blue-500/20 text-blue-300 font-medium rounded-full text-sm border border-blue-500/30">
-            DIVISION OF INDIA EQUITY NETWORK
-          </span>
+      {/* Hero Section with Parallax Effect */}
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900 via-indigo-900 to-cyan-900 text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
         </div>
         
-        <div className="mb-8">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
-            <span className="text-white">ISS</span>
-            <span className="text-cyan-400">MA</span>
-          </h1>
-          <div className="w-32 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
-        </div>
-        
-        <p className="text-gray-300 text-xl mb-10 max-w-xl">
-          Integrated School of Stock Markets & Analytics
-        </p>
-        
-        <div className="flex items-center gap-6">
-          <div className="text-center">
-            <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-3">
-              <GraduationCap className="w-7 h-7 text-white" />
-            </div>
-            <div className="text-white font-bold">Education</div>
-            <div className="text-blue-300 text-sm">Only</div>
-          </div>
-          
-          <div className="h-12 w-px bg-gray-700"></div>
-          
-          <div className="text-center">
-            <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-3">
-              <Shield className="w-7 h-7 text-white" />
-            </div>
-            <div className="text-white font-bold">No Advisory</div>
-            <div className="text-cyan-300 text-sm">Services</div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Right Side */}
-      <div className="lg:w-1/2">
-        <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30">
-          <h2 className="text-2xl font-bold text-white mb-6">Our Educational Focus</h2>
-          
-          <div className="space-y-6">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Target className="w-6 h-6 text-blue-300" />
+        <div className="relative max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div className="lg:w-1/2">
+              <div className="mb-6 animate-fade-in">
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm text-white font-medium rounded-full text-sm border border-white/20">
+                  <Sparkles className="w-4 h-4" />
+                  DIVISION OF INDIA EQUITY NETWORK
+                </span>
               </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-2">Market Skills</h3>
-                <p className="text-gray-300">Practical skills for market understanding and analysis</p>
+              
+              <div className="mb-8">
+                <h1 className="text-5xl md:text-7xl font-bold mb-4">
+                  <span className="text-white">ISS</span>
+                  <span className="text-cyan-400">MA</span>
+                </h1>
+                <div className="w-32 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
+              </div>
+              
+              <p className="text-gray-300 text-2xl mb-6 max-w-xl font-light">
+                Integrated School of Stock Market Analytics
+              </p>
+              
+              <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+                The training and education vertical of India Equity Network.
+                Courses structured in progressive levels for foundational to applied market work.
+              </p>
+              
+              <div className="flex flex-wrap items-center gap-8">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                    <GraduationCap className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-white font-bold text-xl">Education</div>
+                    <div className="text-blue-300">Only</div>
+                  </div>
+                </div>
+                
+                <div className="w-px h-12 bg-white/20"></div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-500/30">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-white font-bold text-xl">No Advisory</div>
+                    <div className="text-cyan-300">Services</div>
+                  </div>
+                </div>
               </div>
             </div>
             
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                <BookOpen className="w-6 h-6 text-cyan-300" />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-2">Financial Literacy</h3>
-                <p className="text-gray-300">Building foundational knowledge for informed decisions</p>
+            <div className="lg:w-1/2">
+              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
+                <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                  <Award className="w-6 h-6 text-cyan-400" />
+                  Training & Education Vertical
+                </h2>
+                
+                <div className="space-y-4">
+                  {[
+                    "All programs designed for learning and skill development",
+                    "Structured market understanding",
+                    "No guarantees, promises, or outcome assurances"
+                  ].map((text, index) => (
+                    <div key={index} className="flex items-start gap-3 text-gray-200">
+                      <div className="w-5 h-5 rounded-full bg-cyan-500/20 flex items-center justify-center mt-0.5">
+                        <CheckCircle className="w-3 h-3 text-cyan-400" />
+                      </div>
+                      <span>{text}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-white/20">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white">9+</div>
+                    <div className="text-sm text-gray-400">Courses</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white">150+</div>
+                    <div className="text-sm text-gray-400">Hours</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white">100%</div>
+                    <div className="text-sm text-gray-400">Practical</div>
+                  </div>
+                </div>
               </div>
             </div>
-            
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Brain className="w-6 h-6 text-emerald-300" />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-2">Structured Learning</h3>
-                <p className="text-gray-300">Systematic approach to market education</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-8 pt-6 border-t border-blue-500/20">
-            <p className="text-gray-400 text-sm italic">
-              "No investment advice or stock recommendations. Pure education only."
-            </p>
           </div>
         </div>
-      </div>
-    </div>
-    
-    {/* Decorative Element */}
-    <div className="mt-16 text-center">
-      <div className="inline-flex items-center gap-3">
-        <div className="w-16 h-px bg-blue-500/30"></div>
-        
-        <div className="w-16 h-px bg-cyan-500/30"></div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Main Content */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          {/* WHAT ISSMA STANDS FOR */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-20">
-            <div className="sticky top-24">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                WHAT ISSMA STANDS FOR
-              </h2>
-              <div className="w-16 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-8"></div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-2xl border border-blue-100">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                    <Lightbulb className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">Our Purpose</h3>
+          {/* COURSES SECTION - COMPLETELY REDESIGNED */}
+          <div className="mb-20">
+            {/* Section Header with decorative elements */}
+            <div className="text-center mb-16 relative">
+              <div className="absolute left-1/2 -translate-x-1/2 top-0 w-40 h-40 bg-blue-100 rounded-full filter blur-3xl opacity-50"></div>
+              <div className="relative">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-full mb-6 shadow-lg shadow-blue-500/30">
+                  <BookOpen className="w-4 h-4" />
+                  <span className="text-sm font-medium">LEARNING PATH</span>
                 </div>
-                <p className="text-gray-700">
-                  Dedicated to teaching market skills, financial literacy, and structured learning without advisory or predictions.
+                <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+                  Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">Courses</span>
+                </h2>
+                <p className="text-gray-600 text-xl max-w-3xl mx-auto">
+                  Serious Market Education. Structured Progression. 
+                  Learn Directly From Experienced Market Professionals
                 </p>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200">
-              <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                ISSMA is India Equity Network's education and training vertical dedicated to teaching market skills, 
-                financial literacy, and structured learning without advisory or predictions.
-              </p>
-              
+            {/* Category Tabs */}
+            <div className="flex flex-wrap justify-center gap-3 mb-12">
+              {courseCategories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveTab(category.id)}
+                  className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeTab === category.id
+                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/30 scale-105'
+                      : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200 hover:scale-105'
+                  }`}
+                >
+                  {category.icon}
+                  {category.name}
+                </button>
+              ))}
+            </div>
+
+            {/* View Toggle */}
+            <div className="flex justify-end mb-6">
+              <div className="bg-white rounded-lg p-1 border border-gray-200 shadow-sm">
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded-md transition-all ${
+                    viewMode === 'grid' 
+                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white' 
+                      : 'text-gray-400 hover:text-gray-600'
+                  }`}
+                >
+                  <Grid className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-md transition-all ${
+                    viewMode === 'list' 
+                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white' 
+                      : 'text-gray-400 hover:text-gray-600'
+                  }`}
+                >
+                  <List className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Course Cards - Grid View */}
+            {viewMode === 'grid' ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredCourses.map((course) => {
+                  const colors = getColorClasses(course.color);
+                  const isHovered = hoveredCourse === course.id;
+                  
+                  return (
+                    <div
+                      key={course.id}
+                      onMouseEnter={() => setHoveredCourse(course.id)}
+                      onMouseLeave={() => setHoveredCourse(null)}
+                      className="group relative"
+                    >
+                      {/* Card with 3D effect */}
+                      <div className={`absolute inset-0 bg-gradient-to-r ${course.gradient} rounded-3xl opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl`}></div>
+                      
+                      <div className={`relative bg-white rounded-3xl border-2 ${colors.border} shadow-xl overflow-hidden transition-all duration-500 ${
+                        isHovered ? 'transform -translate-y-2 shadow-2xl' : ''
+                      }`}>
+                        {/* Card Header with Pattern */}
+                        <div className={`relative h-48 bg-gradient-to-r ${course.gradient} p-6 overflow-hidden`}>
+                          <div className="absolute inset-0 bg-black/10"></div>
+                          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                          <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+                          
+                          <div className="relative z-10">
+                            <div className="flex justify-between items-start mb-4">
+                              <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-white/30">
+                                Course {course.id}
+                              </span>
+                              <div className="flex items-center gap-1 bg-white/20 backdrop-blur-sm px-2 py-1 rounded-full">
+                                <Star className="w-3 h-3 text-yellow-300 fill-current" />
+                                <span className="text-xs text-white">{course.rating}</span>
+                              </div>
+                            </div>
+                            
+                            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 border border-white/30">
+                              <div className="text-white transform group-hover:scale-110 transition-transform duration-300">
+                                {course.icon}
+                              </div>
+                            </div>
+                            
+                            <h3 className="text-xl font-bold text-white mb-1">{course.level}</h3>
+                            <p className="text-white/90 text-sm line-clamp-2">{course.title}</p>
+                          </div>
+                        </div>
+
+                        {/* Card Body */}
+                        <div className="p-6">
+                          {/* Quick Info */}
+                          <div className="grid grid-cols-2 gap-3 mb-4">
+                            <div className="flex items-center gap-2 text-sm text-gray-600">
+                              <Clock3 className="w-4 h-4 text-gray-400" />
+                              <span className="truncate">{course.duration}</span>
+                            </div>
+                            <div className="flex items-center gap-2 text-sm text-gray-600">
+                              <Users className="w-4 h-4 text-gray-400" />
+                              <span>{course.students}</span>
+                            </div>
+                          </div>
+
+                          {/* Fee */}
+                          <div className="mb-4">
+                            <div className="text-2xl font-bold text-gray-900">{course.fee}</div>
+                            <div className="text-xs text-gray-500">+ GST (if applicable)</div>
+                          </div>
+
+                          {/* Key Features Preview */}
+                          <div className="space-y-2 mb-6">
+                            {course.features.slice(0, 2).map((feature, idx) => (
+                              <div key={idx} className="flex items-start gap-2 text-xs text-gray-600">
+                                <CheckCircle className={`w-3 h-3 ${colors.text} mt-0.5 flex-shrink-0`} />
+                                <span className="line-clamp-1">{feature}</span>
+                              </div>
+                            ))}
+                            {course.features.length > 2 && (
+                              <div className="text-xs text-gray-400">
+                                +{course.features.length - 2} more topics
+                              </div>
+                            )}
+                          </div>
+
+                          {/* Action Buttons */}
+                          <div className="flex gap-3">
+                            <button
+                              onClick={() => setSelectedCourse(selectedCourse === course.id ? null : course.id)}
+                              className="flex-1 px-4 py-2.5 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl text-sm font-medium text-gray-700 transition-all duration-300 flex items-center justify-center gap-2 group"
+                            >
+                              <span>Details</span>
+                              {selectedCourse === course.id ? (
+                                <ChevronUp className="w-4 h-4" />
+                              ) : (
+                                <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+                              )}
+                            </button>
+                            <button className="px-4 py-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-xl text-sm font-medium transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:scale-105">
+                              Enroll
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Expanded Details */}
+                        {selectedCourse === course.id && (
+                          <div className="border-t border-gray-200 p-6 bg-gray-50 animate-slideDown">
+                            <div className="space-y-4 max-h-96 overflow-y-auto custom-scrollbar">
+                              {/* Full Description */}
+                              {course.description && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                    <FileText className={`w-4 h-4 ${colors.text}`} />
+                                    About
+                                  </h4>
+                                  <p className="text-sm text-gray-700">{course.description}</p>
+                                </div>
+                              )}
+
+                              {/* Full Features */}
+                              <div>
+                                <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                  <BookMarked className={`w-4 h-4 ${colors.text}`} />
+                                  Curriculum
+                                </h4>
+                                <ul className="space-y-1.5">
+                                  {course.features.map((feature, idx) => (
+                                    <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                                      <CheckCircle className={`w-4 h-4 ${colors.text} mt-0.5 flex-shrink-0`} />
+                                      <span>{feature}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+
+                              {/* Target Audience */}
+                              {course.target && (
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
+                                    <Users className={`w-4 h-4 ${colors.text}`} />
+                                    Who Should Join
+                                  </h4>
+                                  <div className="flex flex-wrap gap-2">
+                                    {course.target.map((item, idx) => (
+                                      <span key={idx} className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-xs text-gray-700">
+                                        {item}
+                                      </span>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
+
+                              {/* Special Offers */}
+                              {course.combined && (
+                                <div className="bg-amber-50 p-3 rounded-lg border border-amber-200">
+                                  <p className="text-sm text-amber-800">
+                                    <span className="font-bold">Combo:</span> {course.combined.with} - {course.combined.fee}
+                                  </p>
+                                </div>
+                              )}
+
+                              {course.internship && (
+                                <div className="bg-purple-50 p-3 rounded-lg border border-purple-200">
+                                  <p className="text-sm text-purple-800 font-medium mb-1">Internship Options:</p>
+                                  <ul className="text-xs text-purple-700 space-y-1">
+                                    <li>• {course.internship.unpaid}</li>
+                                    <li>• {course.internship.paid}</li>
+                                  </ul>
+                                </div>
+                              )}
+
+                              {/* Assessment */}
+                              <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
+                                <p className="text-sm text-blue-800">
+                                  <span className="font-bold">Assessment:</span> {course.assessment}
+                                </p>
+                                {course.outcome && (
+                                  <p className="text-sm text-blue-800 mt-1">
+                                    <span className="font-bold">Outcome:</span> {course.outcome}
+                                  </p>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              /* List View */
               <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-lg">
-                  <CheckCircle className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-800 font-medium">Focus on skill development, not stock recommendations</span>
-                </div>
+                {filteredCourses.map((course) => {
+                  const colors = getColorClasses(course.color);
+                  
+                  return (
+                    <div
+                      key={course.id}
+                      className="bg-white rounded-2xl border-2 border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                    >
+                      <div className="flex flex-col md:flex-row">
+                        {/* Color Bar */}
+                        <div className={`md:w-2 h-2 md:h-auto bg-gradient-to-r ${course.gradient}`}></div>
+                        
+                        {/* Content */}
+                        <div className="flex-1 p-6">
+                          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                            {/* Left Section */}
+                            <div className="flex items-start gap-4">
+                              <div className={`w-16 h-16 bg-gradient-to-r ${course.gradient} rounded-xl flex items-center justify-center shadow-lg flex-shrink-0`}>
+                                <div className="text-white">
+                                  {course.icon}
+                                </div>
+                              </div>
+                              
+                              <div>
+                                <div className="flex items-center gap-3 mb-1">
+                                  <span className={`px-3 py-1 ${colors.badge} rounded-full text-xs font-medium`}>
+                                    Course {course.id}
+                                  </span>
+                                  <div className="flex items-center gap-1">
+                                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                                    <span className="text-sm font-medium">{course.rating}</span>
+                                  </div>
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-1">{course.level}</h3>
+                                <p className="text-gray-600">{course.title}</p>
+                              </div>
+                            </div>
+
+                            {/* Right Section */}
+                            <div className="flex items-center gap-6">
+                              <div className="text-right">
+                                <div className="text-2xl font-bold text-gray-900">{course.fee}</div>
+                                <div className="text-sm text-gray-500">{course.duration}</div>
+                              </div>
+                              
+                              <button
+                                onClick={() => setSelectedCourse(selectedCourse === course.id ? null : course.id)}
+                                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl text-sm font-medium hover:shadow-lg transition-all duration-300 whitespace-nowrap"
+                              >
+                                {selectedCourse === course.id ? 'Hide Details' : 'View Details'}
+                              </button>
+                            </div>
+                          </div>
+
+                          {/* Expanded Details */}
+                          {selectedCourse === course.id && (
+                            <div className="mt-6 pt-6 border-t border-gray-200">
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {/* Features */}
+                                <div>
+                                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                                    <BookMarked className={`w-4 h-4 ${colors.text}`} />
+                                    What You'll Learn
+                                  </h4>
+                                  <ul className="space-y-2">
+                                    {course.features.map((feature, idx) => (
+                                      <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                                        <CheckCircle className={`w-4 h-4 ${colors.text} mt-0.5 flex-shrink-0`} />
+                                        <span>{feature}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+
+                                {/* Additional Info */}
+                                <div className="space-y-4">
+                                  {course.target && (
+                                    <div>
+                                      <h4 className="font-semibold text-gray-900 mb-2">Ideal For</h4>
+                                      <div className="flex flex-wrap gap-2">
+                                        {course.target.map((item, idx) => (
+                                          <span key={idx} className="px-3 py-1 bg-gray-100 rounded-lg text-xs text-gray-700">
+                                            {item}
+                                          </span>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  )}
+
+                                  <div className="bg-blue-50 p-4 rounded-lg">
+                                    <p className="text-sm text-blue-800">
+                                      <span className="font-bold">Assessment:</span> {course.assessment}
+                                    </p>
+                                  </div>
+
+                                  {course.combined && (
+                                    <div className="bg-amber-50 p-4 rounded-lg">
+                                      <p className="text-sm text-amber-800">
+                                        <span className="font-bold">Combo Offer:</span> {course.combined.with} - {course.combined.fee}
+                                      </p>
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Learning Path Visualization */}
+            <div className="mt-16 relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl opacity-10 blur-2xl"></div>
+              <div className="relative bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-8 text-white overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mb-24"></div>
                 
-                <div className="flex items-center gap-4 p-4 bg-cyan-50 rounded-lg">
-                  <CheckCircle className="w-5 h-5 text-cyan-600" />
-                  <span className="text-gray-800 font-medium">Structured learning pathways for all levels</span>
-                </div>
-                
-                <div className="flex items-center gap-4 p-4 bg-emerald-50 rounded-lg">
-                  <CheckCircle className="w-5 h-5 text-emerald-600" />
-                  <span className="text-gray-800 font-medium">Real-world application of market concepts</span>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
+                    <Workflow className="w-6 h-6" />
+                    Your Learning Journey
+                  </h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {[
+                      { step: 1, title: "Foundation", desc: "Start with Course 1 for financial literacy", icon: <School className="w-8 h-8" /> },
+                      { step: 2, title: "Specialization", desc: "Choose Technical or Fundamental track", icon: <Target className="w-8 h-8" /> },
+                      { step: 3, title: "Mastery", desc: "Complete all courses + internship", icon: <Trophy className="w-8 h-8" /> }
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-4 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                          {item.icon}
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">
+                              {item.step}
+                            </span>
+                            <h4 className="font-semibold text-lg">{item.title}</h4>
+                          </div>
+                          <p className="text-white/80 text-sm">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* OUR TEACHING PHILOSOPHY */}
+          
+          {/* Teaching Philosophy with Modern Design */}
           <div className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                OUR TEACHING PHILOSOPHY
+              <div className="inline-flex items-center gap-2 bg-purple-100 px-4 py-2 rounded-full mb-4">
+                <Brain className="w-4 h-4 text-purple-600" />
+                <span className="text-purple-700 font-medium">Our Approach</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Teaching <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Philosophy</span>
               </h2>
               <p className="text-gray-600 text-lg max-w-2xl mx-auto">
                 The principles that guide our educational approach
               </p>
-              <div className="w-20 h-2 bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 mx-auto rounded-full mt-4"></div>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
               {teachingPhilosophy.map((item, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-lg flex items-center justify-center mb-4">
-                    <div className="text-blue-600">
-                      {item.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* WHAT WE TEACH */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                WHAT WE TEACH
-              </h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Comprehensive curriculum covering all aspects of market understanding
-              </p>
-              <div className="w-20 h-2 bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 mx-auto rounded-full mt-4"></div>
-            </div>
-
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl p-8 border border-blue-100">
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {whatWeTeach.map((item, index) => (
-                  <div key={index} className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200 hover:border-blue-300 transition-all duration-300">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                      <div className="text-white">
+                <div key={index} className="group relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+                  <div className="relative bg-white rounded-2xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group-hover:border-transparent">
+                    <div className="w-14 h-14 bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-purple-600">
                         {item.icon}
                       </div>
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
                     <p className="text-gray-600 text-sm">{item.desc}</p>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* MANDATORY EDUCATION DISCLAIMER */}
-          <div className="mb-20">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                MANDATORY EDUCATION DISCLAIMER
-              </h2>
-              <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
-            </div>
-
-            <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-8 border-2 border-amber-200">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-2xl flex items-center justify-center">
-                  <AlertTriangle className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-amber-800">Important Notice</h3>
-                  <p className="text-amber-700">Education Only - No Advisory Services</p>
-                </div>
-              </div>
-
-              <div className="space-y-4 text-amber-800">
-                <div className="flex items-start gap-3 p-4 bg-white/50 rounded-xl">
-                  <XCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
-                  <p className="leading-relaxed">
-                    ISSMA provides training and education only.
-                  </p>
-                </div>
-                
-                <div className="flex items-start gap-3 p-4 bg-white/50 rounded-xl">
-                  <XCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
-                  <p className="leading-relaxed">
-                    ISSMA does NOT provide investment advice, stock recommendations,
-                    model portfolios, buy/sell tips, or calls.
-                  </p>
-                </div>
-                
-                <div className="flex items-start gap-3 p-4 bg-white/50 rounded-xl">
-                  <CheckCircle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
-                  <p className="leading-relaxed">
-                    All content is purely educational in nature.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* OUR PROGRAM FORMATS */}
-          <div className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                OUR PROGRAM FORMATS
-              </h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Flexible learning options to suit different needs and preferences
-              </p>
-              <div className="w-20 h-2 bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 mx-auto rounded-full mt-4"></div>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {programFormats.map((format, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
-                    <div className="text-white">
-                      {format.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{format.title}</h3>
-                  <p className="text-gray-600 mb-4">{format.desc}</p>
-                  
-                  {format.title === "Online modules & analytics tools" ? (
-                    <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 text-sm font-medium rounded-full">
-                      Coming Soon
-                    </span>
-                  ) : (
-                    <button className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm">
-                      Explore Programs
-                      <ChevronRight className="w-4 h-4" />
-                    </button>
-                  )}
                 </div>
               ))}
             </div>
           </div>
 
-         
+          {/* Program Formats */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-cyan-100 px-4 py-2 rounded-full mb-4">
+                <Calendar className="w-4 h-4 text-cyan-600" />
+                <span className="text-cyan-700 font-medium">Learning Formats</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Program <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">Formats</span>
+              </h2>
+              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                Flexible learning options to suit different needs and preferences
+              </p>
+            </div>
 
-          {/* Final CTA */}
-         
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {programFormats.map((format, index) => (
+                <div key={index} className="group relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+                  <div className="relative bg-white rounded-2xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group-hover:border-transparent">
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-white">
+                        {format.icon}
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{format.title}</h3>
+                    <p className="text-gray-600 mb-4">{format.desc}</p>
+                    
+                    {format.title === "Online modules & analytics tools" ? (
+                      <span className="inline-flex items-center gap-1 px-3 py-1 bg-amber-100 text-amber-700 text-sm font-medium rounded-full">
+                        <Clock className="w-3 h-3" />
+                        Coming Soon
+                      </span>
+                    ) : (
+                      <button className="inline-flex items-center gap-1 text-cyan-600 hover:text-cyan-700 font-medium text-sm group/btn">
+                        Learn More
+                        <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </button>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl opacity-10 blur-2xl"></div>
+            <div className="relative bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 text-center text-white overflow-hidden">
+              <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -ml-32 -mt-32"></div>
+              <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mb-32"></div>
+              
+              <div className="relative z-10 max-w-3xl mx-auto">
+                <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                  Ready to Start Your Journey?
+                </h2>
+                <p className="text-xl text-white/90 mb-8">
+                  Join ISSMA today and transform your understanding of financial markets
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-bold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                    Explore All Courses
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                  <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300">
+                    Contact Us
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+          animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes slideDown {
+          from { opacity: 0; transform: translateY(-10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-slideDown {
+          animation: slideDown 0.3s ease-out;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 6px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 10px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 10px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+      `}</style>
     </main>
   )
 }
