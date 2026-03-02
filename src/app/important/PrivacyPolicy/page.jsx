@@ -1,491 +1,228 @@
 'use client'
 import React from 'react'
-import {
-  Shield,
-  Mail,
-  Phone,
-  MapPin,
-  FileText,
-  Lock,
-  Users,
-  Eye,
-  Cookie,
-  ExternalLink,
-  Calendar,
-  BookOpen,
-  Target,
-  Bell,
-  CheckCircle
-} from "lucide-react";
+import { FileText, Mail, MapPin, Phone, Lock, AlertTriangle } from 'lucide-react'
 
 const PrivacyPolicy = () => {
-  const currentDate = new Date().toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      {/* Hero Section */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <main className="bg-gradient-to-b from-slate-50 to-white min-h-screen">
+      {/* Hero */}
+      <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
-              <Lock className="w-6 h-6 text-white" />
-            </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-              Privacy Policy
-            </h1>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border border-white/20 mb-6">
+            <Lock className="w-5 h-5" />
+            <span className="text-sm font-medium">Legal</span>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <div className="flex items-center gap-2 bg-blue-900/30 px-4 py-2 rounded-full">
-              <Calendar className="w-4 h-4 text-blue-300" />
-              <span className="text-blue-200">Last Updated: {currentDate}</span>
-            </div>
-            <div className="flex items-center gap-2 bg-emerald-900/30 px-4 py-2 rounded-full">
-              <Shield className="w-4 h-4 text-emerald-300" />
-              <span className="text-emerald-200">SEBI Compliant</span>
-            </div>
-          </div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Your privacy and trust are fundamental to our operations at Indeqnet and its verticals
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
+          <p className="text-slate-300 text-lg">
+            India Elite Summit — How we collect, use, and protect your information
           </p>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-blue-400 to-emerald-400 mx-auto rounded-full mt-8"></div>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Content */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-gray-200">
-            
-            {/* Introduction Card */}
-            <div className="mb-10 p-6 bg-gradient-to-r from-blue-50 to-emerald-50 rounded-xl border border-blue-200">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Privacy Matters</h2>
-                  <p className="text-gray-700">
-                    This Privacy Policy explains how Indeqnet, operating under the brand India Equity Network and its verticals — MarketgAInz (Advisory Desk), India Elite Summit (Events & Community), and ISSMA – Integrated School of Stock Markets Analytics (Training & Academy) — collects, uses, stores, discloses and protects your personal information.
-                  </p>
-                  <div className="mt-4 p-4 bg-white/70 rounded-lg border border-blue-100">
-                    <p className="text-gray-600 text-sm">
-                      <span className="font-semibold text-gray-800">Important:</span> By accessing our platforms, enrolling in our programs, purchasing services, or submitting information, you acknowledge that you have read and understood this Privacy Policy and consent to the use of your information as described herein.
-                    </p>
-                  </div>
-                </div>
-              </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="prose prose-slate prose-lg">
+            <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg mb-10 flex items-start gap-3">
+              <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
+              <p className="text-amber-900 text-sm m-0">
+                By accessing or using our Platforms, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy. If you do not agree, please do not use our Platforms.
+              </p>
             </div>
 
-            {/* Section 1: Our Identity */}
-            <div className="mb-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center">
-                  <BookOpen className="w-5 h-5 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">1. OUR IDENTITY AND LEGAL STATUS</h2>
-              </div>
-              
-              <div className="bg-emerald-50 rounded-xl p-6 border border-emerald-200">
-                <div className="space-y-6">
-                  <div>
-                    <p className="text-gray-800 text-lg mb-4">
-                      This Privacy Policy governs all websites and services owned and operated by Indeqnet, the registered legal entity of India Equity Network. Throughout this document, terms such as "we", "our", and "us" refer to Indeqnet and its operational verticals.
-                    </p>
-                  </div>
-
-                  {/* Services Grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="bg-white rounded-lg p-4 border border-emerald-100">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-blue-400 rounded-full"></div>
-                        <h4 className="font-bold text-gray-900">MarketGAInz</h4>
-                      </div>
-                      <p className="text-gray-600 text-sm">Research and advisory (strictly non-solicitation, no guaranteed returns)</p>
-                    </div>
-                    <div className="bg-white rounded-lg p-4 border border-emerald-100">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-                        <h4 className="font-bold text-gray-900">India Elite Summit</h4>
-                      </div>
-                      <p className="text-gray-600 text-sm">Event access, networking and community interactions</p>
-                    </div>
-                    <div className="bg-white rounded-lg p-4 border border-emerald-100">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
-                        <h4 className="font-bold text-gray-900">ISSMA Academy</h4>
-                      </div>
-                      <p className="text-gray-600 text-sm">Educational programs, cohorts and certifications</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-blue-50 rounded-lg p-4 border border-blue-200 mt-4">
-                    <p className="text-gray-700">
-                      <span className="font-semibold text-gray-900">Important Note:</span> All services are provided for personal use, knowledge enhancement and lawful market participation. Nothing provided constitutes investment advice or solicitation, in line with SEBI advertising and communication rules.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Indeqnet Private Limited (hereinafter referred to as &quot;India Elite Summit,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), having its registered office at 201, Radhakrishna, Radha Residency, Siddharth Nagar, Borivali - East, Mumbai – 400066, Maharashtra, India, is committed to protecting the privacy and security of your personal information. This Privacy Policy governs the collection, use, storage, disclosure, and protection of personal information obtained through our website www.indiaelitesummit.com, mobile applications, web applications, and related services (collectively, the &quot;Platforms&quot;) in connection with our capital market events, training programs, and associated activities.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              By accessing or using our Platforms, you (the &quot;User,&quot; &quot;you,&quot; or &quot;your&quot;) acknowledge that you have read, understood, and agree to be bound by this Privacy Policy. If you do not agree with the terms of this Privacy Policy, please do not use or access our Platforms. We reserve the right to update or modify this Privacy Policy at any time, and changes will be effective upon posting on our Platforms. Your continued use of the Platforms constitutes acceptance of any revised terms.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              This Privacy Policy complies with applicable data protection laws, including but not limited to the Digital Personal Data Protection Act, 2023 (DPDP Act) of India, the General Data Protection Regulation (GDPR) (where applicable), and other relevant regulations. For any questions or concerns regarding this Privacy Policy, please contact our Data Protection Officer at:
+            </p>
+            <div className="bg-slate-100 rounded-xl p-4 mb-10 border border-slate-200">
+              <p className="m-0 flex items-center gap-2 text-gray-700"><Mail className="w-5 h-5 text-emerald-600 flex-shrink-0" /> Email: <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a></p>
+              <p className="m-0 mt-2 flex items-center gap-2 text-gray-700"><MapPin className="w-5 h-5 text-emerald-600 flex-shrink-0" /> Address: 201, Radhakrishna, Radha Residency, Siddharth Nagar, Borivali - East, Mumbai – 400066, Maharashtra, India</p>
+              <p className="m-0 mt-2 flex items-center gap-2 text-gray-700"><Phone className="w-5 h-5 text-emerald-600 flex-shrink-0" /> Phone: <a href="tel:+918828320113" className="text-emerald-700 hover:underline">+91-8828320113</a></p>
             </div>
 
-            {/* Section 2: Information We Collect */}
-            <div className="mb-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <Eye className="w-5 h-5 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">2. INFORMATION WE COLLECT</h2>
-              </div>
-              
-              <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
-                <p className="text-gray-800 text-lg mb-6">
-                  To facilitate access, ensure compliance, improve user experience and fulfil contractual obligations, we may collect the following information:
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Definitions</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              For the purposes of this Privacy Policy, the following terms shall have the meanings ascribed to them below:
+            </p>
+            <ul className="list-none space-y-2 mb-4 pl-0">
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>&quot;We,&quot; &quot;Us,&quot; &quot;Our&quot;:</strong> Refers to Indeqnet Private Limited, trading as India Elite Summit, and its affiliates, successors, and assigns.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>&quot;You,&quot; &quot;Your,&quot; &quot;User&quot;:</strong> Refers to any individual or legal entity accessing or using the Platforms, whether registered or unregistered.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>&quot;Personal Information&quot;:</strong> Refers to any information that identifies or can be used to identify an individual, including but not limited to name, address, email, phone number, and financial details, as further described in Section 2.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>&quot;Sensitive Personal Information&quot;:</strong> Includes financial data, biometric data, or other categories of sensitive information as defined under applicable laws.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>&quot;Third Parties&quot;:</strong> Refers to any individual, company, or entity other than India Elite Summit and the User, including service providers, partners, or advertisers.</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed mb-8">Headings in this Privacy Policy are for organizational purposes only and do not affect the interpretation of its provisions.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">2. Information We Collect</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              We collect information to provide seamless, efficient, and personalized services related to our capital market events, training programs, and associated activities. The types of information we may collect include:
+            </p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.1 Personal Information</h3>
+            <ul className="list-none space-y-2 mb-4 pl-0">
+              <li className="flex items-start text-gray-500 text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Contact Details:</strong> Name, email address, phone number, mailing address.</li>
+              <li className="flex items-start text-gray-500 text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Account Details:</strong> Username, password, and account preferences.</li>
+              <li className="flex items-start text-gray-500 text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Professional Information:</strong> Educational qualifications, college name, area of interest, professional references, or employment details.</li>
+              <li className="flex items-start text-gray-500 text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Financial Information:</strong> Payment details (e.g., credit/debit card numbers, bank account details, billing address) provided during transactions for event registrations or training programs.</li>
+              <li className="flex items-start text-gray-500 text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Event-Related Information:</strong> Details related to event attendance, training program enrollment, or participation preferences.</li>
+            </ul>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.2 Non-Personal Information</h3>
+            <ul className="list-none space-y-2 mb-4 pl-0">
+              <li className="flex items-start text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Tracking Data:</strong> IP address, device ID, browser type, operating system, and other technical information collected when you interact with our Platforms.</li>
+              <li className="flex items-start text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Usage Data:</strong> Pages visited, time spent on the Platforms, search history, features used, and clickstream data.</li>
+              <li className="flex items-start text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Cookies and Similar Technologies:</strong> Information collected via cookies, web beacons, and other tracking technologies to enhance user experience and analyze usage patterns (see Section 7 for details).</li>
+            </ul>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.3 Information from Non-Registered Users</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">We may collect data from users who are not registered, such as browsing behavior, pages viewed, or interactions with public sections of the Platforms.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.4 Purpose of Collection</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">We collect only the information necessary to:</p>
+            <ul className="list-none space-y-2 mb-8 pl-0">
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Provide and improve our services, including event management and training delivery.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Process transactions and registrations.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Communicate account, event, or service-related information.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Personalize user experience through tailored content and offers.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Conduct analytics to understand user preferences and enhance our Platforms.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Comply with legal and regulatory obligations.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">3. How We Collect Information</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">We collect information through the following methods:</p>
+            <ul className="list-none space-y-2 mb-4 pl-0">
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Direct Input:</strong> When you voluntarily provide information during account creation, event registration, training enrolment, or contact form submissions.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Automated Technologies:</strong> Through cookies, web beacons, server logs, and analytics tools (e.g., Google Analytics) that track your interactions with our Platforms.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Third Parties:</strong> From service providers, payment gateways, or partners (e.g., event sponsors or exhibitors) when necessary to fulfil your requests or comply with legal requirements.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Public Sources:</strong> From publicly available sources, such as social media profiles, when you interact with our Platforms or events.</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed mb-8">Before collecting Personal Information, we will inform you of the purpose of collection. If the purpose is unclear, you may request clarification by contacting us at <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a>. You are not obligated to provide information until the purpose is adequately explained.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">4. How We Use Your Information</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">We use your information to provide, improve, and personalize our services. Specific uses include:</p>
+            <ul className="list-none space-y-2 mb-4 pl-0">
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Service Delivery:</strong> To facilitate event registrations, training program enrolments, and customer support.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Communication:</strong> To send account updates, event reminders, training materials, or responses to inquiries.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Personalization:</strong> To tailor content, recommendations, and marketing communications based on your interests and usage patterns.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Analytics:</strong> To analyze usage trends, improve Platform functionality, and develop new services.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Marketing:</strong> To send promotional offers, newsletters, or targeted advertisements (subject to your consent, where required). You may opt out of marketing communications at any time via the &quot;unsubscribe&quot; link or by emailing <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a>.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Compliance:</strong> To meet legal, regulatory, or tax obligations, including audits or law enforcement requests.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Security:</strong> To detect and prevent fraud, unauthorized access, or other illegal activities.</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed mb-8">We will only process your Personal Information with your explicit consent or as permitted by law, and we will retain it only for as long as necessary to fulfill the stated purposes.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">5. Disclosure of Your Information</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">We do not sell, rent, or trade your Personal Information to third parties. However, we may disclose your information in the following circumstances:</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">5.1 Service Providers</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">We may share your information with trusted third-party service providers (e.g., payment processors, event organizers, or analytics providers) who assist us in operating the Platforms and delivering services. These providers are contractually obligated to protect your information and use it only for the purposes specified by us.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">5.2 Event Partners</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">For events, we may share limited information (e.g., name, company name, email address) with exhibitors, sponsors, or co-organizers to facilitate event logistics or networking opportunities. Such disclosures will be communicated to you in advance, and you may opt out where applicable.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">5.3 Legal Obligations</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">We may disclose your information to comply with legal or regulatory requirements, such as: responding to lawful requests from government authorities or law enforcement; enforcing our rights, including investigations of fraud, intellectual property violations, or other illegal activities; complying with tax, audit, or financial reporting obligations.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">5.4 Business Transfers</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">In the event of a merger, acquisition, or sale of all or part of our assets, your Personal Information may be transferred to the acquiring entity. You will be notified of such transfers and any changes to how your information is handled.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">5.5 With Your Consent</h3>
+            <p className="text-gray-700 leading-relaxed mb-8">We may share your information with third parties if you provide explicit consent, such as for promotional partnerships or third-party services. All disclosures will be made in compliance with applicable data protection laws, and we will notify you via email or Platform notification when required.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">6. Cookies and Tracking Technologies</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">We use cookies and similar technologies to enhance your experience, analyze usage, and deliver personalized content. Cookies are small data files stored on your device that help us recognize you and track your interactions.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">6.1 Types of Cookies </h3>
+            <ul className="list-none space-y-2 mb-4 pl-0">
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Essential Cookies:</strong> Necessary for the Platforms to function, such as maintaining your session or enabling secure logins.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Functionality Cookies:</strong> Enable personalized features, such as resuming training progress or remembering your preferences.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Analytics Cookies:</strong> Collect anonymous data on how you use our Platforms (e.g., pages visited, time spent) to improve performance and content.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Advertising Cookies:</strong> Deliver targeted advertisements based on your interests and browsing behavior.</li>
+            </ul>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">6.2 Third-Party Cookies</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">We use third-party tools, such as Google Analytics, to analyze user behavior. Google Analytics collects anonymous data (e.g., IP address, pages visited) to generate reports on Platform usage. This data may be stored on Google&apos;s servers in the United States and processed in accordance with Google&apos;s Privacy Policy. By using our Platforms, you consent to this processing.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">6.3 Managing Cookies</h3>
+            <p className="text-gray-700 leading-relaxed mb-8">You can accept or decline cookies by modifying your browser settings. However, disabling cookies may limit your ability to use certain features of the Platforms. For more information, refer to our Cookie Policy (available on the Website) or contact us at <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a>.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">7. Your Rights</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">As a User, you have the following rights regarding your Personal Information, subject to applicable laws:</p>
+            <ul className="list-none space-y-2 mb-4 pl-0">text-gray-500 
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Access:</strong> Request a copy of the Personal Information we hold about you.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete information.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Deletion:</strong> Request deletion of your Personal Information, subject to our legal obligations.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Restrict Processing:</strong> Request that we limit the processing of your information in certain circumstances.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Data Portability:</strong> Request a transferable copy of your Personal Information in a structured, commonly used format.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Object:</strong> Object to the processing of your information for marketing or other purposes.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Withdraw Consent:</strong> Withdraw your consent to data processing at any time, without affecting the lawfulness of prior processing.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Lodge a Complaint:</strong> File a complaint with a supervisory authority, such as the Data Protection Authority of India (once established under the DPDP Act) or the relevant authority in your jurisdiction.</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed mb-8">To exercise these rights, please contact our Data Protection Officer at <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a> or use the self-service options in your account profile (where available). We will respond to your request within the timeframes prescribed by law.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">8. Accessing, Reviewing, and Deleting Your Information</h2>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">8.1 Accessing Your Information</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">Registered Users can view and update their Personal Information in the &quot;Profile&quot; section of their account. Certain sensitive information (e.g., passwords) may be withheld for security reasons.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">8.2 Deleting Your Information</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">You may request deletion of your Personal Information via: The &quot;Delete My Account&quot; feature in your account profile; or emailing <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a> with your request. We will delete your information promptly, except where retention is required for legal or regulatory compliance, fraud prevention or security purposes, or resolving disputes or enforcing our Terms of Service. Deleted data will be removed from our active databases and backup systems, subject to technical limitations.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">8.3 Updating Your Information</h3>
+            <p className="text-gray-700 leading-relaxed mb-8">You can update your account details (except your registered email ID) at any time via the Platform&apos;s profile settings. We may retain previous information for audit or dispute resolution purposes unless you explicitly request its deletion.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">9. Data Security</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">We employ industry-standard security measures to protect your Personal Information. These measures include:</p>
+            <ul className="list-none space-y-2 mb-4 pl-0">
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Encryption:</strong> Secure transmission of sensitive data using SSL/TLS protocols.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Access Controls:</strong> Restricting access to Personal Information to authorized personnel only.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Secure Storage:</strong> Storing data on encrypted servers with regular security audits.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Monitoring:</strong> Continuous monitoring for suspicious activity or vulnerabilities.</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed mb-8">Despite these measures, no online platform can guarantee absolute security. You are responsible for maintaining the confidentiality of your account credentials and notifying us immediately of any suspected unauthorized access at <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a>.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">10. Data Retention</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">We retain your Personal Information only for as long as necessary to fulfil the purposes outlined in this Privacy Policy or as required by law. Retention periods vary based on: <strong>Account Status</strong> — information is retained while you are an active User and for a reasonable period thereafter; <strong>Legal Requirements</strong> — financial transaction data may be retained for up to 7 years to comply with tax or audit regulations; <strong>Consent Withdrawal</strong> — upon withdrawal of consent or deletion request, we will delete your information unless retention is required for legal purposes. Deleted data is securely erased from our systems, subject to technical constraints (e.g., backup archives).</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">11. Third-Party Links and Services</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">Our Platforms may contain links to third-party websites, applications, or services. We are not responsible for the privacy practices, content, or security of these third-party sites. Accessing third-party links is at your own risk. Advertisers or partners may use their own cookies or tracking technologies, governed by their privacy policies. For a list of third-party links on our Platforms, please contact us at <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a>.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">12. International Data Transfers</h2>
+            <p className="text-gray-700 leading-relaxed mb-8">India Elite Summit is based in India, and your Personal Information is primarily stored and processed within India. However, certain service providers (e.g., Google Analytics) may process data in other jurisdictions. When transferring data internationally, we ensure compliance with applicable laws, including GDPR (for EU residents) and the DPDP Act. You may request information about international transfers by contacting <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a>.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">13. Children&apos;s Privacy</h2>
+            <p className="text-gray-700 leading-relaxed mb-8">Our Platforms are not intended for individuals under the age of 18. We do not knowingly collect Personal Information from children. If we become aware that a child has provided information, we will delete it immediately. If you believe a child has provided information, please contact us at <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a>.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">14. Confidentiality</h2>
+            <p className="text-gray-700 leading-relaxed mb-8">Your Personal Information is treated as confidential and will not be disclosed to third parties except as outlined in this Privacy Policy or with your consent. We will not use your email address for unsolicited communications, and all marketing emails will include an option to unsubscribe.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">15. Changes to This Privacy Policy</h2>
+            <p className="text-gray-700 leading-relaxed mb-8">We may update this Privacy Policy to reflect changes in our practices, legal requirements, or Platform functionalities. Updates will be posted on our Platforms, and significant changes will be communicated via email or Platform notifications. Your continued use of the Platforms after such changes constitutes acceptance of the revised policy.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">16. Governing Law and Dispute Resolution</h2>
+            <p className="text-gray-700 leading-relaxed mb-8">This Privacy Policy is governed by the laws of India, without regard to its conflict of law principles. Any disputes arising from this Privacy Policy shall be subject to the exclusive jurisdiction of the courts in Mumbai, Maharashtra, India. You waive any objections to jurisdiction, venue, or forum non conveniens.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">17. Contact Us</h2>
+            <p className="text-gray-700 leading-relaxed mb-6">For questions, concerns, or complaints about this Privacy Policy or our data practices, please contact our Data Protection Officer:</p>
+            <div className="bg-slate-100 rounded-2xl p-6 border border-slate-200 mb-8">
+              <p className="font-bold text-gray-900 mb-4">Indeqnet Private Limited (India Elite Summit)</p>
+              <div className="space-y-3 text-gray-700">
+                <p className="flex items-center gap-2">
+                  <Mail className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                  <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a>
                 </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-3"></div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Basic Profile Information</p>
-                        <p className="text-gray-600">Name, mobile number, email address, city, and occupation</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-3"></div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Billing Information</p>
-                        <p className="text-gray-600">Payment confirmations, invoices, course/event enrolment history</p>
-                        <div className="mt-2 p-3 bg-white/70 rounded border border-blue-100">
-                          <p className="text-gray-600 text-sm">
-                            <span className="font-semibold text-gray-800">Note:</span> We do not store card numbers or sensitive payment credentials; payments are routed through secure gateways.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-3"></div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Technical Data</p>
-                        <p className="text-gray-600">IP address, browser type, device identifiers, location data, session duration</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-3"></div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Communication Records</p>
-                        <p className="text-gray-600">Email correspondences, WhatsApp/Telegram interactions, support tickets</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-3"></div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Learning History</p>
-                        <p className="text-gray-600">Course progress, webinar attendance, resource downloads, content engagement</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
-                  <p className="text-amber-800">
-                    <span className="font-semibold">Important:</span> You may decline to provide information; however, doing so may limit our ability to deliver services or fulfill contractual obligations.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Section 3: Lawful Use */}
-            <div className="mb-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
-                  <CheckCircle className="w-5 h-5 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">3. LAWFUL USE OF YOUR INFORMATION</h2>
-              </div>
-              
-              <div className="bg-green-50 rounded-xl p-6 border border-green-200">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {[
-                    "Verification of identity, creation of user profiles and secure login access",
-                    "Delivery of subscribed education, event privileges, cohort access and advisory content",
-                    "Communication regarding program updates, transaction confirmations, operational notices",
-                    "Research-based service improvements, platform enhancements and security optimization",
-                    "Compliance with tax records, regulatory audits, fraud-prevention",
-                    "Sending curated educational newsletters, announcements, academic material"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-white text-sm font-bold">{index + 1}</span>
-                      </div>
-                      <p className="text-gray-800">{item}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 p-4 bg-white rounded-lg border border-green-200">
-                  <p className="text-gray-700">
-                    <span className="font-semibold text-gray-900">Important Commitment:</span> We do not engage in manipulative digital practices, unauthorized data resale, or targeted financial solicitation prohibited under SEBI advertisement rules.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Section 4: SEBI Alignment */}
-            <div className="mb-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center">
-                  <Target className="w-5 h-5 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">4. SEBI-ALIGNED COMMUNICATION & NON-SOLICITATION STATEMENT</h2>
-              </div>
-              
-              <div className="bg-red-50 rounded-xl p-8 border border-red-200">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Compliance Commitment</h3>
-                  <p className="text-gray-700">
-                    All communications from Indeqnet and its verticals are intended for informational, educational and research purposes only.
-                  </p>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <p className="text-gray-800">MarketGAInz may share analytical viewpoints but does not guarantee outcomes or offer return commitments</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <p className="text-gray-800">We do not cold call with stock tips, personalized buy/sell instructions or profit promises</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <p className="text-gray-800">Any paid or free content must be interpreted as learning support, not investment direction</p>
-                  </div>
-                </div>
-
-                <div className="mt-6 p-4 bg-white rounded-lg border border-red-300">
-                  <p className="text-gray-700">
-                    <span className="font-semibold text-gray-900">User Responsibility:</span> Users are responsible for their personal financial decisions and should consult SEBI-registered experts before acting on market information, wherever required.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Quick Info Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                    <Cookie className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="font-bold text-gray-900">5. COOKIES & ANALYTICS</h3>
-                </div>
-                <p className="text-gray-700">We use cookies for personalized experience and security. You may disable them through browser settings.</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border border-cyan-200">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
-                    <Lock className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="font-bold text-gray-900">6. DATA SECURITY</h3>
-                </div>
-                <p className="text-gray-700">Encrypted databases, role-based access, and industry-standard protocols protect your information.</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg flex items-center justify-center">
-                    <Users className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="font-bold text-gray-900">7. SHARING POLICY</h3>
-                </div>
-                <p className="text-gray-700">We do not sell or rent your personal information. Limited sharing only for authorized service delivery.</p>
-              </div>
-            </div>
-
-            {/* Your Rights Section */}
-            <div className="mb-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center">
-                  <Bell className="w-5 h-5 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">8. YOUR RIGHTS & DATA CONTROL OPTIONS</h2>
-              </div>
-              
-              <div className="bg-indigo-50 rounded-xl p-6 border border-indigo-200">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-br from-indigo-400 to-indigo-500 rounded-lg flex items-center justify-center">
-                        <Eye className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Access & Review</p>
-                        <p className="text-gray-600 text-sm">Request access to your personal data</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-br from-indigo-400 to-indigo-500 rounded-lg flex items-center justify-center">
-                        <FileText className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Correction</p>
-                        <p className="text-gray-600 text-sm">Update or correct inaccurate information</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-br from-indigo-400 to-indigo-500 rounded-lg flex items-center justify-center">
-                        <Shield className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Deletion</p>
-                        <p className="text-gray-600 text-sm">Request deletion of your personal data</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-br from-indigo-400 to-indigo-500 rounded-lg flex items-center justify-center">
-                        <Bell className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Opt-Out</p>
-                        <p className="text-gray-600 text-sm">Withdraw consent for marketing communications</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-6 p-4 bg-white rounded-lg border border-indigo-300">
-                  <p className="text-gray-700">
-                    <span className="font-semibold text-gray-900">Contact for Rights:</span> For any request, write to:{' '}
-                    <a 
-                      href="mailto:support@indeqnet.com"
-                      className="text-indigo-600 hover:text-indigo-700 font-medium hover:underline"
-                    >
-                      support@indeqnet.com
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Information */}
-            <div className="mb-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-gray-600 to-gray-700 rounded-lg flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">13. CONTACT INFORMATION</h2>
-              </div>
-              
-              <div className="bg-gray-50 rounded-xl p-8 border border-gray-300">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                        <Mail className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Email</p>
-                        <a 
-                          href="mailto:support@indeqnet.com"
-                          className="text-gray-700 hover:text-blue-600 hover:underline"
-                        >
-                          support@indeqnet.com
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
-                        <Phone className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Phone</p>
-                        <a 
-                          href="tel:+918828320113"
-                          className="text-gray-700 hover:text-green-600 hover:underline"
-                        >
-                          +91 88283 20113
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
-                        <MapPin className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Registered Office</p>
-                        <p className="text-gray-700">201, RADHAKRISHNA, RADHA RESIDENCY</p>
-                        <p className="text-gray-700">SIDDHARTH NAGAR, BORIVALI - EAST</p>
-                        <p className="text-gray-700">MUMBAI, MAHARASHTRA - 400066 India</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 pt-8 border-t border-gray-300">
-                  <div className="text-center">
-                    <p className="text-gray-700">
-                      For questions, corrections, withdrawals or data concerns, please contact us through any of the above channels.
-                    </p>
-                    <div className="mt-4 flex flex-wrap gap-4 justify-center">
-                      <a 
-                        href="mailto:support@indeqnet.com"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-md hover:shadow-lg"
-                      >
-                        <Mail className="w-5 h-5" />
-                        Email Support
-                      </a>
-                      <a 
-                        href="tel:+918828320113"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 shadow-md hover:shadow-lg"
-                      >
-                        <Phone className="w-5 h-5" />
-                        Call Us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Policy Notice */}
-            <div className="mt-12 p-6 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl border border-gray-300">
-              <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Policy Updates</h3>
-                <p className="text-gray-700 mb-4">
-                  We may revise this Privacy Policy periodically to reflect legal, technological or operational changes. Updated versions will be posted on this page with the revised "Last Updated" date.
+                <p className="flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                  Indeqnet Private Limited, 201, Radhakrishna, Radha Residency, Siddharth Nagar, Borivali - East, Mumbai – 400066, Maharashtra, India
                 </p>
-                <div className="flex items-center justify-center gap-2 text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-emerald-500" />
-                  <p>Continued use of the platform constitutes acknowledgment and acceptance of revisions</p>
-                </div>
+                <p className="flex items-center gap-2">
+                  <Phone className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                  <a href="tel:+918828320113" className="text-emerald-700 hover:underline">+91-8828320113</a>
+                </p>
               </div>
+              <p className="text-gray-600 text-sm mt-4">We will respond to your inquiries promptly and in accordance with applicable laws.</p>
             </div>
 
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">18. Severability</h2>
+            <p className="text-gray-700 leading-relaxed mb-8">If any provision of this Privacy Policy is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, the remaining provisions shall continue in full force and effect to the extent permitted by law.</p>
+
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">19. Entire Agreement</h2>
+            <p className="text-gray-700 leading-relaxed mb-8">This Privacy Policy, together with our Disclaimer, Terms of Use, and any other policies posted on the Platforms, constitutes the entire agreement between you and India Elite Summit regarding the collection, use, and protection of your information. It supersedes all prior or contemporaneous agreements, whether written or oral.</p>
           </div>
         </div>
       </section>
     </main>
-  );
-};
+  )
+}
 
-export default PrivacyPolicy;
+export default PrivacyPolicy

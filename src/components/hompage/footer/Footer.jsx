@@ -42,8 +42,8 @@ const Footer = () => {
       icon: <Users className="w-4 h-4" />
     },
     { 
-      name: "Blogs", 
-      href: "/",
+      name: "Disclaimer", 
+      href: "/important/disclaimer",
       icon: <BlendIcon className="w-4 h-4" />
     },{ 
       name: "Grievance officer", 

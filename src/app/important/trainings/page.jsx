@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { useRouter } from "next/navigation"
+import Image from 'next/image'
 import { 
   ArrowRight, BookOpen, Users, Brain, Target, BarChart3, 
   TrendingUp, ChevronRight, GraduationCap, Calendar, Clock, 
@@ -449,12 +450,17 @@ Most people are expected to manage savings, insurance, risk, and investments thr
               </div>
               
               <p className="text-gray-300 text-2xl mb-6 max-w-xl font-light">
-                Integrated School of Stock Market Analytics
+                Integrated School of Stock Markets Analytics
               </p>
               
-              <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                The training and education vertical of India Equity Network.
-                Courses structured in progressive levels for foundational to applied market work.
+              <p className="text-gray-300 mb-4 text-lg leading-relaxed max-w-2xl">
+                ISSMA is built for individuals who want to understand markets with depth, structure, and discipline.
+              </p>
+              <p className="text-gray-300 mb-4 text-lg leading-relaxed max-w-2xl">
+                In a space often dominated by noise, shortcuts, and surface-level learning, ISSMA focuses on building clear thinking, analytical foundations, and independent market capability. Our programs are designed to move learners from basic awareness to structured analysis—across Technical Analysis, Fundamental Analysis, and derivatives.
+              </p>
+              <p className="text-gray-300 mb-8 text-lg leading-relaxed max-w-2xl">
+                At ISSMA, the objective is to help you develop the clarity and confidence required to approach markets responsibly, thoughtfully, and independently.
               </p>
               
               <div className="flex flex-wrap items-center gap-8">
@@ -486,14 +492,15 @@ Most people are expected to manage savings, insurance, risk, and investments thr
               <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
                 <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
                   <Award className="w-6 h-6 text-cyan-400" />
-                  Training & Education Vertical
+                  What ISSMA Delivers
                 </h2>
                 
                 <div className="space-y-4">
                   {[
-                    "All programs designed for learning and skill development",
-                    "Structured market understanding",
-                    "No guarantees, promises, or outcome assurances"
+                    "Depth, structure, and discipline in market understanding",
+                    "Clear thinking and analytical foundations",
+                    "Independent market capability—Technical, Fundamental & derivatives",
+                    "Clarity and confidence to approach markets responsibly and thoughtfully"
                   ].map((text, index) => (
                     <div key={index} className="flex items-start gap-3 text-gray-200">
                       <div className="w-5 h-5 rounded-full bg-cyan-500/20 flex items-center justify-center mt-0.5">
@@ -528,7 +535,7 @@ Most people are expected to manage savings, insurance, risk, and investments thr
       {/* Main Content */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          {/* COURSES SECTION - COMPLETELY REDESIGNED */}
+          {/* COURSES SECTION */}
           <div className="mb-20">
             {/* Section Header with decorative elements */}
             <div className="text-center mb-16 relative">
@@ -612,31 +619,46 @@ Most people are expected to manage savings, insurance, risk, and investments thr
                       <div className={`relative bg-white rounded-3xl border-2 ${colors.border} shadow-xl overflow-hidden transition-all duration-500 ${
                         isHovered ? 'transform -translate-y-2 shadow-2xl' : ''
                       }`}>
-                        {/* Card Header with Pattern */}
-                        <div className={`relative h-48 bg-gradient-to-r ${course.gradient} p-6 overflow-hidden`}>
-                          <div className="absolute inset-0 bg-black/10"></div>
-                          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                          <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+                        {/* Card Header with Image */}
+                        <div className={`relative h-48 bg-gradient-to-r ${course.gradient} overflow-hidden`}>
+                          {/* Background Image */}
+                          {course.image && (
+                            <div className="absolute inset-0">
+                              <Image
+                                src={course.image}
+                                alt={course.title}
+                                fill
+                                className="object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+                                onError={(e) => {
+                                  e.target.style.display = 'none';
+                                }}
+                              />
+                            </div>
+                          )}
                           
-                          <div className="relative z-10">
-                            <div className="flex justify-between items-start mb-4">
+                          {/* Gradient Overlay */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                          
+                          {/* Pattern Overlay */}
+                          <div className="absolute inset-0 opacity-10">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-16 -mt-16"></div>
+                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white rounded-full -ml-12 -mb-12"></div>
+                          </div>
+                          
+                          <div className="relative z-10 h-full flex flex-col justify-between p-6">
+                            <div className="flex justify-between items-start">
                               <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-white/30">
                                 Course {course.id}
                               </span>
-                              <div className="flex items-center gap-1 bg-white/20 backdrop-blur-sm px-2 py-1 rounded-full">
-                                <Star className="w-3 h-3 text-yellow-300 fill-current" />
-                                <span className="text-xs text-white">{course.rating}</span>
-                              </div>
+                             
                             </div>
                             
-                            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 border border-white/30">
-                              <div className="text-white transform group-hover:scale-110 transition-transform duration-300">
-                                {course.icon}
-                              </div>
+                            <div>
+                              
+                              
+                              <h3 className="text-lg font-bold text-white mb-1 line-clamp-2">{course.level}</h3>
+                              <p className="text-white/90 text-sm line-clamp-2">{course.title}</p>
                             </div>
-                            
-                            <h3 className="text-xl font-bold text-white mb-1">{course.level}</h3>
-                            <p className="text-white/90 text-sm line-clamp-2">{course.title}</p>
                           </div>
                         </div>
 
@@ -705,7 +727,7 @@ Most people are expected to manage savings, insurance, risk, and investments thr
                                     <FileText className={`w-4 h-4 ${colors.text}`} />
                                     About
                                   </h4>
-                                  <p className="text-sm text-gray-700">{course.description}</p>
+                                  <p className="text-sm text-gray-700 whitespace-pre-line">{course.description}</p>
                                 </div>
                               )}
 
@@ -792,20 +814,28 @@ Most people are expected to manage savings, insurance, risk, and investments thr
                       className="bg-white rounded-2xl border-2 border-gray-200 shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                     >
                       <div className="flex flex-col md:flex-row">
-                        {/* Color Bar */}
-                        <div className={`md:w-2 h-2 md:h-auto bg-gradient-to-r ${course.gradient}`}></div>
+                        {/* Color Bar with Image */}
+                        <div className={`md:w-32 h-32 md:h-auto relative overflow-hidden bg-gradient-to-r ${course.gradient}`}>
+                          {course.image && (
+                            <Image
+                              src={course.image}
+                              alt={course.title}
+                              fill
+                              className="object-cover opacity-40"
+                            />
+                          )}
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="text-white/80">
+                              {course.icon}
+                            </div>
+                          </div>
+                        </div>
                         
                         {/* Content */}
                         <div className="flex-1 p-6">
                           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                             {/* Left Section */}
                             <div className="flex items-start gap-4">
-                              <div className={`w-16 h-16 bg-gradient-to-r ${course.gradient} rounded-xl flex items-center justify-center shadow-lg flex-shrink-0`}>
-                                <div className="text-white">
-                                  {course.icon}
-                                </div>
-                              </div>
-                              
                               <div>
                                 <div className="flex items-center gap-3 mb-1">
                                   <span className={`px-3 py-1 ${colors.badge} rounded-full text-xs font-medium`}>
@@ -898,146 +928,42 @@ Most people are expected to manage savings, insurance, risk, and investments thr
             )}
 
             {/* Learning Path Visualization */}
-            <div className="mt-16 relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl opacity-10 blur-2xl"></div>
-              <div className="relative bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-8 text-white overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
-                <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mb-24"></div>
-                
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
-                    <Workflow className="w-6 h-6" />
-                    Your Learning Journey
-                  </h3>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {[
-                      { step: 1, title: "Foundation", desc: "Start with Course 1 for financial literacy", icon: <School className="w-8 h-8" /> },
-                      { step: 2, title: "Specialization", desc: "Choose Technical or Fundamental track", icon: <Target className="w-8 h-8" /> },
-                      { step: 3, title: "Mastery", desc: "Complete all courses + internship", icon: <Trophy className="w-8 h-8" /> }
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-4 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                          {item.icon}
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">
-                              {item.step}
-                            </span>
-                            <h4 className="font-semibold text-lg">{item.title}</h4>
-                          </div>
-                          <p className="text-white/80 text-sm">{item.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </div>
           
           {/* Teaching Philosophy with Modern Design */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-purple-100 px-4 py-2 rounded-full mb-4">
-                <Brain className="w-4 h-4 text-purple-600" />
-                <span className="text-purple-700 font-medium">Our Approach</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Teaching <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Philosophy</span>
-              </h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                The principles that guide our educational approach
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-              {teachingPhilosophy.map((item, index) => (
-                <div key={index} className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
-                  <div className="relative bg-white rounded-2xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group-hover:border-transparent">
-                    <div className="w-14 h-14 bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <div className="text-purple-600">
-                        {item.icon}
-                      </div>
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          
 
           {/* Program Formats */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-cyan-100 px-4 py-2 rounded-full mb-4">
-                <Calendar className="w-4 h-4 text-cyan-600" />
-                <span className="text-cyan-700 font-medium">Learning Formats</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Program <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">Formats</span>
-              </h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Flexible learning options to suit different needs and preferences
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {programFormats.map((format, index) => (
-                <div key={index} className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
-                  <div className="relative bg-white rounded-2xl p-6 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group-hover:border-transparent">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <div className="text-white">
-                        {format.icon}
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{format.title}</h3>
-                    <p className="text-gray-600 mb-4">{format.desc}</p>
-                    
-                    {format.title === "Online modules & analytics tools" ? (
-                      <span className="inline-flex items-center gap-1 px-3 py-1 bg-amber-100 text-amber-700 text-sm font-medium rounded-full">
-                        <Clock className="w-3 h-3" />
-                        Coming Soon
-                      </span>
-                    ) : (
-                      <button className="inline-flex items-center gap-1 text-cyan-600 hover:text-cyan-700 font-medium text-sm group/btn">
-                        Learn More
-                        <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                      </button>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          
 
           {/* Call to Action */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl opacity-10 blur-2xl"></div>
-            <div className="relative bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 text-center text-white overflow-hidden">
-              <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -ml-32 -mt-32"></div>
-              <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mb-32"></div>
-              
-              <div className="relative z-10 max-w-3xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                  Ready to Start Your Journey?
-                </h2>
-                <p className="text-xl text-white/90 mb-8">
-                  Join ISSMA today and transform your understanding of financial markets
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-bold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
-                    Explore All Courses
-                    <ArrowRight className="w-5 h-5" />
-                  </button>
-                  <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300">
-                    Contact Us
-                  </button>
+         
+          {/* Important Note - Education Disclaimer */}
+          <div className="mt-16 mb-8">
+            <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-8 border-2 border-amber-200 shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center">
+                  <AlertTriangle className="w-6 h-6 text-white" />
                 </div>
+                <h2 className="text-2xl font-bold text-amber-900">Important Note</h2>
+              </div>
+              <div className="space-y-4 text-amber-900">
+                <p className="leading-relaxed">
+                  The courses and training programs offered by IndeqNet through ISSMA are intended solely for educational and informational purposes and do not constitute investment advice, research recommendations, or solicitation of any securities.
+                </p>
+                <p className="leading-relaxed">
+                  Course content is independent of IndeqNet's Research Analyst services and should not be construed as research reports or research recommendations under SEBI (Research Analyst) Regulations, 2014.
+                </p>
+                <p className="leading-relaxed">
+                  No assurance or guarantee is provided regarding accuracy, completeness, or profitability of any concepts, strategies, tools, or examples discussed during the courses.
+                </p>
+                <p className="leading-relaxed">
+                  Participation in the courses does not guarantee trading success, investment performance, income generation, employment, certification outcomes, or financial results.
+                </p>
+                <p className="leading-relaxed">
+                  Any market examples, case studies, illustrations, simulations, or historical data used during the courses are for explanation purposes only and should not be considered as recommendations or indicative of future performance. No assurance or guarantee is provided regarding returns, income generation, trading performance or investment outcomes as a result of attending any course.
+                </p>
               </div>
             </div>
           </div>
@@ -1079,6 +1005,20 @@ Most people are expected to manage savings, insurance, risk, and investments thr
         
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
           background: #555;
+        }
+
+        .line-clamp-1 {
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
       `}</style>
     </main>

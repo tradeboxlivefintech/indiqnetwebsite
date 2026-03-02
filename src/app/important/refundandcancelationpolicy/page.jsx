@@ -1,581 +1,161 @@
 'use client'
 import React from 'react'
-import {
-  RefreshCw,
-  XCircle,
-  Clock,
-  AlertCircle,
-  FileText,
-  CheckCircle,
-  Shield,
-  Mail,
-  Phone,
-  MapPin,
-  DollarSign,
-  Calendar,
-  Users,
-  Download,
-  ExternalLink,
-  Ban
-} from "lucide-react";
+import { FileText, Mail, MapPin, Phone, AlertTriangle, RefreshCw, Calendar } from 'lucide-react'
 
 const RefundPolicy = () => {
-  const currentDate = new Date().toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      {/* Hero Section */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <main className="bg-gradient-to-b from-slate-50 to-white min-h-screen">
+      {/* Hero */}
+      <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center">
-              <RefreshCw className="w-6 h-6 text-white" />
-            </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-              Refund & Cancellation Policy
-            </h1>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border border-white/20 mb-6">
+            <RefreshCw className="w-5 h-5" />
+            <span className="text-sm font-medium">Legal</span>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <div className="flex items-center gap-2 bg-amber-900/30 px-4 py-2 rounded-full">
-              <Calendar className="w-4 h-4 text-amber-300" />
-              <span className="text-amber-200">Last Updated: {currentDate}</span>
-            </div>
-            <div className="flex items-center gap-2 bg-red-900/30 px-4 py-2 rounded-full">
-              <AlertCircle className="w-4 h-4 text-red-300" />
-              <span className="text-red-200">Important: Most services are non-refundable</span>
-            </div>
-          </div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Clear guidelines for refunds, cancellations, and service policies across all India Equity Network verticals
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Refund & Cancellation Policy</h1>
+          <p className="text-slate-300 text-lg">
+            India Elite Summit — Seminar refunds, cancellations, and transfers
           </p>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-amber-400 to-orange-400 mx-auto rounded-full mt-8"></div>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Content */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-gray-200">
-            
-            {/* Warning Banner */}
-            <div className="mb-10 p-6 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border border-red-200">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <AlertCircle className="w-6 h-6 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Important Notice</h3>
-                  <p className="text-gray-800">
-                    Due to the nature of digital delivery, proprietary content, intellectual property, and service-based execution, 
-                    most purchases are <span className="font-bold text-red-600">non-refundable</span> once access is granted or materials are delivered.
-                  </p>
-                </div>
-              </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="prose prose-slate prose-lg">
+            <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg mb-10 flex items-start gap-3">
+              <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
+              <p className="text-amber-900 text-sm m-0">
+                By registering for the Seminar, you agree to be bound by this Refund Policy. We reserve the right to update or modify this policy at any time; changes will be posted on www.indiaelitesummit.com.
+              </p>
             </div>
 
-            {/* Section 1: General Principle */}
-            <div className="mb-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <FileText className="w-5 h-5 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">1. GENERAL REFUND PRINCIPLE</h2>
-              </div>
-              
-              <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
-                <div className="flex items-start gap-4">
-                  <div className="flex-1">
-                    <p className="text-gray-800 text-lg mb-4">
-                      Refunds are considered only under defined, limited conditions and are not guaranteed.
-                      By purchasing or subscribing to any of our services, you acknowledge that you have read, 
-                      understood, and agree to the terms outlined in this policy.
-                    </p>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-                      <div className="bg-white rounded-lg p-4 border border-blue-100">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Shield className="w-4 h-4 text-blue-500" />
-                          <h4 className="font-bold text-gray-900">Applies To</h4>
-                        </div>
-                        <p className="text-gray-600 text-sm">All services, courses, subscriptions, and registrations</p>
-                      </div>
-                      <div className="bg-white rounded-lg p-4 border border-blue-100">
-                        <div className="flex items-center gap-2 mb-2">
-                         
-                          <h4 className="font-bold text-gray-900">Refund Basis</h4>
-                        </div>
-                        <p className="text-gray-600 text-sm">Defined conditions only, not guaranteed</p>
-                      </div>
-                      <div className="bg-white rounded-lg p-4 border border-blue-100">
-                        <div className="flex items-center gap-2 mb-2">
-                          <CheckCircle className="w-4 h-4 text-blue-500" />
-                          <h4 className="font-bold text-gray-900">Acknowledgment</h4>
-                        </div>
-                        <p className="text-gray-600 text-sm">Purchase indicates acceptance of terms</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Indeqnet Private Limited, trading as India Elite Summit (hereinafter referred to as &quot;we,&quot; &quot;us,&quot; or &quot;India Elite Summit&quot;), having its registered office at 201, Radhakrishna, Radha Residency, Siddharth Nagar, Borivali - East, Mumbai – 400066, Maharashtra, India, organizes capital market events and training programs, including the India Elite Summit Seminar scheduled for 21st June 2025 and 22nd June 2025 (the &quot;Seminar&quot;). This Refund Policy governs the terms and conditions for cancellations, refunds, and transfers related to Seminar registrations.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              By registering for the Seminar, you (the &quot;Attendee,&quot; &quot;Participant,&quot; or &quot;you&quot;) agree to be bound by this Refund Policy. We reserve the right to update or modify this Refund Policy at any time, and changes will be posted on our website www.indiaelitesummit.com. Your continued participation or failure to cancel your registration constitutes acceptance of any revised terms.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">For any inquiries regarding this Refund Policy, please contact us at:</p>
+            <div className="bg-slate-100 rounded-xl p-4 mb-10 border border-slate-200">
+              <p className="m-0 flex items-center gap-2 text-gray-700"><Mail className="w-5 h-5 text-emerald-600 flex-shrink-0" /> Email: <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a></p>
+              <p className="m-0 mt-2 flex items-center gap-2 text-gray-700"><Phone className="w-5 h-5 text-emerald-600 flex-shrink-0" /> Phone: <a href="tel:+918828320113" className="text-emerald-700 hover:underline">+91-8828320113</a></p>
+              <p className="m-0 mt-2 flex items-center gap-2 text-gray-700">WhatsApp: <a href="https://wa.me/918828320113" className="text-emerald-700 hover:underline" target="_blank" rel="noopener noreferrer">+91-8828320113</a></p>
             </div>
 
-            {/* Section 2: Non-Refundable Items */}
-            <div className="mb-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center">
-                  <Ban className="w-5 h-5 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">2. NON-REFUNDABLE PRODUCTS & SERVICES</h2>
-              </div>
-              
-              <div className="bg-red-50 rounded-xl p-6 border border-red-200">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                      <XCircle className="w-5 h-5 text-red-500" />
-                      Strictly Non-Refundable
-                    </h3>
-                    <div className="space-y-3">
-                      {[
-                        "Digital courses, masterclasses, cohorts, and live training",
-                        "Recording access, e-learning content, LMS logins",
-                        "Advisory & research output from MarketGAInz",
-                        "Community/group access (WhatsApp/Telegram/Discord)",
-                        "Memberships, program subscriptions, toolkits",
-                        "Software, ebooks, templates, license-based materials",
-                        "Missed classes, no-shows, non-attendance"
-                      ].map((item, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                          <span className="text-gray-800">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                      <AlertCircle className="w-5 h-5 text-amber-500" />
-                      Not Grounds for Refund
-                    </h3>
-                    <div className="space-y-3">
-                      {[
-                        "Perceived learning value",
-                        "Changes in personal schedule",
-                        "Lack of time to use the product",
-                        "Market movement contrary to expectation",
-                        "Losses in trading or investing",
-                        "Request after partial/full utilisation",
-                        "Market opinions in educational material"
-                      ].map((item, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-amber-500 rounded-full mt-2"></div>
-                          <span className="text-gray-800">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Seminar Registration Fees</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">The Seminar registration fees are as follows (inclusive of applicable taxes):</p>
+            <ul className="list-none space-y-2 mb-4 pl-0">
+              <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Conference Only:</strong> INR 5,500/- (Rupees Five Thousand Five Hundred Only)</li>
+              <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Conference + Single Occupancy:</strong> INR 10,000/- (Rupees Ten Thousand Only)</li>
+              <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Conference + Double Occupancy:</strong> INR 7,000/- (Rupees Seven Thousand Only)</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed mb-8"><strong>Payment Deadline:</strong> Full payment must be received by 31st May 2025. Partial payments or late payments may result in forfeiture of registration or ineligibility for refunds, as outlined below.</p>
 
-            {/* Section 3: Eligible Cases */}
-            <div className="mb-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
-                  <CheckCircle className="w-5 h-5 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">3. ELIGIBLE REFUND CASES</h2>
-              </div>
-              
-              <div className="bg-green-50 rounded-xl p-6 border border-green-200">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {/* Eligible Cases */}
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-4">Eligible Scenarios</h3>
-                    <div className="space-y-4">
-                      <div className="bg-white rounded-lg p-4 border border-green-100">
-                        <div className="flex items-center gap-3 mb-2">
-                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center">
-                            <span className="text-white font-bold">A</span>
-                          </div>
-                          <h4 className="font-semibold text-gray-900">Duplicate Payment</h4>
-                        </div>
-                        <p className="text-gray-600">Same transaction charged more than once</p>
-                      </div>
-                      
-                      <div className="bg-white rounded-lg p-4 border border-green-100">
-                        <div className="flex items-center gap-3 mb-2">
-                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center">
-                            <span className="text-white font-bold">B</span>
-                          </div>
-                          <h4 className="font-semibold text-gray-900">Access Not Provided</h4>
-                        </div>
-                        <p className="text-gray-600">Paid access not granted due to our error</p>
-                      </div>
-                      
-                      <div className="bg-white rounded-lg p-4 border border-green-100">
-                        <div className="flex items-center gap-3 mb-2">
-                          <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center">
-                            <span className="text-white font-bold">C</span>
-                          </div>
-                          <h4 className="font-semibold text-gray-900">Event Cancellation</h4>
-                        </div>
-                        <p className="text-gray-600">Event cancelled by Indeqnet</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Documentation */}
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-4">Documentation Requirements</h3>
-                    <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg p-4 border border-amber-200">
-                      <div className="space-y-3">
-                        <div className="flex items-center gap-2">
-                          <FileText className="w-4 h-4 text-amber-600" />
-                          <span className="text-gray-800">Valid proof of payment</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <FileText className="w-4 h-4 text-amber-600" />
-                          <span className="text-gray-800">Written explanation</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4 text-amber-600" />
-                          <span className="text-gray-800">Time-stamped evidence</span>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-6 p-4 bg-white rounded-lg border border-green-200">
-                      <h4 className="font-semibold text-gray-900 mb-2">Event Cancellation Options</h4>
-                      <div className="space-y-2">
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                          <span className="text-gray-700">Full refund, OR</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                          <span className="text-gray-700">Transfer ticket to another date</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">2. Cancellation by Attendee</h2>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.1 Cancellation Deadline</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">To be eligible for a refund, Attendees must notify India Elite Summit of their cancellation in writing by <strong>20th May 2025</strong> (30 days prior to the Seminar start date). Notifications must be sent via email to <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a> from the registered email ID provided during registration.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.2 Refund Options</h3>
+            <ul className="list-none space-y-3 mb-4 pl-0">
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>No Full Refund:</strong> Under no circumstances will a full refund of the registration fees be issued, except as provided in Section 3 (Cancellation by India Elite Summit).</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Partial Refund:</strong> Cancellations received on or before 20th May 2025 are eligible for a <strong>75% refund</strong> of the paid registration fee, after deducting a 25% administrative fee to cover processing, operational, and third-party costs. The refund amount will be calculated based on the total amount paid by the Attendee, excluding any bank charges or transaction fees.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>No Refund:</strong> Cancellations received after 20th May 2025 are not eligible for any refund. No refunds will be issued for no-shows (failure to attend the Seminar without prior cancellation). If only a partial payment was made by 30th April 2025, the entire amount paid will be forfeited, and no refund will be issued. The decision to offer any refund in such cases rests solely with the India Elite Summit Decision Committee, whose decision is final and binding.</li>
+            </ul>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.3 Transfer of Registration</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">Attendees may transfer their registration to another individual, subject to the following conditions:</p>
+            <ul className="list-none space-y-2 mb-4 pl-0">
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> A written request for transfer, including the reason for cancellation and the details of the substitute attendee (name, email, phone number), must be emailed to <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a> from the registered email ID.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> The request must be received at least 15 days prior to the Seminar (by <strong>6th June 2025</strong>).</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Transfers are subject to approval by India Elite Summit, and an administrative fee of <strong>INR 1,000/-</strong> may be charged to process the transfer.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Transfers are not permitted after 6th June 2025 or for no-shows.</li>
+            </ul>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.4 Refund Process</h3>
+            <ul className="list-none space-y-2 mb-8 pl-0">
+              <li className="flex items-start  text-gray-500 gap-2"><span className="text-emerald-600">•</span> Refunds will be processed within <strong>15 business days</strong> of receiving an eligible cancellation request.</li>
+              <li className="flex items-start  text-gray-500 gap-2"><span className="text-emerald-600">•</span> Refunds will be issued using the original payment method or via wire transfer to a bank account specified by the Attendee. Bank details must match those provided during registration to prevent fraud.</li>
+              <li className="flex items-start  text-gray-500 gap-2"><span className="text-emerald-600">•</span> Any bank charges or transaction fees incurred during the refund process will be borne by the Attendee.</li>
+            </ul>
 
-            {/* Quick Info Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                    <Clock className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="font-bold text-gray-900">4. TIME LIMIT</h3>
-                </div>
-                <p className="text-gray-700">
-                  All refund requests must be initiated within <span className="font-bold">72 hours (3 working days)</span> of purchase.
-                </p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border border-cyan-200">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
-                    <Clock className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="font-bold text-gray-900">5. PROCESSING TIME</h3>
-                </div>
-                <p className="text-gray-700">
-                  Approved refunds processed in <span className="font-bold">45 working days</span> to original payment source.
-                </p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl p-6 border border-emerald-200">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-green-500 rounded-lg flex items-center justify-center">
-                    <DollarSign className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="font-bold text-gray-900">CHARGES</h3>
-                </div>
-                <p className="text-gray-700">
-                  Payment gateway charges, bank fees, and administrative charges are <span className="font-bold">non-refundable</span>.
-                </p>
-              </div>
-            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">3. Cancellation or Rescheduling by India Elite Summit</h2>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">3.1 Event Cancellation</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">India Elite Summit reserves the right to cancel or reschedule the Seminar due to unforeseen circumstances, including but not limited to: Acts of God (e.g., natural disasters, pandemics); Government regulations or restrictions; Insufficient registrations or logistical issues; Speaker or venue unavailability.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">3.2 Notification</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">In the event of cancellation or rescheduling, Attendees will be notified as soon as practicable via: Email to the registered email ID; SMS or WhatsApp to the registered mobile number; An announcement on our website www.indiaelitesummit.com.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">3.3 Refund for Cancellation</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">If India Elite Summit cancels the Seminar, Attendees will receive a <strong>full refund</strong> of the registration fees paid, without deduction of administrative fees. Refunds will be processed within 15 business days of the cancellation announcement.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">3.4 Options for Rescheduling</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">If the Seminar is rescheduled, Attendees may choose to: Transfer their registration to the rescheduled Seminar at no additional cost; or Request a full refund of the registration fees, processed within 15 business days of the request.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">3.5 No Additional Liability</h3>
+            <p className="text-gray-700 leading-relaxed mb-8">India Elite Summit will not be liable for any incidental, consequential, or indirect damages resulting from cancellation or rescheduling, including but not limited to: Travel or accommodation expenses; Lost wages or business opportunities; Other costs incurred by the Attendee.</p>
 
-            {/* Section 6-8 Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-              <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    <XCircle className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="font-bold text-gray-900">6. SUBSCRIPTION CANCELLATION</h3>
-                </div>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
-                    <span className="text-gray-700">Cancel renewal anytime to avoid future charges</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
-                    <span className="text-gray-700">No pro-rated refunds for partial periods</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
-                    <span className="text-gray-700">Processed billing cycles are non-refundable</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
-                    <Users className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="font-bold text-gray-900">7. TRANSFER POLICY</h3>
-                </div>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span className="text-gray-700">Event tickets transferable 7+ days prior</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span className="text-gray-700">Course deferral possible to later batch</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span className="text-gray-700">Replacement options at our discretion</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-amber-600 rounded-lg flex items-center justify-center">
-                    <AlertCircle className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="font-bold text-gray-900">8. THIRD-PARTY PURCHASES</h3>
-                </div>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full mt-2"></div>
-                    <span className="text-gray-700">Affiliate/influencer purchases</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full mt-2"></div>
-                    <span className="text-gray-700">Third-party platform purchases</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full mt-2"></div>
-                    <span className="text-gray-700 text-sm font-semibold">Contact seller directly for refunds</span>
-                  </div>
-                </div>
-              </div>
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">4. Payment Terms and Conditions</h2>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">4.1 Payment Methods</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">Payments for Seminar registration must be made via: Online payment gateways (credit/debit card, UPI, net banking); Bank transfer to the account details provided below; Other methods as specified on our website.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">4.2 Bank Details for Payments</h3>
+            <div className="overflow-x-auto mb-4">
+              <table className="w-full border border-gray-200 rounded-lg overflow-hidden">
+                <thead className="bg-slate-100">
+                  <tr>
+                    <th className="text-left p-3 font-semibold text-gray-900">S. No.</th>
+                    <th className="text-left p-3 font-semibold text-gray-900">Details</th>
+                    <th className="text-left p-3 font-semibold text-gray-900">Remarks</th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-700">
+                  <tr className="border-t border-gray-200"><td className="p-3">1</td><td className="p-3">Beneficiary Name</td><td className="p-3">INDEQNET PRIVATE LIMITED</td></tr>
+                  <tr className="border-t border-gray-200"><td className="p-3">2</td><td className="p-3">Bank Name</td><td className="p-3">ICICI BANK</td></tr>
+                  <tr className="border-t border-gray-200"><td className="p-3">3</td><td className="p-3">Bank Account No.</td><td className="p-3">041205001093</td></tr>
+                  <tr className="border-t border-gray-200"><td className="p-3">4</td><td className="p-3">Account Type</td><td className="p-3">Current Account</td></tr>
+                  <tr className="border-t border-gray-200"><td className="p-3">5</td><td className="p-3">Bank IFSC Code</td><td className="p-3">ICIC0000412</td></tr>
+                  <tr className="border-t border-gray-200"><td className="p-3">6</td><td className="p-3">Bank Branch Location</td><td className="p-3">Yari Road Versova, Andheri West</td></tr>
+                </tbody>
+              </table>
             </div>
+            <p className="text-gray-700 leading-relaxed mb-4">Attendees must include their Registration ID or Attendee Name as a reference in the bank transfer to ensure accurate allocation. Any bank charges or transaction fees for payments are the responsibility of the Attendee.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">4.3 Payment Confirmation</h3>
+            <p className="text-gray-700 leading-relaxed mb-8">Upon successful payment, Attendees will receive a confirmation email with their registration details. Failure to complete full payment by 31st May 2025 may result in cancellation of the registration without refund of any partial payments.</p>
 
-            {/* Fraud Prevention */}
-            <div className="mb-10">
-              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-white">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center">
-                    <Shield className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold">9. FRAUD PREVENTION & MISUSE</h3>
-                    <p className="text-gray-300 text-sm">We reserve the right to deny refunds for misuse</p>
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {[
-                    "Misuse for free content consumption",
-                    "Download materials then request refund",
-                    "Share login access or intellectual property",
-                    "Initiate chargeback fraud or false claims",
-                    "Engage with unauthorized resellers"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                      <span className="text-gray-200">{item}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="mt-4 p-4 bg-gray-900/50 rounded-lg border border-gray-700">
-                  <p className="text-red-300 text-sm">
-                    <span className="font-semibold">Note:</span> Such behaviour may result in legal action and permanent platform ban.
-                  </p>
-                </div>
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">5. Other Considerations</h2>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">5.1 Administrative Fees</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">A 25% administrative fee will be deducted from all eligible refunds to cover processing, operational, and third-party costs. Additional fees may apply for registration transfers, as outlined in Section 2.3.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">5.2 Non-Transferable Fees</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">Registration fees are non-transferable to other events, training programs, or services offered by India Elite Summit unless explicitly approved by the India Elite Summit Decision Committee.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">5.3 Force Majeure</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">India Elite Summit shall not be liable for failure to hold the Seminar or provide refunds due to circumstances beyond our reasonable control, including but not limited to natural disasters, war, terrorism, government restrictions, or cyberattacks. In such cases, India Elite Summit may offer alternative remedies, such as rescheduling or credit for future events, at its sole discretion.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">5.4 Dispute Resolution</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">Any disputes arising from this Refund Policy shall be governed by the laws of India and subject to the exclusive jurisdiction of the courts in Mumbai, Maharashtra. Attendees waive any objections to jurisdiction, venue, or forum non conveniens.</p>
+            <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">5.5 Contact Information</h3>
+            <p className="text-gray-700 leading-relaxed mb-4">For refund requests, inquiries, or disputes, please contact:</p>
+            <div className="bg-slate-100 rounded-2xl p-6 border border-slate-200 mb-8">
+              <p className="font-bold text-gray-900 mb-2">Indeqnet Private Limited (India Elite Summit)</p>
+              <div className="space-y-2 text-gray-700">
+                <p className="flex items-center gap-2"><Mail className="w-5 h-5 text-emerald-600 flex-shrink-0" /> <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a></p>
+                <p className="flex items-center gap-2"><Phone className="w-5 h-5 text-emerald-600 flex-shrink-0" /> <a href="tel:+918828320113" className="text-emerald-700 hover:underline">+91-8828320113</a></p>
+                <p className="flex items-center gap-2">WhatsApp: <a href="https://wa.me/918828320113" className="text-emerald-700 hover:underline" target="_blank" rel="noopener noreferrer">+91-8828320113</a></p>
+                <p className="flex items-center gap-2"><MapPin className="w-5 h-5 text-emerald-600 flex-shrink-0" /> 201, Radhakrishna, Radha Residency, Siddharth Nagar, Borivali - East, Mumbai – 400066, Maharashtra, India</p>
               </div>
-            </div>
+              <p className="text-gray-600 text-sm mt-4">We aim to respond to all inquiries within 5 business days.</p>
+            </div>text-gray-500 
 
-            {/* Refund Request Process */}
-            <div className="mb-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900">12. REFUND REQUEST PROCESS</h2>
-              </div>
-              
-              <div className="bg-indigo-50 rounded-xl p-6 border border-indigo-200">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-4">Contact Information</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-3">
-                        <Mail className="w-5 h-5 text-indigo-600" />
-                        <div>
-                          <p className="font-semibold text-gray-900">Email</p>
-                          <a 
-                            href="mailto:support@indeqnet.com"
-                            className="text-gray-700 hover:text-indigo-600 hover:underline"
-                          >
-                            support@indeqnet.com
-                          </a>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <Phone className="w-5 h-5 text-indigo-600" />
-                        <div>
-                          <p className="font-semibold text-gray-900">Phone</p>
-                          <a 
-                            href="tel:+918828320113"
-                            className="text-gray-700 hover:text-indigo-600 hover:underline"
-                          >
-                            +91 88283 20113
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-6 p-4 bg-white rounded-lg border border-indigo-100">
-                      <p className="text-gray-700">
-                        <span className="font-semibold text-gray-900">Subject Line Format:</span>
-                      </p>
-                      <code className="block mt-2 text-sm bg-gray-800 text-gray-100 p-2 rounded">
-                        REFUND REQUEST – [Full Name] – [Service Purchased] – [Date]
-                      </code>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-4">Required Information</h3>
-                    <div className="space-y-3">
-                      {[
-                        "Full name",
-                        "Mobile number",
-                        "Transaction ID & date",
-                        "Proof of payment",
-                        "Reason for request with evidence"
-                      ].map((item, index) => (
-                        <div key={index} className="flex items-center gap-3">
-                          <div className="w-6 h-6 bg-gradient-to-br from-indigo-400 to-indigo-500 rounded-full flex items-center justify-center">
-                            <span className="text-white text-sm">{index + 1}</span>
-                          </div>
-                          <span className="text-gray-800">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="mt-4 p-4 bg-amber-50 rounded-lg border border-amber-200">
-                      <p className="text-amber-800 text-sm">
-                        <span className="font-semibold">Important:</span> Incomplete requests may be rejected without processing.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">6. Attendee Responsibilities</h2>
+            <ul className="list-none space-y-2 mb-8 pl-0">
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Accurate Information:</strong> Attendees must provide accurate contact and payment details during registration to ensure timely communication and refund processing.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Timely Notification:</strong> Attendees are responsible for notifying India Elite Summit of cancellations or transfer requests within the specified deadlines.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Verification:</strong> For security purposes, refund or transfer requests must be made from the registered email ID or verified by providing the Registration ID.</li>
+            </ul>
 
-            {/* Final Contact Information */}
-            <div className="mt-12 p-8 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl border border-gray-300">
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">15. CONTACT INFORMATION</h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                  <div className="bg-white rounded-lg p-6 border border-gray-200">
-                    <div className="flex flex-col items-center">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                        <Mail className="w-6 h-6 text-white" />
-                      </div>
-                      <p className="font-semibold text-gray-900 mb-2">Email</p>
-                      <a 
-                        href="mailto:support@indeqnet.com"
-                        className="text-blue-600 hover:text-blue-700 hover:underline text-lg"
-                      >
-                        support@indeqnet.com
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white rounded-lg p-6 border border-gray-200">
-                    <div className="flex flex-col items-center">
-                      <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
-                        <Phone className="w-6 h-6 text-white" />
-                      </div>
-                      <p className="font-semibold text-gray-900 mb-2">Phone</p>
-                      <a 
-                        href="tel:+918828320113"
-                        className="text-emerald-600 hover:text-emerald-700 hover:underline text-lg"
-                      >
-                        +91 88283 20113
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white rounded-lg p-6 border border-gray-200">
-                    <div className="flex flex-col items-center">
-                      <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                        <MapPin className="w-6 h-6 text-white" />
-                      </div>
-                      <p className="font-semibold text-gray-900 mb-2">Registered Office</p>
-                      <p className="text-gray-700 text-center text-sm">
-                        201, Radhakrishna, Radha Residency, Siddharth Nagar,
-                        Borivali East, Mumbai – 400066, Maharashtra, India
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-white rounded-lg p-6 border border-gray-200">
-                  <h4 className="font-bold text-gray-900 mb-4">Final Acknowledgment</h4>
-                  <p className="text-gray-700 mb-4">
-                    By completing a purchase, the user acknowledges that they have read this policy in full, 
-                    understand the refund limitations, agree that refunds are discretionary, and will not 
-                    initiate chargebacks without first contacting support.
-                  </p>
-                  <div className="flex flex-wrap gap-4 justify-center">
-                    <a 
-                      href="mailto:support@indeqnet.com"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-md hover:shadow-lg"
-                    >
-                      <Mail className="w-5 h-5" />
-                      Submit Refund Request
-                    </a>
-                    <a 
-                      href="tel:+918828320113"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 shadow-md hover:shadow-lg"
-                    >
-                      <Phone className="w-5 h-5" />
-                      Call for Queries
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">7. Additional Terms</h2>
+            <ul className="list-none space-y-2 mb-4 pl-0">
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>No Guarantee of Attendance:</strong> Registration fees cover access to the Seminar but do not guarantee attendance if Attendees fail to comply with event policies (e.g., health and safety protocols, code of conduct).</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Policy Updates:</strong> India Elite Summit may amend this Refund Policy at any time. Attendees will be notified of significant changes via email or website updates.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Severability:</strong> If any provision of this Refund Policy is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Entire Agreement:</strong> This Refund Policy, together with our Privacy Policy, Disclaimer, and Terms of Use, constitutes the entire agreement between you and India Elite Summit regarding Seminar registrations and refunds.</li>
+            </ul>
           </div>
         </div>
       </section>
     </main>
-  );
-};
+  )
+}
 
-export default RefundPolicy;
+export default RefundPolicy
