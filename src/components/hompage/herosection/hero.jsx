@@ -15,19 +15,19 @@ const HomePage = () => {
     const slides = [
       {
         name: 'NS Fidai',
-        image: '/founders/picture1.png',
+        image: '/founders/Picture1.png',
         shortDescription: 'Founder of Analyse India — veteran banker and market guru with 13 years in banking and over 33 years in Indian Equity markets (since 1991). Known as "Master of Moving Averages", he has mentored thousands in Technical Analysis for over 20 years.',
         fullDescription: 'Founder of Analyse India is a veteran banker and market guru with an unparalleled track record of success. With 13 years of banking experience and over 33 years of navigating the Indian Equity markets (since 1991). NS Fidai\'s expertise in Technical Analysis has earned him widespread recognition as one of the top analysts in the field and he is known as "Master of Moving Averages". For over 20 years, Fidai has shared his knowledge and insights with thousands of aspiring traders and investors, mentoring and training them in the art of Technical Analysis.'
       },
       {
         name: 'Rajeev Jhunjhunwala',
-        image: '/founders/picture2.png',
+        image: '/founders/Picture2.png',
         shortDescription: 'Over three decades in Indian capital markets — seasoned broker, disciplined investor, and respected market voice. Brings a long-term, systems-oriented understanding grounded in capital discipline and risk awareness.',
         fullDescription: 'With over three decades of experience in the Indian capital markets, Rajeev Jhunjhunwala has established himself as a seasoned broker, disciplined investor, and respected market voice. Having navigated multiple economic cycles, regulatory reforms, and structural transitions within India\'s financial ecosystem, he brings a long-term, systems-oriented understanding of markets grounded in capital discipline and risk awareness.'
       },
       {
         name: 'Ram Iyer',
-        image: '/founders/picture3.png',
+        image: '/founders/Picture3.png',
         shortDescription: 'Seasoned finance professional with over three decades driving business growth. MBA (NMIMS), SEBI Research Analyst. Strategic advisor featured on CNBC Awaaz and regional business channels. Vision: informed, independent market participants who approach opportunity and risk with discipline.',
         fullDescription: 'Ram is a seasoned finance professional with over three decades of experience driving significant business growth. Armed with an MBA in Finance (NMIMS), a Diploma in Cyber Law, and SEBI Research Analyst registration, he specializes in establishing new ventures and implementing robust control and monitoring systems. Ram functions as a strategic advisor to CEOs and a key operational resource for cross-functional teams. He has been featured on CNBC Awaaz and prominent Bengali business channels. He believes markets are structured systems of ownership, capital allocation, and long-term wealth creation, and his vision is centered on building informed and independent market participants who approach opportunity and risk with equal seriousness and discipline.'
       }
