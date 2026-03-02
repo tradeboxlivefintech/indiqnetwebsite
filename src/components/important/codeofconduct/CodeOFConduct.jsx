@@ -81,7 +81,7 @@ const CodeOfConduct = () => {
                 <h2 className="text-xl font-bold text-gray-900 mb-4">Our Ethical Framework</h2>
                 <p className="text-gray-700 leading-relaxed">
                   This Code of Conduct outlines the fundamental principles that guide our research activities 
-                  and ensure the integrity of our analysis. As a SEBI registered research entity, we are committed 
+                  and ensure the integrity of our analysis. As a SEBI registered research entity (INH000024930), we are committed 
                   to maintaining transparency, professionalism, and ethical behavior in all our operations.
                 </p>
               </div>

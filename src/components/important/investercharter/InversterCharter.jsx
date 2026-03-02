@@ -120,10 +120,10 @@ const InvestorCharter = () => {
   ];
 
   const investorDos = [
-    "Always deal with SEBI registered Research Analyst.",
+    "Always deal with SEBI registered Research Analyst (INH000024930).",
     "Ensure that the Research Analyst has a valid registration certificate.",
     "Check for SEBI registration number.",
-    "Refer to the list of SEBI registered Research Analysts on SEBI website.",
+    "Refer to the list of SEBI registered Research Analysts (INH000024930) on SEBI website.",
     "Pay attention towards disclosures made in the research reports before investing.",
     "Pay your Research Analyst through banking channels only and maintain duly signed receipts.",
     "Check for research recommendation before buying/selling securities.",

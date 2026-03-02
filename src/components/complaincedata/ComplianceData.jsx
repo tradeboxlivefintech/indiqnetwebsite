@@ -198,7 +198,7 @@ const CompliancePage = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-emerald-200 mt-0.5 flex-shrink-0" />
-                    <span>SEBI Registered RA</span>
+                    <span>SEBI Registered RA (INH000024930)</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-emerald-200 mt-0.5 flex-shrink-0" />

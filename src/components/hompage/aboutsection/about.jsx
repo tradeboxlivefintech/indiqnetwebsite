@@ -146,7 +146,7 @@ const About = () => {
                   "Research Services & Market Analysis",
                   "Investor Education Programs",
                   "Seminars & Networking Events",
-                  "SEBI Registered RA & IA Platform",
+                  "SEBI Registered RA (INH000024930) & IA Platform",
                   "Investment Advisory"
                 ].map((service, index) => (
                   <li key={index} className="flex items-center gap-2 text-gray-700">

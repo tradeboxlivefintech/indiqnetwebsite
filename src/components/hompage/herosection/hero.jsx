@@ -177,7 +177,7 @@ const HomePage = () => {
   // Enhanced About Section
   const AboutSection = () => {
     const achievements = [
-      { icon: <Shield />, value: "SEBI Registered", label: "Regulatory Compliance" },
+      { icon: <Shield />, value: "SEBI Registered", label: "INH000024930" },
       { icon: <GraduationCap />, value: "500+", label: "Trained Professionals" },
       { icon: <Briefcase />, value: "75+ Years", label: "Cumulative Market Experience" },
       { icon: <Users />, value: "1000+", label: "Community Members" }
@@ -276,7 +276,7 @@ const HomePage = () => {
     const verticals = [
       {
         title: "Advisory & Research Desk",
-        subtitle: "SEBI Registered Research Analyst",
+        subtitle: "SEBI Registered Research Analyst (INH000024930)",
         description: "The regulated advisory division providing SEBI-compliant, framework-based equity research focused on clarity, documentation, and disciplined analysis.",
         icon: <Shield className="w-10 h-10" />,
         color: "from-emerald-500 to-emerald-600",

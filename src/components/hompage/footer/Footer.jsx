@@ -78,13 +78,11 @@ const Footer = () => {
             
             <div>
               <h3 className="text-lg font-bold text-white mb-1">India Equity Network</h3>
-              <p className="text-gray-300 text-sm mb-2">
-                (CIN: ________)
-              </p>
+             
               
               <div className="space-y-1 text-xs text-gray-400">
                 <p className="flex items-center gap-1">
-                  <span className="text-green-400 font-medium">marketgAInz</span> – SEBI Registered Research Analyst (SEBI Reg No: ________)
+                  <span className="text-green-400 font-medium">marketgAInz</span> – SEBI Registered Research Analyst (SEBI Reg No: INH000024930)
                 </p>
                 <p className="flex items-center gap-1">
                   <span className="text-blue-400 font-medium">ISSMA</span> – Integrated School of Stock Markets & Analytics
