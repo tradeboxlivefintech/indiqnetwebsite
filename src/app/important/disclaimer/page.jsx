@@ -21,7 +21,7 @@ const DisclaimerPage = () => {
 
       {/* Disclaimer content */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="prose prose-slate prose-lg">
+        <div className="prose prose-slate prose-lg max-w-4xl mx-auto [&_ul]:text-gray-800 [&_ul_li]:text-gray-800">
           <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg mb-10 flex items-start gap-3">
             <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
             <p className="text-amber-900 text-sm m-0">

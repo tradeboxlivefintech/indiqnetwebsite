@@ -13,9 +13,9 @@ const MarketgainzPage = () => {
       description: "Both fundamental and technical based. Positional — 3 to 6 months. 2–3 calls per month.",
       gradient: "from-blue-500 to-cyan-500",
       fees: [
-        { period: "Month", original: "₹3,000", final: "₹2,499", promo: "Promo: tradebox" },
-        { period: "Quarter", original: "₹9,000", final: "₹6,999" },
-        { period: "Annual", original: "₹36,000", final: "₹24,999" }
+        { period: "Month", original: "₹3,000", final: "₹2,499", promo: "Promo:  TRADEBOX" },
+        { period: "Quarter", original: "₹9,000", final: "₹6,999" ,promo: "Promo:  TRADEBOX" },
+        { period: "Annual", original: "₹36,000", final: "₹24,999" ,promo: "Promo:  TRADEBOX" }
       ]
     },
     {
@@ -24,9 +24,9 @@ const MarketgainzPage = () => {
       description: "Up to 3 calls per day.",
       gradient: "from-emerald-500 to-teal-500",
       fees: [
-        { period: "Month", original: "₹3,000", final: "₹2,499", promo: "Promo: tradebox" },
-        { period: "Quarter", original: "₹9,000", final: "₹6,999" ,promo: "Promo: tradebox" },
-        { period: "Annual", original: "₹36,000", final: "₹24,999" ,promo: "Promo: tradebox" }
+        { period: "Month", original: "₹3,000", final: "₹2,499", promo: "Promo:  TRADEBOX" },
+        { period: "Quarter", original: "₹9,000", final: "₹6,999" ,promo: "Promo:  TRADEBOX" },
+        { period: "Annual", original: "₹36,000", final: "₹24,999" ,promo: "Promo:  TRADEBOX" }
       ]
     },
     {
@@ -35,9 +35,9 @@ const MarketgainzPage = () => {
       description: "Calls in Index and Stocks.",
       gradient: "from-violet-500 to-purple-500",
       fees: [
-        { period: "Month", original: "₹3,000", final: "₹2,499", promo: "Promo: tradebox" },
-        { period: "Quarter", original: "₹9,000", final: "₹6,999", promo: "Promo: tradebox" },
-        { period: "Annual", original: "₹36,000", final: "₹24,999", promo: "Promo: tradebox" }
+        { period: "Month", original: "₹3,000", final: "₹2,499", promo: "Promo:  TRADEBOX" },
+        { period: "Quarter", original: "₹9,000", final: "₹6,999", promo: "Promo:  TRADEBOX" },
+        { period: "Annual", original: "₹36,000", final: "₹24,999", promo: "Promo:  TRADEBOX" }
       ]
     },
     {
@@ -54,9 +54,9 @@ const MarketgainzPage = () => {
     title: "All 3 Combined",
     subtitle: "Techno Funda + Intraday Cash + Intraday F&O",
     fees: [
-      { period: "Monthly", original: "₹9,000", final: "₹6,999", promo: "Promo: tradebox" },
-      { period: "Quarterly", original: "₹27,000", final: "₹18,999", promo: "Promo: tradebox" },
-      { period: "Annual", original: "₹1,08,000", final: "₹69,999", promo: "Promo: tradebox" }
+      { period: "Monthly", original: "₹9,000", final: "₹6,999", promo: "Promo:  TRADEBOX" },
+      { period: "Quarterly", original: "₹27,000", final: "₹18,999", promo: "Promo:  TRADEBOX" },
+      { period: "Annual", original: "₹1,08,000", final: "₹69,999", promo: "Promo:  TRADEBOX" }
     ]
   };
 
@@ -84,7 +84,7 @@ const MarketgainzPage = () => {
           </div>
 
           {/* Philosophy Section */}
-          <div className="max-w-4xl mx-auto bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/10">
+          <div className="max-w-7xl mx-auto bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/10">
             <div className="flex items-center gap-3 mb-6">
               <Brain className="w-8 h-8 text-emerald-400" />
               <h2 className="text-2xl font-semibold text-white">Our Philosophy</h2>
@@ -241,10 +241,10 @@ const MarketgainzPage = () => {
           </p>
           
           <button
-            onClick={() => router.push('/contact')}
+            onClick={() => router.push('/important/trainings')}
             className="group inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white font-bold py-4 px-10 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
           >
-            <span className="text-lg">Contact Us for Subscription</span>
+            <span className="text-lg"> Subscribe Now</span>
             <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
           </button>
           

@@ -9,8 +9,10 @@ import {
   Scale,
   Users,
   Building,
-  Info
-  ,BlendIcon
+  Info,
+  BlendIcon,
+  AlertCircle,
+  ArrowRight
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -33,7 +35,7 @@ const Footer = () => {
     },
     { 
       name: "Investor Charter", 
-      href: "/important/investercharter",
+      href: "/important/investorcharter",
       icon: <Scale className="w-4 h-4" />
     },
     { 
@@ -47,17 +49,32 @@ const Footer = () => {
       icon: <BlendIcon className="w-4 h-4" />
     },{ 
       name: "Grievance officer", 
-      href: "/important/Grienvanceofficer",
+      href: "/important/GrievanceOfficer",
       icon: <BlendIcon className="w-4 h-4" />
     },{ 
       name: "Refund & Cancelation Policy", 
-      href: "/important/refundandcancelationpolicy",
+      href: "/important/refundandcancellationpolicy",
       icon: <BlendIcon className="w-4 h-4" />
     }
   ];
 
+  const grievanceLink = { name: "Grievance Officer", href: "/important/GrievanceOfficer", icon: <AlertCircle className="w-4 h-4" /> };
+  const otherMandatoryLinks = mandatoryLinks.filter((l) => l.name !== "Grievance officer");
+
   return (
     <footer className="bg-gradient-to-br from-gray-900 to-blue-900 text-white border-t border-blue-800">
+      {/* SEBI: Prominent Grievance Redressal strip */}
+      <div className="bg-amber-500/20 border-b border-amber-400/30">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <AlertCircle className="w-5 h-5 text-amber-400 flex-shrink-0" />
+          <span className="text-amber-100 text-sm font-medium text-center">Complaints or grievances? SEBI requires a clear redressal mechanism.</span>
+          <Link href="/important/GrievanceOfficer" className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-2 px-4 rounded-lg text-sm transition-colors whitespace-nowrap">
+            Grievance Officer &amp; Redressal
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+
       {/* Main Footer Content - Compact */}
       <div className="max-w-7xl mx-auto px-4 py-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -82,7 +99,7 @@ const Footer = () => {
               
               <div className="space-y-1 text-xs text-gray-400">
                 <p className="flex items-center gap-1">
-                  <span className="text-green-400 font-medium">marketgAInz</span> – SEBI Registered Research Analyst (SEBI Reg No: INH000024930)
+                  <span className="text-green-400 font-medium">MarketgAInz</span> – SEBI Registered Research Analyst (SEBI Reg No: INH000024930)
                 </p>
                 <p className="flex items-center gap-1">
                   <span className="text-blue-400 font-medium">ISSMA</span> – Integrated School of Stock Markets & Analytics
@@ -123,14 +140,23 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Legal Links - Compact */}
+          {/* Legal Links - Compact; Grievance Officer prominent */}
           <div>
             <h4 className="text-green-400 font-semibold mb-3 text-sm flex items-center gap-2">
               <Shield className="w-4 h-4" />
               Legal
             </h4>
             <div className="space-y-2">
-              {mandatoryLinks.map((link, index) => (
+              <Link
+                href={grievanceLink.href}
+                className="text-amber-300 hover:text-amber-200 font-semibold text-xs transition-colors duration-300 flex items-center gap-2 py-1.5 px-2 -mx-2 rounded bg-amber-500/20 border border-amber-400/30"
+              >
+                <div className="w-6 h-6 bg-amber-500/30 rounded flex items-center justify-center">
+                  {grievanceLink.icon}
+                </div>
+                {grievanceLink.name}
+              </Link>
+              {otherMandatoryLinks.map((link, index) => (
                 <Link
                   key={index}
                   href={link.href}

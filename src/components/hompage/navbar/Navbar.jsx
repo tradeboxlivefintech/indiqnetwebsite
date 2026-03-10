@@ -10,21 +10,20 @@ const Navbar = () => {
   const router = useRouter();
 
   const announcements = [
-    "🚀 India Elite Summit 2025: Early Bird Registration Open ---make it 2026..",
     "📢 MarketgAInz: SEBI-Registered Research Reports Available",
     "⭐ ISSMA: New Financial Literacy Program Launched",
     "🔔 Contact us: +918828320113 | support@indeqnet.com"
   ];
 
   const navItems = [
-    { name: 'HOME', href: '/' },
-    { name: 'ABOUT', href: '/important/about' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/important/about' },
     { name: 'Advisory', href: '/important/Advisory' },
     { name: 'Trainings', href: '/important/trainings' },
     { name: 'Events', href: '/important/events' },
-    { name: 'COMPLIANCE', href: '/compliance' },
-    { name: 'CONTACT', href: '/contactUS' },
-    {name : 'BLOGS', href: '/'}
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'Blogs', href: '/blogs' },
+    { name: 'Contact Us', href: '/contactUS' },
   ];
 
   const toggleMobileMenu = () => {
@@ -37,7 +36,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='flex items-center justify-between lg:justify-around bg-white shadow-lg px-4 lg:px-8 py-4 border-b-2 border-blue-100 sticky top-0 z-50'>
+      <nav className='flex items-center justify-between lg:justify-around bg-white shadow-lg px-4 lg:px-8 py-2 border-b-2 border-gray-200 sticky top-0 z-50'>
         {/* Logo and Brand */}
         <div className='flex items-center lg:gap-2'>
           <div onClick={() => router.push('/')} className='w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer'>
@@ -79,7 +78,7 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-
+ 
         {/* Mobile Menu Button */}
         <div className='lg:hidden flex items-center sticky'>
           <button

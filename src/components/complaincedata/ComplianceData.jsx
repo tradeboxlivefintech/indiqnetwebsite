@@ -117,8 +117,8 @@ const CompliancePage = () => {
                 
                 <div className="space-y-3 text-gray-700">
                   
-                  <p>CIN: ________</p>
-                  <p>Registered Address: ____________________________</p>
+                  <p>CIN: U74999MH2021PTC267652</p>
+                  <p>Registered Address: 201, Radhakrishna, Radha Residency, Siddharth Nagar, Borivali - East, Mumbai – 400066, Maharashtra, India</p>
                 </div>
               </div>
               
@@ -131,7 +131,7 @@ const CompliancePage = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-blue-600" />
-                    <span className="text-gray-800">+91 ____________</span>
+                    <span className="text-gray-800">+91 8828320113</span>
                   </div>
                 </div>
               </div>
@@ -165,12 +165,9 @@ const CompliancePage = () => {
                       <div className="space-y-4">
                         <div className="p-4 bg-gray-50 rounded-xl">
                           <div className="text-gray-600 text-sm mb-1">SEBI Registration No</div>
-                          <div className="text-gray-900 font-mono text-lg font-bold">_______</div>
+                          <div className="text-gray-900 font-mono text-lg font-bold">INH000024930</div>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-xl">
-                          <div className="text-gray-600 text-sm mb-1">Validity Period</div>
-                          <div className="text-gray-900 font-mono text-lg font-bold">_______</div>
-                        </div>
+                       
                       </div>
                     </div>
                     

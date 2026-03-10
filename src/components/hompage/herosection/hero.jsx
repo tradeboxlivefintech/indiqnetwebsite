@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-import { ArrowRight, Shield, BookOpen, Users, Target, BarChart3, Brain, TrendingUp, ChevronRight, Award, Eye, Check, Clock, GraduationCap, Calendar, FileText, Scale, Building, Briefcase } from 'lucide-react'
+import { ArrowRight, Shield, BookOpen, Users, Target, BarChart3, Brain, TrendingUp, ChevronRight, Award, Eye, Check, Clock, GraduationCap, Calendar, FileText, Scale, Building, Briefcase, AlertTriangle } from 'lucide-react'
 
 const HomePage = () => {
   const router = useRouter();
@@ -11,6 +11,7 @@ const HomePage = () => {
   const Hero = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [fade, setFade] = useState(true)
+    const [isHovered, setIsHovered] = useState(false)
 
     const slides = [
       {
@@ -34,6 +35,7 @@ const HomePage = () => {
     ]
 
     useEffect(() => {
+      if (isHovered) return
       const interval = setInterval(() => {
         setFade(false)
         setTimeout(() => {
@@ -41,14 +43,17 @@ const HomePage = () => {
           setFade(true)
         }, 500)
       }, 6000)
-
       return () => clearInterval(interval)
-    }, [slides.length])
+    }, [slides.length, isHovered])
 
     const currentSlide = slides[currentIndex]
 
     return (
-      <div className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <div
+        className="relative min-h-[80vh] flex items-center px-4 sm:px-6 lg:px-8 py-6 overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         {/* Subtle gradient accents */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
@@ -57,80 +62,60 @@ const HomePage = () => {
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-500/30 to-cyan-500/30" />
         </div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
+        <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
           {/* Left: name + short description + CTAs + stats */}
           <div className="flex-1 text-center lg:text-left">
             <div className={`transition-all duration-1000 ${
               fade ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 rounded-full border border-emerald-500/20 mb-6">
-                <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                <span className="text-emerald-400 font-semibold text-sm tracking-wider uppercase">
-                 Founders
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 rounded-full border border-emerald-500/20 mb-3">
+                <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+                <span className="text-emerald-400 font-semibold text-xs tracking-wider uppercase">
+                  Founders
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
                 {currentSlide.name}
               </h1>
 
-              <p className="text-gray-300 text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+              <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 mb-5 leading-relaxed">
                 {currentSlide.shortDescription}
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
-                <button
-                  onClick={() => router.push('/india-elite-summit')}
-                  className="group relative w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-600 hover:to-cyan-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300"
-                >
-                  <span className="relative flex items-center justify-center gap-2 text-base">
-                    Explore India Elite Summit
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </button>
-                <button
-                  onClick={() => router.push('/marketgainz')}
-                  className="w-full sm:w-auto bg-transparent text-white font-semibold py-3 px-6 rounded-full border-2 border-emerald-400/50 hover:border-emerald-300 hover:bg-emerald-500/10 transition-all duration-300"
-                >
-                  <span className="flex items-center justify-center gap-2 text-base">
-                    View marketgAInz (SEBI RA)
-                    <ChevronRight className="w-5 h-5" />
-                  </span>
-                </button>
-              </div>
+              
 
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                
-                <div className="hidden sm:flex items-center gap-2 px-3 py-2 bg-white/5 rounded-lg border border-white/10">
-                  <Award className="w-5 h-5 text-cyan-400" />
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                {/* <div className="hidden sm:flex items-center gap-2 px-2.5 py-1.5 bg-white/5 rounded-lg border border-white/10">
+                  <Award className="w-4 h-4 text-cyan-400" />
                   <div className="text-left">
-                    <div className="text-white font-bold">SEBI RA</div>
+                    <div className="text-white font-bold text-sm">SEBI RA</div>
                     <div className="text-gray-400 text-xs">Registered</div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
 
           {/* Right: clearly visible founder photo + description */}
-          <div className={`flex-1 w-full max-w-lg transition-all duration-1000 ${
+          <div className={`flex-1 w-full max-w-md transition-all duration-1000 ${
             fade ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
           }`}>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {/* Photo in a clear frame - prominent and visible */}
-              <div className="relative w-full aspect-[4/5] max-h-[420px] mx-auto rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl bg-gray-800">
+              <div className="relative w-full aspect-[4/5] max-h-[320px] mx-auto rounded-xl overflow-hidden border-2 border-white/20 shadow-xl bg-gray-800">
                 <Image
                   src={currentSlide.image}
                   alt={currentSlide.name}
                   fill
                   className="object-cover object-top"
                   priority
-                  sizes="(max-width: 1024px) 100vw, 500px"
+                  sizes="(max-width: 1024px) 100vw, 420px"
                 />
               </div>
               {/* Full description below photo */}
-              <div className="rounded-xl bg-gray-800/80 border border-white/10 p-4 max-h-44 overflow-y-auto custom-scrollbar">
-                <p className="text-gray-200 text-sm leading-relaxed">
+              <div className="rounded-lg bg-gray-800/80 border border-white/10 p-3 max-h-32 overflow-y-auto custom-scrollbar">
+                <p className="text-gray-200 text-xs leading-relaxed">
                   {currentSlide.fullDescription}
                 </p>
               </div>
@@ -139,7 +124,7 @@ const HomePage = () => {
         </div>
 
         {/* Slide indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex gap-3">
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 flex gap-2">
           {slides.map((_, index) => (
             <button
               key={index}
@@ -150,23 +135,23 @@ const HomePage = () => {
                   setFade(true)
                 }, 200)
               }}
-              className={`relative w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`relative w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                 index === currentIndex
                   ? 'bg-emerald-400 scale-125 shadow-lg shadow-emerald-400/50'
                   : 'bg-white/40 hover:bg-white/80'
               }`}
             >
               {index === currentIndex && (
-                <span className="absolute -inset-1 rounded-full border-2 border-emerald-400/50 animate-ping" />
+                <span className="absolute -inset-0.5 rounded-full border-2 border-emerald-400/50 animate-ping" />
               )}
             </button>
           ))}
         </div>
 
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 hidden lg:block">
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-10 hidden lg:block">
           <div className="animate-bounce">
-            <div className="w-8 h-12 border-2 border-emerald-500/30 rounded-full flex justify-center">
-              <div className="w-1.5 h-3 bg-emerald-400/70 rounded-full mt-3 animate-pulse" />
+            <div className="w-6 h-10 border-2 border-emerald-500/30 rounded-full flex justify-center">
+              <div className="w-1 h-2.5 bg-emerald-400/70 rounded-full mt-2 animate-pulse" />
             </div>
           </div>
         </div>
@@ -184,7 +169,7 @@ const HomePage = () => {
     ];
 
     return (
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+      <section className="relative py-5 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-300 rounded-full blur-3xl"></div>
@@ -193,7 +178,7 @@ const HomePage = () => {
 
         <div className="relative max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-5">
             <span className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-50 to-cyan-50 text-emerald-700 font-semibold rounded-full text-lg mb-6 border border-emerald-100 shadow-sm">
               ABOUT INDIA EQUITY NETWORK
             </span>
@@ -284,7 +269,7 @@ const HomePage = () => {
         borderColor: "border-emerald-200",
         buttonText: "Explore As Others..",
         route: "/marketgainz",
-        disclaimer: "SEBI RA Registration No: ______. No guaranteed returns. Market risks apply."
+        disclaimer: "SEBI RA Registration No: INH000024930. No guaranteed returns. Market risks apply."
       },
       {
         title: "Integrated School of Stock Market Analytics (Training & Fellowship)",
@@ -313,7 +298,7 @@ const HomePage = () => {
     ]
 
     return (
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800 text-white overflow-hidden">
+      <section className="relative py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-800 text-white overflow-hidden min-h-0">
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500 rounded-full blur-3xl"></div>
@@ -321,59 +306,59 @@ const HomePage = () => {
         </div>
 
         <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 backdrop-blur-sm text-emerald-300 font-semibold rounded-full text-lg mb-6 border border-emerald-500/30">
+          <div className="text-center mb-6">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 backdrop-blur-sm text-emerald-300 font-semibold rounded-full text-sm mb-3 border border-emerald-500/30">
               OUR DIVISIONS
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">
               Three Integrated Verticals, <span className="bg-gradient-to-r from-emerald-300 via-cyan-300 to-blue-300 bg-clip-text text-transparent">One Shared Vision</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-400 text-base max-w-3xl mx-auto">
               Distinct divisions serving unique needs, united by our commitment to ethics, education, and community.
             </p>
-            <div className="w-24 h-2 bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 mx-auto rounded-full mt-6"></div>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 mx-auto rounded-full mt-3"></div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-5">
             {verticals.map((vertical, index) => (
               <div 
                 key={index} 
-                className="group relative bg-gray-800/60 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/50 hover:border-emerald-500/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-emerald-500/10"
+                className="group relative bg-gray-800/60 backdrop-blur-sm rounded-2xl p-5 border border-gray-700/50 hover:border-emerald-500/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-emerald-500/10"
               >
                 {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 {/* Icon with glow */}
-                <div className={`relative w-20 h-20 bg-gradient-to-br ${vertical.color} rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:shadow-xl group-hover:shadow-emerald-500/30 transition-all duration-300`}>
-                  <div className="text-white">
+                <div className={`relative w-14 h-14 bg-gradient-to-br ${vertical.color} rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:shadow-xl group-hover:shadow-emerald-500/30 transition-all duration-300`}>
+                  <div className="text-white [&>svg]:w-7 [&>svg]:h-7">
                     {vertical.icon}
                   </div>
-                  <div className="absolute -inset-4 bg-gradient-to-br ${vertical.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+                  <div className={`absolute -inset-3 bg-gradient-to-br ${vertical.color} rounded-xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold mb-3">{vertical.title}</h3>
-                <p className="text-emerald-300 font-medium text-lg mb-6">{vertical.subtitle}</p>
+                <h3 className="text-xl font-bold mb-2">{vertical.title}</h3>
+                <p className="text-emerald-300 font-medium text-sm mb-3">{vertical.subtitle}</p>
 
                 {/* Description */}
-                <p className="text-gray-300 mb-8 leading-relaxed text-lg">
+                <p className="text-gray-300 mb-4 leading-relaxed text-sm">
                   {vertical.description}
                 </p>
 
                 {/* Button */}
                 <button 
                   onClick={() => router.push(vertical.route)}
-                  className="w-full bg-gradient-to-r from-gray-700 to-gray-800 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 mb-6 group/btn"
+                  className="w-full bg-gradient-to-r from-gray-700 to-gray-800 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 mb-4 group/btn text-sm"
                 >
-                  <span className="flex items-center justify-center gap-3 text-lg">
+                  <span className="flex items-center justify-center gap-2">
                     {vertical.buttonText}
-                    <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-2 transition-transform duration-300" />
                   </span>
                 </button>
 
                 {/* Disclaimer */}
-                <div className="pt-6 border-t border-gray-700/50">
-                  <p className="text-gray-500 text-sm italic">
+                <div className="pt-4 border-t border-gray-700/50">
+                  <p className="text-gray-500 text-xs italic">
                     {vertical.disclaimer}
                   </p>
                 </div>
@@ -420,7 +405,7 @@ const HomePage = () => {
     ]
 
     return (
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+      <section className="relative py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden min-h-0">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-64 h-64 bg-emerald-300 rounded-full blur-3xl"></div>
@@ -429,46 +414,46 @@ const HomePage = () => {
 
         <div className="relative max-w-7xl mx-auto">
           {/* Quote Section */}
-          <div className="text-center mb-16 max-w-4xl mx-auto">
+          <div className="text-center mb-6 max-w-4xl mx-auto">
             <div className="relative inline-block">
-              <div className="absolute -top-4 -left-4 w-8 h-8 text-emerald-400 text-4xl">"</div>
-              <div className="text-3xl md:text-4xl font-light text-gray-800 italic mb-8 leading-relaxed">
+              <div className="absolute -top-3 -left-3 w-6 h-6 text-emerald-400 text-2xl">"</div>
+              <div className="text-2xl md:text-3xl font-light text-gray-800 italic mb-4 leading-relaxed">
                 In markets and in life, ethics & discipline are the ultimate edge.
               </div>
-              <div className="absolute -bottom-4 -right-4 w-8 h-8 text-emerald-400 text-4xl transform rotate-180">"</div>
+              <div className="absolute -bottom-3 -right-3 w-6 h-6 text-emerald-400 text-2xl transform rotate-180">"</div>
             </div>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-              <div className="w-16 h-1 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full"></div>
-              <span className="text-emerald-600 font-bold text-xl">— NS Fidai</span>
-              <span className="text-gray-900 font-extrabold text-lg">#NoCapitalNoCapitalMarkets</span>
-              <div className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-full"></div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-4">
+              <div className="w-12 h-1 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full"></div>
+              <span className="text-emerald-600 font-bold text-lg">— NS Fidai</span>
+              <span className="text-gray-900 font-extrabold text-base">#NoCapitalNoCapitalMarkets</span>
+              <div className="w-12 h-1 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-full"></div>
             </div>
           </div>
 
           {/* Core Values */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <div className="mb-6">
+            <div className="text-center mb-5">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                 Our Core Values
               </h3>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              <p className="text-gray-600 text-base max-w-2xl mx-auto">
                 The principles that guide every decision and action we take
               </p>
             </div>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {coreValues.map((value, index) => (
                 <div 
                   key={index} 
-                  className="group bg-white rounded-2xl p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                  className="group bg-white rounded-xl p-5 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-cyan-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-100 to-cyan-100 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300 [&>div>svg]:w-6 [&>div>svg]:h-6">
                     <div className="text-emerald-600">
                       {value.icon}
                     </div>
                   </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h4>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">{value.title}</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {value.description}
                   </p>
                 </div>
@@ -477,32 +462,27 @@ const HomePage = () => {
           </div>
 
           {/* Services Snapshot */}
-          <div className="relative bg-gradient-to-br from-emerald-50 via-white to-cyan-50 rounded-3xl p-12 border border-emerald-200 shadow-2xl">
-            {/* Decorative elements */}
-          
-            
+          <div className="relative bg-gradient-to-br from-emerald-50 via-white to-cyan-50 rounded-2xl p-6 border border-emerald-200 shadow-xl">
             <div className="relative">
-              <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-5 text-center">
                 What We Do
               </h3>
               
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {services.map((service, index) => (
                   <div 
                     key={index} 
-                    className="group bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-gray-200 hover:border-emerald-300 hover:shadow-lg transition-all duration-300"
+                    className="group bg-white/80 backdrop-blur-sm rounded-lg p-4 border border-gray-200 hover:border-emerald-300 hover:shadow-lg transition-all duration-300"
                   >
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <ChevronRight className="w-6 h-6 text-white" />
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                        <ChevronRight className="w-5 h-5 text-white" />
                       </div>
-                      <span className="text-gray-800 font-semibold text-lg">{service}</span>
+                      <span className="text-gray-800 font-semibold text-sm">{service}</span>
                     </div>
                   </div>
                 ))}
               </div>
-
-              
             </div>
           </div>
         </div>
@@ -510,12 +490,52 @@ const HomePage = () => {
     )
   }
 
+  // SEBI mandatory disclosures (Research Analyst)
+  const SEBIDisclosuresSection = () => (
+    <section className="relative py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-50/80 to-white border-t border-amber-200/50">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+          <Shield className="w-5 h-5 text-amber-600" />
+          <span className="text-amber-800 font-bold text-sm uppercase tracking-wider">SEBI Mandatory Disclosures</span>
+          <span className="text-amber-600 text-xs">(Research Analyst)</span>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="bg-white rounded-xl p-4 border border-amber-200 shadow-sm">
+            <p className="text-amber-800 font-semibold text-xs uppercase mb-1">Principal Officer</p>
+            <p className="text-gray-900 font-bold">Mr. Ram Iyer</p>
+            <p className="text-gray-700 text-sm mt-1">SEBI RA Reg. No.: <span className="font-mono font-bold text-gray-900">INH000024930</span></p>
+          </div>
+          <div className="bg-white rounded-xl p-4 border border-amber-200 shadow-sm">
+            <p className="text-amber-800 font-semibold text-xs uppercase mb-1">SEBI RA Compliance</p>
+            <p className="text-gray-700 text-sm mb-3">We comply with SEBI (Research Analyst) Regulations, 2014.</p>
+            <button onClick={() => router.push('/compliance')} className="text-emerald-600 font-semibold text-sm inline-flex items-center gap-1 hover:underline">
+              View compliance details <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+          <div className="bg-white rounded-xl p-4 border border-amber-200 shadow-sm">
+            <p className="text-amber-800 font-semibold text-xs uppercase mb-1">Financial Interest</p>
+            <p className="text-gray-700 text-sm">The Research Analyst or its associates may have financial interest in securities mentioned in research. Investors should do their own due diligence.</p>
+          </div>
+          <div className="bg-white rounded-xl p-4 border border-amber-200 shadow-sm flex flex-col">
+            <p className="text-amber-800 font-semibold text-xs uppercase mb-1">Grievance Redressal</p>
+            <p className="text-gray-700 text-sm mb-3 flex-1">Complaints or grievances can be raised with our Grievance Officer. Resolution within 30 days.</p>
+            <button onClick={() => router.push('/important/GrievanceOfficer')} className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-2.5 px-4 rounded-lg text-sm transition-colors inline-flex items-center justify-center gap-2">
+              <AlertTriangle className="w-4 h-4" /> Grievance Officer &amp; Redressal
+            </button>
+          </div>
+        </div>
+        <p className="text-center text-gray-500 text-xs mt-4">Registration granted by SEBI does not guarantee performance. Market risks apply.</p>
+      </div>
+    </section>
+  )
+
   return (
     <main className="overflow-hidden">
       <Hero />
       <AboutSection />
       <VerticalsSection />
       <PhilosophySection />
+      <SEBIDisclosuresSection />
     </main>
   )
 }

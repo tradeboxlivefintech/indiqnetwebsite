@@ -47,8 +47,8 @@ const AboutPage = () => {
                     <Clock className="w-7 h-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">30+ Years</h3>
-                    <p className="text-gray-600">of market engagement</p>
+                    <h3 className="text-xl font-bold text-gray-900">75 Years</h3>
+                    <p className="text-gray-600">of cumulative engagement</p>
                   </div>
                 </div>
               </div>
@@ -57,7 +57,7 @@ const AboutPage = () => {
             <div className="space-y-8">
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200">
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                  <span className="text-emerald-600 font-bold">India Equity Network </span> was founded after more than 30 years of deep engagement with Indian equity markets.
+                  <span className="text-emerald-600 font-bold">India Equity Network </span> was founded after more than 75 years of deep engagement with Indian equity markets.
                 </p>
                 
                 <div className="bg-gradient-to-r from-emerald-50 to-cyan-50 p-6 rounded-xl border-l-4 border-emerald-500 mb-8">

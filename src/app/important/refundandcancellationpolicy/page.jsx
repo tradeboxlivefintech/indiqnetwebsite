@@ -46,9 +46,9 @@ const RefundPolicy = () => {
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Seminar Registration Fees</h2>
             <p className="text-gray-700 leading-relaxed mb-4">The Seminar registration fees are as follows (inclusive of applicable taxes):</p>
             <ul className="list-none space-y-2 mb-4 pl-0">
-              <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Conference Only:</strong> INR 5,500/- (Rupees Five Thousand Five Hundred Only)</li>
-              <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Conference + Single Occupancy:</strong> INR 10,000/- (Rupees Ten Thousand Only)</li>
-              <li className="flex items-start gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Conference + Double Occupancy:</strong> INR 7,000/- (Rupees Seven Thousand Only)</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Conference Only:</strong> INR 5,500/- (Rupees Five Thousand Five Hundred Only)</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Conference + Single Occupancy:</strong> INR 10,000/- (Rupees Ten Thousand Only)</li>
+              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Conference + Double Occupancy:</strong> INR 7,000/- (Rupees Seven Thousand Only)</li>
             </ul>
             <p className="text-gray-700 leading-relaxed mb-8"><strong>Payment Deadline:</strong> Full payment must be received by 31st May 2025. Partial payments or late payments may result in forfeiture of registration or ineligibility for refunds, as outlined below.</p>
 
@@ -130,12 +130,12 @@ const RefundPolicy = () => {
               <p className="font-bold text-gray-900 mb-2">Indeqnet Private Limited (India Elite Summit)</p>
               <div className="space-y-2 text-gray-700">
                 <p className="flex items-center gap-2"><Mail className="w-5 h-5 text-emerald-600 flex-shrink-0" /> <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a></p>
-                <p className="flex items-center gap-2"><Phone className="w-5 h-5 text-emerald-600 flex-shrink-0" /> <a href="tel:+918828320113" className="text-emerald-700 hover:underline">+91-8828320113</a></p>
+                <p className="flex items-cent er gap-2"><Phone className="w-5 h-5 text-emerald-600 flex-shrink-0" /> <a href="tel:+918828320113" className="text-emerald-700 hover:underline">+91-8828320113</a></p>
                 <p className="flex items-center gap-2">WhatsApp: <a href="https://wa.me/918828320113" className="text-emerald-700 hover:underline" target="_blank" rel="noopener noreferrer">+91-8828320113</a></p>
                 <p className="flex items-center gap-2"><MapPin className="w-5 h-5 text-emerald-600 flex-shrink-0" /> 201, Radhakrishna, Radha Residency, Siddharth Nagar, Borivali - East, Mumbai – 400066, Maharashtra, India</p>
               </div>
               <p className="text-gray-600 text-sm mt-4">We aim to respond to all inquiries within 5 business days.</p>
-            </div>text-gray-500 
+            </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">6. Attendee Responsibilities</h2>
             <ul className="list-none space-y-2 mb-8 pl-0">
