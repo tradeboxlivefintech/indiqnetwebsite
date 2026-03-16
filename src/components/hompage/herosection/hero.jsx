@@ -43,13 +43,13 @@ const HomePage = () => {
       },
       {
         name: "Rajeev Jhunjhunwala",
-        image: "/Picture 3.png",
+        image: "/Picture 2.png",
         description: "With over three decades of experience in the Indian capital markets, Rajeev Jhunjhunwala has established himself as a seasoned broker, disciplined investor, and respected market voice. Having navigated multiple economic cycles, regulatory reforms, and structural transitions within India's financial ecosystem, he brings a long-term, systems-oriented understanding of markets grounded in capital discipline and risk awareness. He has been featured on leading business platforms including CNBC Awaaz and prominent Bengali business channels, where he has shared perspectives on market direction, Union Budget implications, sectoral outlooks, and macroeconomic developments. His insights have also been published in respected regional financial publications such as Dainik Vishwamitra. He believes markets are not merely platforms for profit, but structured systems of ownership, capital allocation, and long-term wealth creation. His vision is centered on building informed and independent market participants who approach opportunity and risk with equal seriousness and discipline.",
         x: " "
       },
       {
         name: "Ram Iyer",
-        image: "/Picture 2.png",
+        image: "/Picture 3.png",
         description: "Ram is a seasoned finance professional with over three decades of experience driving significant business growth. Armed with an MBA in Finance (NMIMS), a Diploma in Cyber Law, and SEBI Research Analyst registration, he specializes in establishing new ventures and implementing robust control and monitoring systems. Ram functions as a strategic advisor to CEOs and a key operational resource for cross-functional teams, consistently leveraging a people-centric approach, optimized processes, and technology to cultivate impactful business partnerships. He possesses a proven track record across diverse business models and multicultural teams, and is an active mentor to start-ups.",
         x: "https://x.com/Ram_Iyer572"
       }
