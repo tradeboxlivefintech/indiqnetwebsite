@@ -128,7 +128,7 @@ const Navbar = () => {
       <div className='border-b py-2 overflow-hidden bg-gradient-to-r from-blue-50 to-green-50'>
         <div className='animate-marquee whitespace-nowrap'>
           {announcements.map((announcement, index) => (
-            <span key={index} className='mx-4 lg:mx-8 text-gray-700 font-medium text-sm lg:text-base'>
+            <span key={index} className='mx-4 lg:mx-8 text-gray-800  font-bold text-sm lg:text-base'>
               {announcement}
               {index < announcements.length - 1 && (
                 <span className='mx-2 lg:mx-4 text-green-400'>•</span>

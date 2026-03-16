@@ -49,12 +49,27 @@ const PrivacyPolicy = () => {
             <p className="text-gray-700 leading-relaxed mb-4">
               For the purposes of this Privacy Policy, the following terms shall have the meanings ascribed to them below:
             </p>
-            <ul className="list-none space-y-2 mb-4 pl-0">
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>&quot;We,&quot; &quot;Us,&quot; &quot;Our&quot;:</strong> Refers to Indeqnet Private Limited, trading as India Elite Summit, and its affiliates, successors, and assigns.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>&quot;You,&quot; &quot;Your,&quot; &quot;User&quot;:</strong> Refers to any individual or legal entity accessing or using the Platforms, whether registered or unregistered.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>&quot;Personal Information&quot;:</strong> Refers to any information that identifies or can be used to identify an individual, including but not limited to name, address, email, phone number, and financial details, as further described in Section 2.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>&quot;Sensitive Personal Information&quot;:</strong> Includes financial data, biometric data, or other categories of sensitive information as defined under applicable laws.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>&quot;Third Parties&quot;:</strong> Refers to any individual, company, or entity other than India Elite Summit and the User, including service providers, partners, or advertisers.</li>
+            <ul className="space-y-3 mb-4">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>&quot;We,&quot; &quot;Us,&quot; &quot;Our&quot;:</strong> Refers to Indeqnet Private Limited, trading as India Elite Summit, and its affiliates, successors, and assigns.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>&quot;You,&quot; &quot;Your,&quot; &quot;User&quot;:</strong> Refers to any individual or legal entity accessing or using the Platforms, whether registered or unregistered.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>&quot;Personal Information&quot;:</strong> Refers to any information that identifies or can be used to identify an individual, including but not limited to name, address, email, phone number, and financial details, as further described in Section 2.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>&quot;Sensitive Personal Information&quot;:</strong> Includes financial data, biometric data, or other categories of sensitive information as defined under applicable laws.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>&quot;Third Parties&quot;:</strong> Refers to any individual, company, or entity other than India Elite Summit and the User, including service providers, partners, or advertisers.</span>
+              </li>
             </ul>
             <p className="text-gray-700 leading-relaxed mb-8">Headings in this Privacy Policy are for organizational purposes only and do not affect the interpretation of its provisions.</p>
 
@@ -63,52 +78,127 @@ const PrivacyPolicy = () => {
               We collect information to provide seamless, efficient, and personalized services related to our capital market events, training programs, and associated activities. The types of information we may collect include:
             </p>
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.1 Personal Information</h3>
-            <ul className="list-none space-y-2 mb-4 pl-0">
-              <li className="flex items-start text-gray-500 text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Contact Details:</strong> Name, email address, phone number, mailing address.</li>
-              <li className="flex items-start text-gray-500 text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Account Details:</strong> Username, password, and account preferences.</li>
-              <li className="flex items-start text-gray-500 text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Professional Information:</strong> Educational qualifications, college name, area of interest, professional references, or employment details.</li>
-              <li className="flex items-start text-gray-500 text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Financial Information:</strong> Payment details (e.g., credit/debit card numbers, bank account details, billing address) provided during transactions for event registrations or training programs.</li>
-              <li className="flex items-start text-gray-500 text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Event-Related Information:</strong> Details related to event attendance, training program enrollment, or participation preferences.</li>
+            <ul className="space-y-3 mb-4">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Contact Details:</strong> Name, email address, phone number, mailing address.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Account Details:</strong> Username, password, and account preferences.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Professional Information:</strong> Educational qualifications, college name, area of interest, professional references, or employment details.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Financial Information:</strong> Payment details (e.g., credit/debit card numbers, bank account details, billing address) provided during transactions for event registrations or training programs.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Event-Related Information:</strong> Details related to event attendance, training program enrollment, or participation preferences.</span>
+              </li>
             </ul>
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.2 Non-Personal Information</h3>
-            <ul className="list-none space-y-2 mb-4 pl-0">
-              <li className="flex items-start text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Tracking Data:</strong> IP address, device ID, browser type, operating system, and other technical information collected when you interact with our Platforms.</li>
-              <li className="flex items-start text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Usage Data:</strong> Pages visited, time spent on the Platforms, search history, features used, and clickstream data.</li>
-              <li className="flex items-start text-gray-500  gap-2"><span className="text-emerald-600">•</span> <strong>Cookies and Similar Technologies:</strong> Information collected via cookies, web beacons, and other tracking technologies to enhance user experience and analyze usage patterns (see Section 7 for details).</li>
+            <ul className="space-y-3 mb-4">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Tracking Data:</strong> IP address, device ID, browser type, operating system, and other technical information collected when you interact with our Platforms.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Usage Data:</strong> Pages visited, time spent on the Platforms, search history, features used, and clickstream data.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Cookies and Similar Technologies:</strong> Information collected via cookies, web beacons, and other tracking technologies to enhance user experience and analyze usage patterns (see Section 7 for details).</span>
+              </li>
             </ul>
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.3 Information from Non-Registered Users</h3>
             <p className="text-gray-700 leading-relaxed mb-4">We may collect data from users who are not registered, such as browsing behavior, pages viewed, or interactions with public sections of the Platforms.</p>
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.4 Purpose of Collection</h3>
             <p className="text-gray-700 leading-relaxed mb-4">We collect only the information necessary to:</p>
-            <ul className="list-none space-y-2 mb-8 pl-0">
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Provide and improve our services, including event management and training delivery.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Process transactions and registrations.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Communicate account, event, or service-related information.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Personalize user experience through tailored content and offers.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Conduct analytics to understand user preferences and enhance our Platforms.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Comply with legal and regulatory obligations.</li>
+            <ul className="space-y-3 mb-8">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span>Provide and improve our services, including event management and training delivery.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span>Process transactions and registrations.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span>Communicate account, event, or service-related information.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span>Personalize user experience through tailored content and offers.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span>Conduct analytics to understand user preferences and enhance our Platforms.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span>Comply with legal and regulatory obligations.</span>
+              </li>
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">3. How We Collect Information</h2>
             <p className="text-gray-700 leading-relaxed mb-4">We collect information through the following methods:</p>
-            <ul className="list-none space-y-2 mb-4 pl-0">
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Direct Input:</strong> When you voluntarily provide information during account creation, event registration, training enrolment, or contact form submissions.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Automated Technologies:</strong> Through cookies, web beacons, server logs, and analytics tools (e.g., Google Analytics) that track your interactions with our Platforms.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Third Parties:</strong> From service providers, payment gateways, or partners (e.g., event sponsors or exhibitors) when necessary to fulfil your requests or comply with legal requirements.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Public Sources:</strong> From publicly available sources, such as social media profiles, when you interact with our Platforms or events.</li>
+            <ul className="space-y-3 mb-4">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Direct Input:</strong> When you voluntarily provide information during account creation, event registration, training enrolment, or contact form submissions.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Automated Technologies:</strong> Through cookies, web beacons, server logs, and analytics tools (e.g., Google Analytics) that track your interactions with our Platforms.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Third Parties:</strong> From service providers, payment gateways, or partners (e.g., event sponsors or exhibitors) when necessary to fulfil your requests or comply with legal requirements.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Public Sources:</strong> From publicly available sources, such as social media profiles, when you interact with our Platforms or events.</span>
+              </li>
             </ul>
             <p className="text-gray-700 leading-relaxed mb-8">Before collecting Personal Information, we will inform you of the purpose of collection. If the purpose is unclear, you may request clarification by contacting us at <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a>. You are not obligated to provide information until the purpose is adequately explained.</p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">4. How We Use Your Information</h2>
             <p className="text-gray-700 leading-relaxed mb-4">We use your information to provide, improve, and personalize our services. Specific uses include:</p>
-            <ul className="list-none space-y-2 mb-4 pl-0">
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Service Delivery:</strong> To facilitate event registrations, training program enrolments, and customer support.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Communication:</strong> To send account updates, event reminders, training materials, or responses to inquiries.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Personalization:</strong> To tailor content, recommendations, and marketing communications based on your interests and usage patterns.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Analytics:</strong> To analyze usage trends, improve Platform functionality, and develop new services.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Marketing:</strong> To send promotional offers, newsletters, or targeted advertisements (subject to your consent, where required). You may opt out of marketing communications at any time via the &quot;unsubscribe&quot; link or by emailing <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a>.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Compliance:</strong> To meet legal, regulatory, or tax obligations, including audits or law enforcement requests.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Security:</strong> To detect and prevent fraud, unauthorized access, or other illegal activities.</li>
+            <ul className="space-y-3 mb-4">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Service Delivery:</strong> To facilitate event registrations, training program enrolments, and customer support.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Communication:</strong> To send account updates, event reminders, training materials, or responses to inquiries.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Personalization:</strong> To tailor content, recommendations, and marketing communications based on your interests and usage patterns.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Analytics:</strong> To analyze usage trends, improve Platform functionality, and develop new services.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Marketing:</strong> To send promotional offers, newsletters, or targeted advertisements (subject to your consent, where required). You may opt out of marketing communications at any time via the &quot;unsubscribe&quot; link or by emailing <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a>.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Compliance:</strong> To meet legal, regulatory, or tax obligations, including audits or law enforcement requests.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Security:</strong> To detect and prevent fraud, unauthorized access, or other illegal activities.</span>
+              </li>
             </ul>
             <p className="text-gray-700 leading-relaxed mb-8">We will only process your Personal Information with your explicit consent or as permitted by law, and we will retain it only for as long as necessary to fulfill the stated purposes.</p>
 
@@ -128,11 +218,23 @@ const PrivacyPolicy = () => {
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">6. Cookies and Tracking Technologies</h2>
             <p className="text-gray-700 leading-relaxed mb-4">We use cookies and similar technologies to enhance your experience, analyze usage, and deliver personalized content. Cookies are small data files stored on your device that help us recognize you and track your interactions.</p>
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">6.1 Types of Cookies </h3>
-            <ul className="list-none space-y-2 mb-4 pl-0">
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Essential Cookies:</strong> Necessary for the Platforms to function, such as maintaining your session or enabling secure logins.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Functionality Cookies:</strong> Enable personalized features, such as resuming training progress or remembering your preferences.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Analytics Cookies:</strong> Collect anonymous data on how you use our Platforms (e.g., pages visited, time spent) to improve performance and content.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Advertising Cookies:</strong> Deliver targeted advertisements based on your interests and browsing behavior.</li>
+            <ul className="space-y-3 mb-4">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Essential Cookies:</strong> Necessary for the Platforms to function, such as maintaining your session or enabling secure logins.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Functionality Cookies:</strong> Enable personalized features, such as resuming training progress or remembering your preferences.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Analytics Cookies:</strong> Collect anonymous data on how you use our Platforms (e.g., pages visited, time spent) to improve performance and content.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Advertising Cookies:</strong> Deliver targeted advertisements based on your interests and browsing behavior.</span>
+              </li>
             </ul>
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">6.2 Third-Party Cookies</h3>
             <p className="text-gray-700 leading-relaxed mb-4">We use third-party tools, such as Google Analytics, to analyze user behavior. Google Analytics collects anonymous data (e.g., IP address, pages visited) to generate reports on Platform usage. This data may be stored on Google&apos;s servers in the United States and processed in accordance with Google&apos;s Privacy Policy. By using our Platforms, you consent to this processing.</p>
@@ -141,15 +243,39 @@ const PrivacyPolicy = () => {
 
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">7. Your Rights</h2>
             <p className="text-gray-700 leading-relaxed mb-4">As a User, you have the following rights regarding your Personal Information, subject to applicable laws:</p>
-            <ul className="list-none space-y-2 mb-4 pl-0">text-gray-500 
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Access:</strong> Request a copy of the Personal Information we hold about you.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete information.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Deletion:</strong> Request deletion of your Personal Information, subject to our legal obligations.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Restrict Processing:</strong> Request that we limit the processing of your information in certain circumstances.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Data Portability:</strong> Request a transferable copy of your Personal Information in a structured, commonly used format.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Object:</strong> Object to the processing of your information for marketing or other purposes.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Withdraw Consent:</strong> Withdraw your consent to data processing at any time, without affecting the lawfulness of prior processing.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Right to Lodge a Complaint:</strong> File a complaint with a supervisory authority, such as the Data Protection Authority of India (once established under the DPDP Act) or the relevant authority in your jurisdiction.</li>
+            <ul className="space-y-3 mb-4">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Right to Access:</strong> Request a copy of the Personal Information we hold about you.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete information.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Right to Deletion:</strong> Request deletion of your Personal Information, subject to our legal obligations.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Right to Restrict Processing:</strong> Request that we limit the processing of your information in certain circumstances.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Right to Data Portability:</strong> Request a transferable copy of your Personal Information in a structured, commonly used format.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Right to Object:</strong> Object to the processing of your information for marketing or other purposes.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Right to Withdraw Consent:</strong> Withdraw your consent to data processing at any time, without affecting the lawfulness of prior processing.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Right to Lodge a Complaint:</strong> File a complaint with a supervisory authority, such as the Data Protection Authority of India (once established under the DPDP Act) or the relevant authority in your jurisdiction.</span>
+              </li>
             </ul>
             <p className="text-gray-700 leading-relaxed mb-8">To exercise these rights, please contact our Data Protection Officer at <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a> or use the self-service options in your account profile (where available). We will respond to your request within the timeframes prescribed by law.</p>
 
@@ -163,11 +289,23 @@ const PrivacyPolicy = () => {
 
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">9. Data Security</h2>
             <p className="text-gray-700 leading-relaxed mb-4">We employ industry-standard security measures to protect your Personal Information. These measures include:</p>
-            <ul className="list-none space-y-2 mb-4 pl-0">
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Encryption:</strong> Secure transmission of sensitive data using SSL/TLS protocols.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Access Controls:</strong> Restricting access to Personal Information to authorized personnel only.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Secure Storage:</strong> Storing data on encrypted servers with regular security audits.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Monitoring:</strong> Continuous monitoring for suspicious activity or vulnerabilities.</li>
+            <ul className="space-y-3 mb-4">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Encryption:</strong> Secure transmission of sensitive data using SSL/TLS protocols.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Access Controls:</strong> Restricting access to Personal Information to authorized personnel only.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Secure Storage:</strong> Storing data on encrypted servers with regular security audits.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Monitoring:</strong> Continuous monitoring for suspicious activity or vulnerabilities.</span>
+              </li>
             </ul>
             <p className="text-gray-700 leading-relaxed mb-8">Despite these measures, no online platform can guarantee absolute security. You are responsible for maintaining the confidentiality of your account credentials and notifying us immediately of any suspected unauthorized access at <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a>.</p>
 

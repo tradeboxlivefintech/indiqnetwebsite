@@ -1,48 +1,37 @@
 'use client'
 import React from 'react'
 import { Shield, FileText, Scale, Users, AlertTriangle, Phone, Mail, MapPin, Building, CheckCircle, FileCheck, BookOpen, XCircle, Info, Download, Eye, Lock, Award, Target, Zap, ChevronRight } from 'lucide-react'
-
+import Link from 'next/link'
 const CompliancePage = () => {
   const investorDocuments = [
     { 
       name: "Investor Charter", 
       icon: <FileText className="w-6 h-6" />,
-      description: "Your rights and our responsibilities"
+      description: "Your rights and our responsibilities",
+      href: "/important/investorcharter"
     },
+    
     { 
-      name: "Complaints Redressal", 
+      name: "disclaimer", 
       icon: <Scale className="w-6 h-6" />,
-      description: "Process for addressing grievances"
+      description: "Important Risk Disclosures",
+      href: "/important/disclaimer"
     },
-    { 
-      name: "Monthly Complaints Report", 
-      icon: <FileCheck className="w-6 h-6" />,
-      description: "Transparent reporting of complaints"
-    },
+    
     { 
       name: "Code of Conduct", 
       icon: <Users className="w-6 h-6" />,
-      description: "Ethical standards and guidelines"
+      description: "Ethical standards and guidelines",
+      href: "/important/codeofconduct"
     },
-    { 
-      name: "Risk Disclosure Document", 
-      icon: <AlertTriangle className="w-6 h-6" />,
-      description: "Comprehensive risk disclosures"
-    },
-    { 
-      name: "Past Performance Disclosure", 
-      icon: <Target className="w-6 h-6" />,
-      description: "Historical performance data"
-    },
-    { 
-      name: "Research Report Policy", 
-      icon: <FileText className="w-6 h-6" />,
-      description: "Methodology and standards"
-    },
+    
+    
+    
     { 
       name: "Terms & Conditions", 
       icon: <Lock className="w-6 h-6" />,
-      description: "Legal terms of engagement"
+      description: "Legal terms of engagement",
+      href: "/important/termsandconditions"
     }
   ];
 
@@ -221,7 +210,7 @@ const CompliancePage = () => {
               
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {investorDocuments.map((doc, index) => (
-                  <button
+                  <Link href={doc.href}
                     key={index}
                     className="group bg-white rounded-xl p-6 border border-gray-200 shadow-md hover:shadow-xl hover:border-emerald-300 transition-all duration-300 hover:-translate-y-1 text-left"
                   >
@@ -235,7 +224,7 @@ const CompliancePage = () => {
                     </div>
                     <h4 className="text-lg font-bold text-gray-900 mb-2">{doc.name}</h4>
                     <p className="text-gray-600 text-sm">{doc.description}</p>
-                  </button>
+                  </Link>
                 ))}
               </div>
             </div>

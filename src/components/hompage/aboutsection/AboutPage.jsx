@@ -123,7 +123,7 @@ const AboutPage = () => {
                   The regulated advisory arm providing SEBI-compliant, framework-based research and analysis.
                 </p>
                 <button 
-                  onClick={() => router.push('/important/marketgainz')}
+                  onClick={() => router.push('/important/Advisory')}
                   className="w-full bg-gradient-to-r from-gray-50 to-gray-100 hover:from-emerald-50 hover:to-emerald-100 text-gray-800 font-semibold py-3 px-4 rounded-lg transition-all duration-300 group"
                 >
                   <span className="flex items-center justify-center gap-2">
@@ -144,7 +144,7 @@ const AboutPage = () => {
                   The educational division focused on practical market skill development and financial literacy.
                 </p>
                 <button 
-                  onClick={() => router.push('/important/issma')}
+                  onClick={() => router.push('/important/trainings')}
                   className="w-full bg-gradient-to-r from-gray-50 to-gray-100 hover:from-blue-50 hover:to-cyan-100 text-gray-800 font-semibold py-3 px-4 rounded-lg transition-all duration-300 group"
                 >
                   <span className="flex items-center justify-center gap-2">
@@ -165,7 +165,7 @@ const AboutPage = () => {
                   The community division facilitating values-driven networking and learning among thoughtful practitioners.
                 </p>
                 <button 
-                  onClick={() => router.push('/important/indiasubmit')}
+                  onClick={() => router.push('/important/events')}
                   className="w-full bg-gradient-to-r from-gray-50 to-gray-100 hover:from-purple-50 hover:to-pink-100 text-gray-800 font-semibold py-3 px-4 rounded-lg transition-all duration-300 group"
                 >
                   <span className="flex items-center justify-center gap-2">

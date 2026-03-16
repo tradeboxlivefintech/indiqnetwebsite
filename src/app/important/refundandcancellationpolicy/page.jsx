@@ -45,10 +45,19 @@ const RefundPolicy = () => {
 
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">1. Seminar Registration Fees</h2>
             <p className="text-gray-700 leading-relaxed mb-4">The Seminar registration fees are as follows (inclusive of applicable taxes):</p>
-            <ul className="list-none space-y-2 mb-4 pl-0">
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Conference Only:</strong> INR 5,500/- (Rupees Five Thousand Five Hundred Only)</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Conference + Single Occupancy:</strong> INR 10,000/- (Rupees Ten Thousand Only)</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Conference + Double Occupancy:</strong> INR 7,000/- (Rupees Seven Thousand Only)</li>
+            <ul className="space-y-3 mb-4">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>Conference Only:</strong> INR 5,500/- (Rupees Five Thousand Five Hundred Only)</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>Conference + Single Occupancy:</strong> INR 10,000/- (Rupees Ten Thousand Only)</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>Conference + Double Occupancy:</strong> INR 7,000/- (Rupees Seven Thousand Only)</span>
+              </li>
             </ul>
             <p className="text-gray-700 leading-relaxed mb-8"><strong>Payment Deadline:</strong> Full payment must be received by 31st May 2025. Partial payments or late payments may result in forfeiture of registration or ineligibility for refunds, as outlined below.</p>
 
@@ -56,24 +65,54 @@ const RefundPolicy = () => {
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.1 Cancellation Deadline</h3>
             <p className="text-gray-700 leading-relaxed mb-4">To be eligible for a refund, Attendees must notify India Elite Summit of their cancellation in writing by <strong>20th May 2025</strong> (30 days prior to the Seminar start date). Notifications must be sent via email to <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a> from the registered email ID provided during registration.</p>
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.2 Refund Options</h3>
-            <ul className="list-none space-y-3 mb-4 pl-0">
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>No Full Refund:</strong> Under no circumstances will a full refund of the registration fees be issued, except as provided in Section 3 (Cancellation by India Elite Summit).</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Partial Refund:</strong> Cancellations received on or before 20th May 2025 are eligible for a <strong>75% refund</strong> of the paid registration fee, after deducting a 25% administrative fee to cover processing, operational, and third-party costs. The refund amount will be calculated based on the total amount paid by the Attendee, excluding any bank charges or transaction fees.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>No Refund:</strong> Cancellations received after 20th May 2025 are not eligible for any refund. No refunds will be issued for no-shows (failure to attend the Seminar without prior cancellation). If only a partial payment was made by 30th April 2025, the entire amount paid will be forfeited, and no refund will be issued. The decision to offer any refund in such cases rests solely with the India Elite Summit Decision Committee, whose decision is final and binding.</li>
+            <ul className="space-y-3 mb-4">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>No Full Refund:</strong> Under no circumstances will a full refund of the registration fees be issued, except as provided in Section 3 (Cancellation by India Elite Summit).</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>Partial Refund:</strong> Cancellations received on or before 20th May 2025 are eligible for a <strong>75% refund</strong> of the paid registration fee, after deducting a 25% administrative fee to cover processing, operational, and third-party costs. The refund amount will be calculated based on the total amount paid by the Attendee, excluding any bank charges or transaction fees.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>No Refund:</strong> Cancellations received after 20th May 2025 are not eligible for any refund. No refunds will be issued for no-shows (failure to attend the Seminar without prior cancellation). If only a partial payment was made by 30th April 2025, the entire amount paid will be forfeited, and no refund will be issued. The decision to offer any refund in such cases rests solely with the India Elite Summit Decision Committee, whose decision is final and binding.</span>
+              </li>
             </ul>
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.3 Transfer of Registration</h3>
             <p className="text-gray-700 leading-relaxed mb-4">Attendees may transfer their registration to another individual, subject to the following conditions:</p>
-            <ul className="list-none space-y-2 mb-4 pl-0">
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> A written request for transfer, including the reason for cancellation and the details of the substitute attendee (name, email, phone number), must be emailed to <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a> from the registered email ID.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> The request must be received at least 15 days prior to the Seminar (by <strong>6th June 2025</strong>).</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Transfers are subject to approval by India Elite Summit, and an administrative fee of <strong>INR 1,000/-</strong> may be charged to process the transfer.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> Transfers are not permitted after 6th June 2025 or for no-shows.</li>
+            <ul className="space-y-3 mb-4">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span>A written request for transfer, including the reason for cancellation and the details of the substitute attendee (name, email, phone number), must be emailed to <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a> from the registered email ID.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span>The request must be received at least 15 days prior to the Seminar (by <strong>6th June 2025</strong>).</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span>Transfers are subject to approval by India Elite Summit, and an administrative fee of <strong>INR 1,000/-</strong> may be charged to process the transfer.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span>Transfers are not permitted after 6th June 2025 or for no-shows.</span>
+              </li>
             </ul>
             <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-2">2.4 Refund Process</h3>
-            <ul className="list-none space-y-2 mb-8 pl-0">
-              <li className="flex items-start  text-gray-500 gap-2"><span className="text-emerald-600">•</span> Refunds will be processed within <strong>15 business days</strong> of receiving an eligible cancellation request.</li>
-              <li className="flex items-start  text-gray-500 gap-2"><span className="text-emerald-600">•</span> Refunds will be issued using the original payment method or via wire transfer to a bank account specified by the Attendee. Bank details must match those provided during registration to prevent fraud.</li>
-              <li className="flex items-start  text-gray-500 gap-2"><span className="text-emerald-600">•</span> Any bank charges or transaction fees incurred during the refund process will be borne by the Attendee.</li>
+            <ul className="space-y-3 mb-8">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span>Refunds will be processed within <strong>15 business days</strong> of receiving an eligible cancellation request.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span>Refunds will be issued using the original payment method or via wire transfer to a bank account specified by the Attendee. Bank details must match those provided during registration to prevent fraud.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span>Any bank charges or transaction fees incurred during the refund process will be borne by the Attendee.</span>
+              </li>
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">3. Cancellation or Rescheduling by India Elite Summit</h2>
@@ -130,7 +169,7 @@ const RefundPolicy = () => {
               <p className="font-bold text-gray-900 mb-2">Indeqnet Private Limited (India Elite Summit)</p>
               <div className="space-y-2 text-gray-700">
                 <p className="flex items-center gap-2"><Mail className="w-5 h-5 text-emerald-600 flex-shrink-0" /> <a href="mailto:support@indiaelitesummit.com" className="text-emerald-700 hover:underline">support@indiaelitesummit.com</a></p>
-                <p className="flex items-cent er gap-2"><Phone className="w-5 h-5 text-emerald-600 flex-shrink-0" /> <a href="tel:+918828320113" className="text-emerald-700 hover:underline">+91-8828320113</a></p>
+                <p className="flex items-center gap-2"><Phone className="w-5 h-5 text-emerald-600 flex-shrink-0" /> <a href="tel:+918828320113" className="text-emerald-700 hover:underline">+91-8828320113</a></p>
                 <p className="flex items-center gap-2">WhatsApp: <a href="https://wa.me/918828320113" className="text-emerald-700 hover:underline" target="_blank" rel="noopener noreferrer">+91-8828320113</a></p>
                 <p className="flex items-center gap-2"><MapPin className="w-5 h-5 text-emerald-600 flex-shrink-0" /> 201, Radhakrishna, Radha Residency, Siddharth Nagar, Borivali - East, Mumbai – 400066, Maharashtra, India</p>
               </div>
@@ -138,18 +177,39 @@ const RefundPolicy = () => {
             </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">6. Attendee Responsibilities</h2>
-            <ul className="list-none space-y-2 mb-8 pl-0">
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Accurate Information:</strong> Attendees must provide accurate contact and payment details during registration to ensure timely communication and refund processing.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Timely Notification:</strong> Attendees are responsible for notifying India Elite Summit of cancellations or transfer requests within the specified deadlines.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600 font-bold">•</span> <strong>Verification:</strong> For security purposes, refund or transfer requests must be made from the registered email ID or verified by providing the Registration ID.</li>
+            <ul className="space-y-3 mb-8">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>Accurate Information:</strong> Attendees must provide accurate contact and payment details during registration to ensure timely communication and refund processing.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>Timely Notification:</strong> Attendees are responsible for notifying India Elite Summit of cancellations or transfer requests within the specified deadlines.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 font-bold mr-2">•</span>
+                <span><strong>Verification:</strong> For security purposes, refund or transfer requests must be made from the registered email ID or verified by providing the Registration ID.</span>
+              </li>
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">7. Additional Terms</h2>
-            <ul className="list-none space-y-2 mb-4 pl-0">
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>No Guarantee of Attendance:</strong> Registration fees cover access to the Seminar but do not guarantee attendance if Attendees fail to comply with event policies (e.g., health and safety protocols, code of conduct).</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Policy Updates:</strong> India Elite Summit may amend this Refund Policy at any time. Attendees will be notified of significant changes via email or website updates.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Severability:</strong> If any provision of this Refund Policy is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.</li>
-              <li className="flex items-start text-gray-500 gap-2"><span className="text-emerald-600">•</span> <strong>Entire Agreement:</strong> This Refund Policy, together with our Privacy Policy, Disclaimer, and Terms of Use, constitutes the entire agreement between you and India Elite Summit regarding Seminar registrations and refunds.</li>
+            <ul className="space-y-3 mb-4">
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>No Guarantee of Attendance:</strong> Registration fees cover access to the Seminar but do not guarantee attendance if Attendees fail to comply with event policies (e.g., health and safety protocols, code of conduct).</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Policy Updates:</strong> India Elite Summit may amend this Refund Policy at any time. Attendees will be notified of significant changes via email or website updates.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Severability:</strong> If any provision of this Refund Policy is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.</span>
+              </li>
+              <li className="flex text-gray-700">
+                <span className="text-emerald-600 mr-2">•</span>
+                <span><strong>Entire Agreement:</strong> This Refund Policy, together with our Privacy Policy, Disclaimer, and Terms of Use, constitutes the entire agreement between you and India Elite Summit regarding Seminar registrations and refunds.</span>
+              </li>
             </ul>
           </div>
         </div>

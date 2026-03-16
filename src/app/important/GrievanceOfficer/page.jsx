@@ -10,7 +10,7 @@ import {
   Users,
   ExternalLink
 } from "lucide-react";
-
+import Image from 'next/image';
 const GrievanceOfficerPolicy = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-gray-50">
@@ -93,23 +93,7 @@ const GrievanceOfficerPolicy = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3"></div>
-                    <div>
-                      <p className="text-gray-800 text-lg font-medium">Service Reference</p>
-                      <p className="text-gray-600 mt-1">
-                        <span className="font-semibold text-gray-800">"Service"</span> refers to the Company's services as mentioned in the{' '}
-                        <a 
-                          href="https://www.indiaequitynetwork.com/terms-of-use"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-emerald-600 hover:text-emerald-700 hover:underline font-medium inline-flex items-center gap-1"
-                        >
-                          Terms of Use <ExternalLink className="w-4 h-4" />
-                        </a>
-                      </p>
-                    </div>
-                  </div>
+                  
                   
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3"></div>
@@ -239,9 +223,9 @@ const GrievanceOfficerPolicy = () => {
                   {/* Grievance Officer Contact Card */}
                   <div className="bg-white rounded-xl p-6 border border-gray-300">
                     <div className="flex flex-col md:flex-row gap-6">
-                      <div className="md:w-1/3">
+                      <div className="md:w-1/4">
                         <div className="w-full h-48 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center">
-                          <User className="w-16 h-16 text-white" />
+                          <Image src="/founders/Picture3.png" alt="Grievance Officer" width={200} height={200} />
                         </div>
                       </div>
                       <div className="md:w-2/3">

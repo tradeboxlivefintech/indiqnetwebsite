@@ -74,7 +74,7 @@ const MarketgainzPage = () => {
             <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold text-white mb-6">
               
               <span className="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              MarketgAInz
+              marketgAInz
               </span>
             </h1>
             

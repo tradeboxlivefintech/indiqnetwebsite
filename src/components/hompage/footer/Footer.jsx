@@ -52,7 +52,7 @@ const Footer = () => {
       href: "/important/GrievanceOfficer",
       icon: <BlendIcon className="w-4 h-4" />
     },{ 
-      name: "Refund & Cancelation Policy", 
+      name: "Refund & Cancellation Policy", 
       href: "/important/refundandcancellationpolicy",
       icon: <BlendIcon className="w-4 h-4" />
     }
