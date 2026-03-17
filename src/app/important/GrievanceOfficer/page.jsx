@@ -236,10 +236,10 @@ const GrievanceOfficerPolicy = () => {
                           <div className="flex items-center gap-3">
                             <Mail className="w-5 h-5 text-gray-500" />
                             <a 
-                              href="mailto:indequitynetwork@gmail.com"
+                              href="compliance@indiaequitynetwork.com"
                               className="text-gray-800 hover:text-emerald-600 font-medium hover:underline"
                             >
-                              indequitynetwork@gmail.com
+                              compliance@indiaequitynetwork.com
                             </a>
                           </div>
                           <div className="flex items-start gap-3">
