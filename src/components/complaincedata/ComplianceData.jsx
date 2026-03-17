@@ -116,7 +116,7 @@ const CompliancePage = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-emerald-600" />
-                    <span className="text-gray-800">support@indeqnet.com</span>
+                    <span className="text-gray-800">compliance@indiaequitynetwork.com</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-blue-600" />
@@ -137,7 +137,7 @@ const CompliancePage = () => {
               </div>
               <div className="ml-20">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                  MARKETGAINZ – SEBI REGISTERED RA
+                  marketgAInz – SEBI REGISTERED RA
                 </h2>
                 <p className="text-gray-600 text-lg">Research Analyst Division</p>
                 <div className="w-20 h-1.5 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full mt-4"></div>

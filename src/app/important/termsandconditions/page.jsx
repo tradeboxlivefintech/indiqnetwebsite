@@ -95,7 +95,7 @@ const TermsAndConditions = () => {
                 <div className="space-y-6">
                   <div>
                     <p className="text-gray-800 text-lg">
-                      "Indeqnet", "India Equity Network", "MarketGAInz", "India Elite Summit", and "ISSMA" are used for branding clarity; however, the legal contracting entity is:
+                      "Indeqnet", "India Equity Network", "marketgAInz", "India Elite Summit", and "ISSMA" are used for branding clarity; however, the legal contracting entity is:
                     </p>
                   </div>
 
@@ -515,10 +515,10 @@ const TermsAndConditions = () => {
                       </div>
                       <p className="font-semibold text-gray-900 mb-2">Email</p>
                       <a 
-                        href="mailto:support@indeqnet.com"
+                        href="mailto:compliance@indiaequitynetwork.com"
                         className="text-blue-600 hover:text-blue-700 hover:underline text-lg"
                       >
-                        support@indeqnet.com
+                        compliance@indiaequitynetwork.com
                       </a>
                       <p className="text-gray-600 text-sm mt-2">For all queries and legal concerns</p>
                     </div>
@@ -568,7 +568,7 @@ const TermsAndConditions = () => {
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center">
                     <a 
-                      href="mailto:support@indeqnet.com"
+                      href="mailto:compliance@indiaequitynetwork.com"
                       className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-indigo-700 transition-all duration-300 shadow-md hover:shadow-lg"
                     >
                       <Mail className="w-5 h-5" />

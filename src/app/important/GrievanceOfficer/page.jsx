@@ -225,7 +225,7 @@ const GrievanceOfficerPolicy = () => {
                     <div className="flex flex-col md:flex-row gap-6">
                       <div className="md:w-1/4">
                         <div className="w-full h-48 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center">
-                          <Image src="/founders/Picture3.png" alt="Grievance Officer" width={200} height={200} />
+                          <Image src="/founders/Picture3.png" alt="Grievance Officer" width={191} height={191} />
                         </div>
                       </div>
                       <div className="md:w-2/3">

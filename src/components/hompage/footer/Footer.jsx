@@ -122,9 +122,9 @@ const Footer = () => {
                 <Phone className="w-3 h-3" />
                 +918828320113
               </a>
-              <a href="mailto:support@indeqnet.com" className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center gap-2">
+              <a href="mailto:compliance@indiaequitynetwork.com" className="text-gray-300 hover:text-green-400 transition-colors duration-300 flex items-center gap-2">
                 <Mail className="w-3 h-3" />
-                support@indeqnet.com
+                compliance@indiaequitynetwork.com
               </a>
               <div className="text-gray-300 flex items-start gap-2">
                 <Building className="w-3 h-3 mt-0.5" />

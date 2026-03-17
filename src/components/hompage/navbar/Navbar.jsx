@@ -12,7 +12,7 @@ const Navbar = () => {
   const announcements = [
     "📢 MarketgAInz: SEBI-Registered Research Reports Available",
     "⭐ ISSMA: New Financial Literacy Program Launched",
-    "🔔 Contact us: +918828320113 | support@indeqnet.com"
+    "🔔 Contact us: +918828320113 | compliance@indiaequitynetwork.com"
   ];
 
   const navItems = [

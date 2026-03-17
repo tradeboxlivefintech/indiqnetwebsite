@@ -194,7 +194,7 @@ const ISSMApage = () => {
       fee: "₹49,999 + GST",
       students: "All Levels",
       rating: 4.9,
-      image: "/issma/course8.png",
+      image: "/new/course1.png",
       comming:"",
       features: [
         "54 live recorded sessions with 150+ hours content",
@@ -381,7 +381,7 @@ const ISSMApage = () => {
     {
       id: 6,
       category: "fundamental",
-      level: "FUNDAMENTAL ANALYSIS",
+      level: "ADVANCED FUNDAMENTAL ANALYSIS",
       title: "Business Understanding & Portfolio Logic",
       shortTitle: "Advanced Fundamental Analysis",
       subtitle: "Analyzing Businesses Like Long-Term Investors",
@@ -462,7 +462,7 @@ const ISSMApage = () => {
       students: "Advanced",
       comming:"Coming Soon",
       rating: 4.7,
-      image: "/issma/course8.png",
+      image: "/new/course8.png",
       features: [
         "How market conditions affect derivative behaviour",
         "Volatility's role in option pricing",
@@ -496,7 +496,7 @@ const ISSMApage = () => {
       students: "Beginners",
       comming:"Coming Soon",
       rating: 4.8,
-      image: "/issma/course1.png",
+      image: "/new/course9.png",
       philosophy: [
         "Why savings and capital protection come first",
         "The role of insurance before wealth creation",
@@ -956,7 +956,7 @@ Most people are expected to manage savings, insurance, risk, and investments thr
   <div className="flex gap-3 w justify-between  mt-auto">
     
     <Link href={"#"} className="px-8 py-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-xl text-sm font-medium transition-all duration-300 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:scale-105">
-      Criculum
+    Curriculum
     </Link>
   </div>
 </div>

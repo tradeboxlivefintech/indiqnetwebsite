@@ -67,10 +67,10 @@ const ContactPage = () => {
                 <div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">Email</h3>
                   <a
-                    href="mailto:support@indeqnet.com"
+                    href="mailto:compliance@indiaequitynetwork.com"
                     className="text-gray-800 text-xl font-semibold mb-1 block hover:text-blue-600 transition-colors"
                   >
-                    support@indeqnet.com
+                    compliance@indiaequitynetwork.com
                   </a>
                   <div className="flex items-center gap-2 mt-3">
                     <Clock className="w-4 h-4 text-gray-500" />
