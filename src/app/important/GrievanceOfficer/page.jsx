@@ -161,10 +161,10 @@ const GrievanceOfficerPolicy = () => {
                       <p className="text-gray-800 text-lg mb-4">
                         Users can write to us at{' '}
                         <a 
-                          href="mailto:support@indiaequitynetwork.com"
+                          href="mailto:compliance@indiaequitynetwork.com"
                           className="text-blue-600 hover:text-blue-700 font-semibold hover:underline"
                         >
-                          support@indiaequitynetwork.com
+                          compliance@indiaequitynetwork.com
                         </a>{' '}
                         for complaints related to the Service.
                       </p>
@@ -223,13 +223,13 @@ const GrievanceOfficerPolicy = () => {
                   {/* Grievance Officer Contact Card */}
                   <div className="bg-white rounded-xl p-6 border border-gray-300">
                     <div className="flex flex-col md:flex-row gap-6">
-                      <div className="md:w-1/4">
+                      <div className="md:w-1/5">
                         <div className="w-full h-48 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center">
-                          <Image src="/founders/Picture3.png" alt="Grievance Officer" width={191} height={191} />
+                          <Image src="/Picture 1.png" alt="Grievance Officer" width={133} height={133} />
                         </div>
                       </div>
                       <div className="md:w-2/3">
-                        <h4 className="text-2xl font-bold text-gray-900 mb-2">Mr. Ram Iyer</h4>
+                        <h4 className="text-2xl font-bold text-gray-900 mb-2">Mr. NS Fidai</h4>
                         <p className="text-gray-700 text-lg mb-4">Grievance Officer</p>
                         
                         <div className="space-y-3 mb-4">
