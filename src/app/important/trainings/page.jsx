@@ -934,7 +934,7 @@ Most people are expected to manage savings, insurance, risk, and investments thr
 
   {/* Key Features Preview */}
   <div className="space-y-2 mb-6 flex-grow">
-    {course.features.slice(0, 2).map((feature, idx) => (
+    {(course.features ?? []).slice(0, 2).map((feature, idx) => (
       <div
         key={idx}
         className="flex items-start gap-2 text-xs text-gray-600"
@@ -945,9 +945,9 @@ Most people are expected to manage savings, insurance, risk, and investments thr
         <span className="line-clamp-1">{feature}</span>
       </div>
     ))}
-    {course.features.length > 2 && (
+    {(course.features ?? []).length > 2 && (
       <div className="text-xs text-gray-400">
-        +{course.features.length - 2} more topics
+        +{(course.features ?? []).length - 2} more topics
       </div>
     )}
   </div>
@@ -989,7 +989,7 @@ Most people are expected to manage savings, insurance, risk, and investments thr
                                   Curriculum
                                 </h4>
                                 <ul className="space-y-1.5">
-                                  {course.features.map((feature, idx) => (
+                                  {(course.features ?? []).map((feature, idx) => (
                                     <li
                                       key={idx}
                                       className="flex items-start gap-2 text-sm text-gray-700"
@@ -1165,7 +1165,7 @@ Most people are expected to manage savings, insurance, risk, and investments thr
                                     What You'll Learn
                                   </h4>
                                   <ul className="space-y-2">
-                                    {course.features.map((feature, idx) => (
+                                    {(course.features ?? []).map((feature, idx) => (
                                       <li
                                         key={idx}
                                         className="flex items-start gap-2 text-sm text-gray-700"
