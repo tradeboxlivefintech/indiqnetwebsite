@@ -480,7 +480,7 @@ const ISSMApage = () => {
     {
       id: 9,
       category: "foundation",
-      level: "Advanced Foundation Course",
+      level: "Bacis Foundation Course",
       title: "Basic Financial Literacy & Introduction to Stock Markets",
       shortTitle: "Financial Literacy",
       subtitle: "A Foundation Course for Every Individual",
