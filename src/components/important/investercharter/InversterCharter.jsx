@@ -18,8 +18,11 @@ import {
   Star,
   TrendingUp,
   Award,
-  Building
+  Building,
+  Download
 } from "lucide-react";
+
+const INVESTOR_CHARTER_PDF_PATH = "/important/Investor Charter - INDEQNET.pdf";
 
 const InvestorCharter = () => {
   const visionMission = [
@@ -162,6 +165,20 @@ const InvestorCharter = () => {
           </h1>
           
           <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto mt-6 rounded-full"></div>
+
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={encodeURI(INVESTOR_CHARTER_PDF_PATH)}
+              download="Investor Charter - INDEQNET.pdf"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-green-600 to-blue-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-blue-900/15 transition-all hover:from-green-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+            >
+              <Download className="h-5 w-5" aria-hidden />
+              Download charter (PDF)
+            </a>
+            <p className="text-sm text-gray-600 max-w-xs text-center sm:text-left">
+              Save or print the full Investor Charter document.
+            </p>
+          </div>
         </div>
 
         {/* A. Vision & Mission */}

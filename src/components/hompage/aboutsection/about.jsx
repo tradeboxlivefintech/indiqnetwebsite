@@ -53,7 +53,7 @@ const About = () => {
       expertise: "Specializes in mid-cap, small-cap investments"
     },
     {
-      name: "Ram Iyer",
+      name: "RAMACHANDRAN CHITHAMBARAN",
       role: "SEBI Research Analyst",
       experience: "30+ years in finance",
       expertise: "Value investing and company research"

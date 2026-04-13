@@ -117,7 +117,7 @@ const AboutPage = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">MarketgAInz</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Advisory</h3>
                 <p className="text-emerald-600 font-medium mb-4">SEBI Registered Research Analyst Division</p>
                 <p className="text-gray-600 mb-6">
                   The regulated advisory arm providing SEBI-compliant, framework-based research and analysis.
@@ -127,7 +127,7 @@ const AboutPage = () => {
                   className="w-full bg-gradient-to-r from-gray-50 to-gray-100 hover:from-emerald-50 hover:to-emerald-100 text-gray-800 font-semibold py-3 px-4 rounded-lg transition-all duration-300 group"
                 >
                   <span className="flex items-center justify-center gap-2">
-                    Learn More
+                    Read More
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
@@ -138,7 +138,7 @@ const AboutPage = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                   <BookOpen className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">ISSMA</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Trainings</h3>
                 <p className="text-blue-600 font-medium mb-4">Integrated School of Stock Markets & Analytics</p>
                 <p className="text-gray-600 mb-6">
                   The educational division focused on practical market skill development and financial literacy.
@@ -148,7 +148,7 @@ const AboutPage = () => {
                   className="w-full bg-gradient-to-r from-gray-50 to-gray-100 hover:from-blue-50 hover:to-cyan-100 text-gray-800 font-semibold py-3 px-4 rounded-lg transition-all duration-300 group"
                 >
                   <span className="flex items-center justify-center gap-2">
-                    Explore Programs
+                    Read More
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
@@ -159,7 +159,7 @@ const AboutPage = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">India Elite Summit</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Events</h3>
                 <p className="text-purple-600 font-medium mb-4">Community Events & Annual Gathering</p>
                 <p className="text-gray-600 mb-6">
                   The community division facilitating values-driven networking and learning among thoughtful practitioners.
@@ -169,7 +169,7 @@ const AboutPage = () => {
                   className="w-full bg-gradient-to-r from-gray-50 to-gray-100 hover:from-purple-50 hover:to-pink-100 text-gray-800 font-semibold py-3 px-4 rounded-lg transition-all duration-300 group"
                 >
                   <span className="flex items-center justify-center gap-2">
-                    Discover Summit
+                    Read More
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>

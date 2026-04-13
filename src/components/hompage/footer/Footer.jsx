@@ -12,7 +12,8 @@ import {
   Info,
   BlendIcon,
   AlertCircle,
-  ArrowRight
+  ArrowRight,
+  Construction
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -72,6 +73,16 @@ const Footer = () => {
             Grievance Officer &amp; Redressal
             <ArrowRight className="w-4 h-4" />
           </Link>
+        </div>
+      </div>
+
+      {/* Website status — visible on every page */}
+      <div className="border-b border-cyan-500/20 bg-slate-800/95">
+        <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-center gap-2 text-center">
+          <Construction className="h-4 w-4 shrink-0 text-cyan-400" aria-hidden />
+          <span className="text-sm font-semibold tracking-wide text-cyan-100">
+            Website Under Development
+          </span>
         </div>
       </div>
 

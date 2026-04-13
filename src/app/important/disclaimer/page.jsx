@@ -1,6 +1,8 @@
 'use client'
 import React from 'react'
-import { FileText, Mail, MapPin, Phone, AlertTriangle } from 'lucide-react'
+import { FileText, Mail, MapPin, Phone, AlertTriangle, Download } from 'lucide-react'
+
+const DISCLAIMERS_PDF_PATH = '/important/Disclaimers - INDEQNET.pdf'
 
 const DisclaimerPage = () => {
   return (
@@ -16,6 +18,20 @@ const DisclaimerPage = () => {
           <p className="text-slate-300 text-lg">
             India Elite Summit — Terms governing use of this Website and Platforms
           </p>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-emerald-400 to-cyan-400 mx-auto rounded-full mt-8" />
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={encodeURI(DISCLAIMERS_PDF_PATH)}
+              download="Disclaimers - INDEQNET.pdf"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-emerald-900/30 transition-colors hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+            >
+              <Download className="h-5 w-5" aria-hidden />
+              Download disclaimers (PDF)
+            </a>
+            <p className="text-sm text-slate-400 max-w-xs text-center sm:text-left">
+              Save or print the full Disclaimers document.
+            </p>
+          </div>
         </div>
       </section>
 

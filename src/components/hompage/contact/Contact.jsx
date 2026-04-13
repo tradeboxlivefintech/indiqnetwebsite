@@ -37,10 +37,9 @@ const ContactPage = () => {
             </div>
 
             {/* Contact Information Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              
+            <div className="grid min-w-0 md:grid-cols-2 gap-8 mb-12">
               {/* Phone Information */}
-              <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border border-blue-100">
+              <div className="flex min-w-0 items-start gap-4 p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border border-blue-100">
                 <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Phone className="w-7 h-7 text-white" />
                 </div>
@@ -60,20 +59,20 @@ const ContactPage = () => {
               </div>
 
               {/* Email Information */}
-              <div className="flex items-start gap-4 p-6 bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl border border-emerald-100">
-                <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="flex min-w-0 items-start gap-4 p-6 bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl border border-emerald-100">
+                <div className="w-14 h-14 flex-shrink-0 bg-gradient-to-br from-emerald-500 to-green-500 rounded-lg flex items-center justify-center">
                   <Mail className="w-7 h-7 text-white" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <h3 className="font-bold text-gray-900 text-lg mb-2">Email</h3>
                   <a
                     href="mailto:compliance@indiaequitynetwork.com"
-                    className="text-gray-800 text-xl font-semibold mb-1 block hover:text-blue-600 transition-colors"
+                    className="text-gray-800 text-base sm:text-lg md:text-xl font-semibold mb-1 block max-w-full break-words hover:text-blue-600 transition-colors"
                   >
                     compliance@indiaequitynetwork.com
                   </a>
                   <div className="flex items-center gap-2 mt-3">
-                    <Clock className="w-4 h-4 text-gray-500" />
+                    <Clock className="w-4 h-4 flex-shrink-0 text-gray-500" />
                     <p className="text-gray-600 text-sm">Response within 24–48 hours</p>
                   </div>
                 </div>

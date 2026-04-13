@@ -17,8 +17,11 @@ import {
   BookOpen,
   Calendar,
   CheckCircle,
-  Scale
+  Scale,
+  Download
 } from "lucide-react";
+
+const TERMS_PDF_PATH = "/important/T&C - INDEQNET.pdf";
 
 const TermsAndConditions = () => {
   const currentDate = new Date().toLocaleDateString('en-US', {
@@ -54,6 +57,19 @@ const TermsAndConditions = () => {
             Legal terms governing your access to India Equity Network platforms and services
           </p>
           <div className="w-20 h-1.5 bg-gradient-to-r from-indigo-400 to-emerald-400 mx-auto rounded-full mt-8"></div>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={encodeURI(TERMS_PDF_PATH)}
+              download="T&C - INDEQNET.pdf"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-gray-900/30 transition-colors hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+            >
+              <Download className="h-5 w-5" aria-hidden />
+              Download terms (PDF)
+            </a>
+            <p className="text-sm text-gray-400 max-w-xs text-center sm:text-left">
+              Save or print the full Terms &amp; Conditions document.
+            </p>
+          </div>
         </div>
       </section>
 

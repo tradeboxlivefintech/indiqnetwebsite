@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   ArrowRight,
@@ -48,7 +49,7 @@ const HomePage = () => {
         x: " "
       },
       {
-        name: "Ram Iyer",
+        name: "RAMACHANDRAN CHITHAMBARAN",
         image: "/Picture 3.png",
         description: "Ram is a seasoned finance professional with over three decades of experience driving significant business growth. Armed with an MBA in Finance (NMIMS), a Diploma in Cyber Law, and SEBI Research Analyst registration, he specializes in establishing new ventures and implementing robust control and monitoring systems. Ram functions as a strategic advisor to CEOs and a key operational resource for cross-functional teams, consistently leveraging a people-centric approach, optimized processes, and technology to cultivate impactful business partnerships. He possesses a proven track record across diverse business models and multicultural teams, and is an active mentor to start-ups.",
         x: "https://x.com/Ram_Iyer572"
@@ -311,7 +312,7 @@ const HomePage = () => {
   const VerticalsSection = () => {
     const verticals = [
       {
-        title: "Advisory & Research Desk",
+        title: "Advisory",
         subtitle: "SEBI Registered Research Analyst (INH000024930)",
         description:
           "The regulated advisory division providing SEBI-compliant, framework-based equity research focused on clarity, documentation, and disciplined analysis.",
@@ -319,14 +320,14 @@ const HomePage = () => {
         color: "from-emerald-500 to-emerald-600",
         bgColor: "bg-emerald-50",
         borderColor: "border-emerald-200",
-        buttonText: "Explore As Others..",
-        route: "/marketgainz",
+        buttonText: "Read More",
+        route: "/important/Advisory",
         disclaimer:
           "SEBI RA Registration No: INH000024930. No guaranteed returns. Market risks apply.",
       },
       {
         title:
-          "Integrated School of Stock Market Analytics (Training & Fellowship)",
+          "Training",
         subtitle: "Integrated School of Stock Markets & Analytics",
         description:
           "The learning and training division delivering structured market education, financial literacy, and skill-building rooted in real market practice.",
@@ -334,13 +335,13 @@ const HomePage = () => {
         color: "from-blue-500 to-cyan-500",
         bgColor: "bg-blue-50",
         borderColor: "border-blue-200",
-        buttonText: "Explore ISSMA Programs",
-        route: "/issma",
+        buttonText: "Read More",
+        route: "/important/trainings",
         disclaimer:
           "ISSMA offers education only. No stock tips, calls, or advisory.",
       },
       {
-        title: "Flagship Events",
+        title: "Events",
         subtitle: "Community Events Division",
         description:
           "A quiet, invitation-only gathering for thoughtful market practitioners designed for reflection, learning, and alignment — not promotion.",
@@ -348,8 +349,8 @@ const HomePage = () => {
         color: "from-purple-500 to-pink-500",
         bgColor: "bg-purple-50",
         borderColor: "border-purple-200",
-        buttonText: "Explore Summit",
-        route: "/india-elite-summit",
+        buttonText: "Read More",
+        route: "/important/events",
         disclaimer:
           "Values-driven environment for ethical networking and framework refinement.",
       },
@@ -387,8 +388,8 @@ const HomePage = () => {
                 key={index}
                 className="group relative bg-gray-800/60 backdrop-blur-sm rounded-2xl p-5 border border-gray-700/50 hover:border-emerald-500/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-emerald-500/10"
               >
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                {/* Glow effect — pointer-events-none so it never blocks clicks */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 {/* Icon with glow */}
                 <div
@@ -398,7 +399,7 @@ const HomePage = () => {
                     {vertical.icon}
                   </div>
                   <div
-                    className={`absolute -inset-3 bg-gradient-to-br ${vertical.color} rounded-xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`}
+                    className={`pointer-events-none absolute -inset-3 bg-gradient-to-br ${vertical.color} rounded-xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`}
                   ></div>
                 </div>
 
@@ -413,16 +414,14 @@ const HomePage = () => {
                   {vertical.description}
                 </p>
 
-                {/* Button */}
-                <button
-                  onClick={() => router.push(vertical.route)}
-                  className="w-full bg-gradient-to-r from-gray-700 to-gray-800 hover:from-emerald-600 hover:to-cyan-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 mb-4 group/btn text-sm"
+                {/* CTA — Link for reliable App Router navigation */}
+                <Link
+                  href={vertical.route}
+                  className="relative z-10 flex w-full items-center justify-center gap-2 bg-gradient-to-r from-gray-700 to-gray-800 py-3 px-4 text-sm font-semibold text-white transition-all duration-300 hover:from-emerald-600 hover:to-cyan-600 mb-4 rounded-xl group/btn"
                 >
-                  <span className="flex items-center justify-center gap-2">
-                    {vertical.buttonText}
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                  </span>
-                </button>
+                  {vertical.buttonText}
+                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-2" />
+                </Link>
 
                 {/* Disclaimer */}
                 <div className="pt-4 border-t border-gray-700/50">
@@ -589,13 +588,19 @@ const HomePage = () => {
             <p className="text-amber-800 font-semibold text-xs uppercase mb-1">
               Principal Officer
             </p>
-            <p className="text-gray-900 font-bold">Mr. Ram Iyer</p>
-            <p className="text-gray-700 text-sm mt-1">
-              SEBI RA Reg. No.:{" "}
-              <span className="font-mono font-bold text-gray-900">
-                INH000024930
-              </span>
-            </p>
+            <p className="text-gray-900 font-bold">Mr. RAMACHANDRAN CHITHAMBARAN</p>
+            <div className="mt-1 space-y-1 text-sm text-gray-700">
+              <p>
+                SEBI RA Reg. No.:{" "}
+                <span className="font-mono font-bold text-gray-900">
+                  INH000024930
+                </span>
+              </p>
+              <p>
+                BSE Enlistment No.:{" "}
+                <span className="font-mono font-bold text-gray-900">6932</span>
+              </p>
+            </div>
           </div>
           <div className="bg-white rounded-xl p-4 border border-amber-200 shadow-sm">
             <p className="text-amber-800 font-semibold text-xs uppercase mb-1">

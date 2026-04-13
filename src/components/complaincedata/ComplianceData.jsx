@@ -12,7 +12,7 @@ const CompliancePage = () => {
     },
     
     { 
-      name: "disclaimer", 
+      name: "Disclaimer", 
       icon: <Scale className="w-6 h-6" />,
       description: "Important Risk Disclosures",
       href: "/important/disclaimer"
